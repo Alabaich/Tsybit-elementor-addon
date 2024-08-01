@@ -120,6 +120,17 @@ class heroShadowText extends \Elementor\Widget_Base
 ?>
 
         <style>
+
+::selection {
+    background: black; /* Background color for selected text */
+    color: white; /* Text color for selected text */
+}
+
+::-moz-selection {
+    background: black; /* Background color for selected text in Firefox */
+    color: white; /* Text color for selected text in Firefox */
+}
+
             .heroShadowTextContainer{
                 display: flex;
                 justify-content: center;
