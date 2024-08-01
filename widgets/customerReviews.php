@@ -181,7 +181,7 @@ class customerReviews extends \Elementor\Widget_Base
             }
         </style>
 
-        <div class="richText pageWidth">
+        <div class="pageWidth">
             <div class="richTextCentered">
                 <?php if (!empty($settings['upperTitle'])) : ?>
                     <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
