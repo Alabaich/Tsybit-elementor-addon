@@ -161,6 +161,7 @@ class customerReviews extends \Elementor\Widget_Base
                 border-radius: 23px;
                 height: 45px;
                 width: 45px;
+                object-fit: cover;
             }
         </style>
 
