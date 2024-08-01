@@ -138,7 +138,28 @@ class heroShadowText extends \Elementor\Widget_Base
                 flex-direction: column;
             }
 
+            .h1cont{
+                position: relative;
+            }
+
+
             .heroShadowTextContainer h1{
+                color: #F9F9F9;
+text-align: center;
+leading-trim: both;
+text-edge: cap;
+text-shadow: 6px 6px 16px rgba(0, 0, 0, 0.20), -2.5px -2.5px 6px #FFF, 3px 3px 6px rgba(174, 174, 192, 0.40);
+-webkit-text-stroke-width: 1;
+-webkit-text-stroke-color: #000;
+font-family: Montserrat;
+font-size: 82px;
+font-style: normal;
+font-weight: 900;
+line-height: 107.473%; /* 88.128px */
+        }
+
+            .heroShadowTextContainer h1.bg{
+                position: absolute;
             position: relative;
             font-family: Montserrat, sans-serif;
             font-size: 82px;
@@ -188,9 +209,14 @@ class heroShadowText extends \Elementor\Widget_Base
 
         </style>
         <div class="heroShadowTextContainer pageWidth">
-        <h1>
+            <div class="h1cont">
+            <h1>
+            Your One-Stop Digitalization Solution.
+        </h1>        <h1 class="bg">
             Your One-Stop Digitalization Solution.
         </h1>
+            </div>
+
         </div>
 
 
