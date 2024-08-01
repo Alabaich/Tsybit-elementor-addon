@@ -167,7 +167,7 @@ class customerReviews extends \Elementor\Widget_Base
                 justify-content: space-between;
                 padding: 20px;
                 border-radius: 25px;
-                width: 350px;
+                width: 400px;
             }
 
             .mainReviewContainer .reviewBlock .review .rowContainer {
