@@ -151,7 +151,7 @@ class customerReviews extends \Elementor\Widget_Base
                 border-radius: 25px;
             }
 
-            .reviewBlock .review .rowConrainer {
+            .reviewBlock .review .rowContainer {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
