@@ -147,6 +147,15 @@ class customerReviews extends \Elementor\Widget_Base
         <style>
             .reviewBlock .review {
                 background-color: #fff;
+                margin: 20px;
+                border-radius: 25px;
+            }
+
+            .reviewBlock .review .rowConrainer {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
             }
         </style>
 
