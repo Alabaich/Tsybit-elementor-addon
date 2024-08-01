@@ -240,7 +240,7 @@ class customerReviews extends \Elementor\Widget_Base
             </div>
             <?php if (!empty($settings['link']['url'])) : ?>
                     <a class="link" href="<?php echo esc_url($settings['link']['url']); ?>" <?php echo !empty($settings['link']['is_external']) ? 'target="_blank"' : ''; ?>>
-                        <?php echo esc_html($settings['link']['url']); ?> ↗
+                        <?php echo esc_html($settings['link']['url']); ?> 
                     </a>
                 <?php endif; ?>
             </div>
