@@ -157,6 +157,11 @@ class customerReviews extends \Elementor\Widget_Base
                 justify-content: space-between;
                 align-items: center;
             }
+            .reviewBlock .review .rowContainer .image {
+                border-radius: 23px;
+                height: 45px;
+                width: 45px;
+            }
         </style>
 
         <div class="greyBg richText pageWidth">
