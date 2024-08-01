@@ -10,7 +10,7 @@ class customerReviews extends \Elementor\Widget_Base
 
     public function get_title()
     {
-        return esc_html__('Rich Text', 'elementor-addon');
+        return esc_html__('Customer Reviews', 'elementor-addon');
     }
 
     public function get_icon()
@@ -65,6 +65,14 @@ class customerReviews extends \Elementor\Widget_Base
             ]
         );
 
+        $this->add_control(
+            'link',
+            [
+                'label' => esc_html__('Link', 'elementor-addon'),
+                'type' => \Elementor\Controls_Manager::TEXTAREA,
+            ]
+        );
+
         $this->end_controls_section();
 
         // Content Tab End
@@ -106,21 +114,21 @@ class customerReviews extends \Elementor\Widget_Base
         <style>
         </style>
 
-            <div class="greyBg richText pageWidth">
-                <div class="richTextCentered">
-                    <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
-                    <h2><?php echo $settings['title']; ?></h2>
-                    <h3 class="bottomTitle">
-                        <?php echo $settings['subtitle']; ?>
-                    </h3>
-                    <p class="regularText">
-                        <?php echo $settings['regularText']; ?>
-                    </p>
-                    <a class="link">
-                        <?php echo $settings['link']; ?> ↗
-                    </a>
-                </div>
+        <div class="greyBg richText pageWidth">
+            <div class="richTextCentered">
+                <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
+                <h2><?php echo $settings['title']; ?></h2>
+                <h3 class="bottomTitle">
+                    <?php echo $settings['subtitle']; ?>
+                </h3>
+                <p class="regularText">
+                    <?php echo $settings['regularText']; ?>
+                </p>
+                <a class="link">
+                    <?php echo $settings['link']; ?> ↗
+                </a>
             </div>
+        </div>
 
 <?php
     }
