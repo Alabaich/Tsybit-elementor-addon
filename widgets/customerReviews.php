@@ -1,11 +1,11 @@
 <?php
 
-class richText extends \Elementor\Widget_Base
+class customerReviews extends \Elementor\Widget_Base
 {
 
     public function get_name()
     {
-        return 'richText';
+        return 'customerReviews';
     }
 
     public function get_title()
@@ -15,7 +15,7 @@ class richText extends \Elementor\Widget_Base
 
     public function get_icon()
     {
-        return 'eicon-t-letter-bold0xe94e';
+        return 'eicon-star-o0xe933';
     }
 
     public function get_categories()
@@ -65,22 +65,6 @@ class richText extends \Elementor\Widget_Base
             ]
         );
 
-        $this->add_control(
-            'regularText',
-            [
-                'label' => esc_html__('Regular Text', 'elementor-addon'),
-                'type' => \Elementor\Controls_Manager::WYSIWYG,
-            ]
-        );
-
-        $this->add_control(
-            'link',
-            [
-                'label' => esc_html__('Link', 'elementor-addon'),
-                'type' => \Elementor\Controls_Manager::Text,
-            ]
-        );
-
         $this->end_controls_section();
 
         // Content Tab End
@@ -120,46 +104,6 @@ class richText extends \Elementor\Widget_Base
 ?>
 
         <style>
-            .richText .bottomTitle {
-                font-weight: 500;
-            }
-
-            .richText .richTextCentered {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 10px;
-            }
-
-            .richTextCentered * {
-                max-width: 800px;
-            }
-
-            @media screen and (max-width: 600px) {
-                .richText .richTextCentered {
-                    padding: 0px;
-                }
-
-                .richText .upperTitle {
-                    justify-content: center;
-                    font-size: 10px;
-                }
-
-                .richText h2 {
-                    text-align: center;
-                }
-
-                .richText .bottomTitle {
-                    font-size: 1em;
-                    justify-content: center;
-                    text-align: center;
-                }
-
-                .richText .regularText {
-                    text-align: center;
-                }
-            }
         </style>
 
             <div class="greyBg richText pageWidth">
