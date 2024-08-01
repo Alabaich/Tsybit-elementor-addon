@@ -157,6 +157,7 @@ class customerReviews extends \Elementor\Widget_Base
             .mainReviewContainer .reviewBlock {
                 display: flex;
                 flex-wrap: wrap;
+                justify-content: center;
                 gap: 25px;
                 width: 100%;
             }
