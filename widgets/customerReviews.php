@@ -149,8 +149,9 @@ class customerReviews extends \Elementor\Widget_Base
                 display: flex;
                 justify-content: center;
                 text-align: center;
+                align-items: center;
                 flex-direction: column;
-                gap: 10px;
+                gap: 25px;
             }
 
             .mainReviewContainer .reviewBlock {
