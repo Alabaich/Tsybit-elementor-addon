@@ -1,6 +1,6 @@
 <?php
 
-class Elementor_richText extends \Elementor\Widget_Base
+class richText extends \Elementor\Widget_Base
 {
 
     public function get_name()
