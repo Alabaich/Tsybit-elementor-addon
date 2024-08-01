@@ -147,7 +147,7 @@ class customerReviews extends \Elementor\Widget_Base
         <style>
             .reviewBlock .review {
                 background-color: #fff;
-                margin: 20px;
+                padding: 20px;
                 border-radius: 25px;
             }
 
