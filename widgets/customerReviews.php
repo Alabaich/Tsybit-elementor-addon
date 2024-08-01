@@ -159,7 +159,6 @@ class customerReviews extends \Elementor\Widget_Base
                 flex-wrap: wrap;
                 gap: 25px;
                 width: 100%;
-                align-items: flex-start;
             }
 
             .mainReviewContainer .reviewBlock .review {
