@@ -149,6 +149,7 @@ class customerReviews extends \Elementor\Widget_Base
                 display: flex;
                 justify-content: center;
                 text-align: center;
+                flex-direction: column;
                 gap: 10px;
             }
 
