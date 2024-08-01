@@ -73,6 +73,14 @@ class richText extends \Elementor\Widget_Base
             ]
         );
 
+        $this->add_control(
+            'link',
+            [
+                'label' => esc_html__('Link', 'elementor-addon'),
+                'type' => \Elementor\Controls_Manager::link,
+            ]
+        );
+
         $this->end_controls_section();
 
         // Content Tab End
@@ -154,7 +162,6 @@ class richText extends \Elementor\Widget_Base
             }
         </style>
 
-        <div class="pageWidthFG">
             <div class="greyBg richText pageWidth">
                 <div class="richTextCentered">
                     <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
@@ -165,9 +172,11 @@ class richText extends \Elementor\Widget_Base
                     <p class="regularText">
                         <?php echo $settings['regularText']; ?>
                     </p>
+                    <a class="link">
+                        <?php echo $settings['link']; ?> ↗
+                    </a>
                 </div>
             </div>
-        </div>
 
 <?php
     }
