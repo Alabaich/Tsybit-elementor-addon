@@ -12,9 +12,11 @@ function register_hello_world_widget( $widgets_manager ) {
 
 
 	require_once( __DIR__ . '/widgets/banner.php' );
+	require_once( __DIR__ . '/widgets/richText.php' );
 
 
 	$widgets_manager->register( new \Banner() );
+	$widgets_manager->register( new \richText() );
 
 }
 add_action( 'elementor/widgets/register', 'register_hello_world_widget' );
