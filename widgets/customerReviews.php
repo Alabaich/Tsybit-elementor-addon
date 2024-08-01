@@ -148,7 +148,9 @@ class customerReviews extends \Elementor\Widget_Base
             .reviewBlock {
                 display: flex;
                 flex-wrap: wrap;
+                gap: 25px;
             }
+            
             .reviewBlock .review {
                 background-color: #fff;
                 padding: 20px;
