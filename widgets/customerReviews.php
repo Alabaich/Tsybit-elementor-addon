@@ -154,7 +154,6 @@ class customerReviews extends \Elementor\Widget_Base
             .reviewBlock .review .rowContainer {
                 display: flex;
                 flex-direction: row;
-                justify-content: space-between;
                 align-items: center;
                 gap: 10px;
             }
