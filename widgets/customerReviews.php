@@ -154,6 +154,7 @@ class customerReviews extends \Elementor\Widget_Base
 
             .reviewBlock .review {
                 background-color: #fff;
+                justify-content: space-between;
                 padding: 20px;
                 border-radius: 25px;
                 width: 350px;
@@ -166,7 +167,7 @@ class customerReviews extends \Elementor\Widget_Base
                 gap: 10px;
             }
 
-            .reviewBlock .review .rowContainer .image {
+            .reviewBlock .review .rowContainer image {
                 border-radius: 23px;
                 height: 45px;
                 width: 45px;
@@ -180,7 +181,7 @@ class customerReviews extends \Elementor\Widget_Base
             }
         </style>
 
-        <div class="greyBg richText pageWidth">
+        <div class="richText pageWidth">
             <div class="richTextCentered">
                 <?php if (!empty($settings['upperTitle'])) : ?>
                     <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
@@ -200,9 +201,7 @@ class customerReviews extends \Elementor\Widget_Base
                         <div class="review">
                             <div class="rowContainer">
                                 <?php if (!empty($item['image']['url'])) : ?>
-                                    <div class="image">
                                         <img src="<?php echo $item['image']['url']; ?>" alt="">
-                                    </div>
                                 <?php endif; ?>
                                 <div class="columnContainer">
                                     <?php if (!empty($item['name'])) : ?>
