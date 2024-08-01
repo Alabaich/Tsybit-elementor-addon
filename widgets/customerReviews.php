@@ -145,14 +145,21 @@ class customerReviews extends \Elementor\Widget_Base
 ?>
 
         <style>
-            .reviewBlock {
+            .mainReviewContainer {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .mainReviewContainer .reviewBlock {
                 display: flex;
                 flex-wrap: wrap;
                 gap: 25px;
                 width: 100%;
             }
 
-            .reviewBlock .review {
+            .mainReviewContainer .reviewBlock .review {
                 background-color: #fff;
                 justify-content: space-between;
                 padding: 20px;
@@ -160,14 +167,14 @@ class customerReviews extends \Elementor\Widget_Base
                 width: 350px;
             }
 
-            .reviewBlock .review .rowContainer {
+            .mainReviewContainer .reviewBlock .review .rowContainer {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 gap: 10px;
             }
 
-            .reviewBlock .review .rowContainer img {
+            .mainReviewContainer .reviewBlock .review .rowContainer img {
                 border-radius: 23px;
                 height: 45px;
                 width: 45px;
@@ -182,54 +189,56 @@ class customerReviews extends \Elementor\Widget_Base
         </style>
 
         <div class="pageWidth">
-            <div class="richTextCentered">
-                <?php if (!empty($settings['upperTitle'])) : ?>
-                    <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
-                <?php endif; ?>
-                <?php if (!empty($settings['title'])) : ?>
-                    <h2><?php echo $settings['title']; ?></h2>
-                <?php endif; ?>
-                <?php if (!empty($settings['subtitle'])) : ?>
-                    <h3 class="bottomTitle">
-                        <?php echo $settings['subtitle']; ?>
-                    </h3>
-            </div>
-        <?php endif; ?>
-        <div class="reviewBlock">
-            <?php
-            foreach ($settings['repeater_field'] as $item) :
-            ?>
-                <div class="review">
-                    <div class="rowContainer">
-                        <?php if (!empty($item['image']['url'])) : ?>
-                            <img src="<?php echo $item['image']['url']; ?>" alt="">
-                        <?php endif; ?>
-                        <div class="columnContainer">
-                            <?php if (!empty($item['name'])) : ?>
-                                <div class="name">
-                                    <p><?php echo $item['name']; ?> </p>
-                                </div>
-                            <?php endif; ?>
-                            <?php if (!empty($item['placeOfWork'])) : ?>
-                                <div class="placeOfWork">
-                                    <p><?php echo $item['placeOfWork']; ?></p>
-                                </div>
-                            <?php endif; ?>
-                        </div>
-                    </div>
-                    <?php if (!empty($item['reviewText'])) : ?>
-                        <div class="reviewText">
-                            <p><?php echo $item['reviewText']; ?></p>
-                        </div>
+            <div class="mainReviewContainer">
+                <div class="richTextCentered">
+                    <?php if (!empty($settings['upperTitle'])) : ?>
+                        <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
                     <?php endif; ?>
+                    <?php if (!empty($settings['title'])) : ?>
+                        <h2><?php echo $settings['title']; ?></h2>
+                    <?php endif; ?>
+                    <?php if (!empty($settings['subtitle'])) : ?>
+                        <h3 class="bottomTitle">
+                            <?php echo $settings['subtitle']; ?>
+                        </h3>
                 </div>
-            <?php
-            endforeach;
-            ?>
-        </div>
-        <a class="link">
-            <?php echo $settings['link']; ?> ↗
-        </a>
+            <?php endif; ?>
+            <div class="reviewBlock">
+                <?php
+                foreach ($settings['repeater_field'] as $item) :
+                ?>
+                    <div class="review">
+                        <div class="rowContainer">
+                            <?php if (!empty($item['image']['url'])) : ?>
+                                <img src="<?php echo $item['image']['url']; ?>" alt="">
+                            <?php endif; ?>
+                            <div class="columnContainer">
+                                <?php if (!empty($item['name'])) : ?>
+                                    <div class="name">
+                                        <p><?php echo $item['name']; ?> </p>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if (!empty($item['placeOfWork'])) : ?>
+                                    <div class="placeOfWork">
+                                        <p><?php echo $item['placeOfWork']; ?></p>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                        <?php if (!empty($item['reviewText'])) : ?>
+                            <div class="reviewText">
+                                <p><?php echo $item['reviewText']; ?></p>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                <?php
+                endforeach;
+                ?>
+            </div>
+            <a class="link">
+                <?php echo $settings['link']; ?> ↗
+            </a>
+            </div>
         </div>
 
 <?php
