@@ -156,12 +156,20 @@ class customerReviews extends \Elementor\Widget_Base
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
+                gap: 10px;
             }
+
             .reviewBlock .review .rowContainer .image {
                 border-radius: 23px;
                 height: 45px;
                 width: 45px;
                 object-fit: cover;
+            }
+
+            .reviewBlock .review .rowContainer .columnContainer {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
             }
         </style>
 
@@ -189,16 +197,18 @@ class customerReviews extends \Elementor\Widget_Base
                                         <img src="<?php echo $item['image']['url']; ?>" alt="">
                                     </div>
                                 <?php endif; ?>
-                                <?php if (!empty($item['name'])) : ?>
-                                    <div class="name">
-                                        <p><?php echo $item['name']; ?> </p>
-                                    </div>
-                                <?php endif; ?>
-                                <?php if (!empty($item['placeOfWork'])) : ?>
-                                    <div class="placeOfWork">
-                                        <p><?php echo $item['placeOfWork']; ?></p>
-                                    </div>
-                                <?php endif; ?>
+                                <div class="columnContainer">
+                                    <?php if (!empty($item['name'])) : ?>
+                                        <div class="name">
+                                            <p><?php echo $item['name']; ?> </p>
+                                        </div>
+                                    <?php endif; ?>
+                                    <?php if (!empty($item['placeOfWork'])) : ?>
+                                        <div class="placeOfWork">
+                                            <p><?php echo $item['placeOfWork']; ?></p>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
                             </div>
                             <?php if (!empty($item['reviewText'])) : ?>
                                 <div class="reviewText">
