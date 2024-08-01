@@ -66,6 +66,39 @@ class customerReviews extends \Elementor\Widget_Base
         );
 
         $this->add_control(
+            'repeater_field',
+            [
+                'label' => esc_html__('Review', 'elementor-addon'),
+                'type' => \Elementor\Controls_Manager::REPEATER,
+                'fields' => [
+                    [
+                        'name' => 'image',
+                        'label' => esc_html__('Choose Image', 'textdomain'),
+                        'type' => \Elementor\Controls_Manager::MEDIA,
+                        'default' => [
+                            'url' => \Elementor\Utils::get_placeholder_image_src(),
+                        ],
+                    ],
+                    [
+                        'name' => 'placeOfWork',
+                        'label' => esc_html__('Place of work', 'elementor-addon'),
+                        'type' => \Elementor\Controls_Manager::TEXTAREA,
+                    ],
+                    [
+                        'name' => 'title',
+                        'label' => esc_html__('Name', 'elementor-addon'),
+                        'type' => \Elementor\Controls_Manager::TEXTAREA,
+                    ],
+                    [
+                        'name' => 'Review Text',
+                        'label' => esc_html__('Description', 'elementor-addon'),
+                        'type' => \Elementor\Controls_Manager::TEXTAREA,
+                    ],
+                ],
+            ]
+        );
+
+        $this->add_control(
             'link',
             [
                 'label' => esc_html__('Link', 'elementor-addon'),
@@ -120,10 +153,20 @@ class customerReviews extends \Elementor\Widget_Base
                 <h2><?php echo $settings['title']; ?></h2>
                 <h3 class="bottomTitle">
                     <?php echo $settings['subtitle']; ?>
+                    <div class="reviewBlock">
+                        <div class="review">
+                            <div class="name">
+                                <p>Sarah L.</p>
+                            </div>
+                            <div class="placeOfWork">
+                                <p>Owner of Sarah's Boutique</p>
+                            </div>
+                            <div class="reviewText">
+                                <p>As a small business owner, finding a reliable and talented web design team was crucial. The all-stack web design team exceeded my expectations! They were professional, responsive, and created a stunning, user-friendly website for my business. From initial consultation to final launch, every step was seamless. Highly recommended!</p>
+                            </div>
+                        </div>
+                    </div>
                 </h3>
-                <p class="regularText">
-                    <?php echo $settings['regularText']; ?>
-                </p>
                 <a class="link">
                     <?php echo $settings['link']; ?> ↗
                 </a>
