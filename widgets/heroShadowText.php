@@ -152,8 +152,6 @@ class heroShadowText extends \Elementor\Widget_Base
   color: #F9F9F9;
   text-align: center;
   text-shadow: 6px 6px 16px rgba(0, 0, 0, 0.20), -2.5px -2.5px 6px #FFF, 3px 3px 6px rgba(174, 174, 192, 0.40);
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #000;
   font-family: Montserrat;
   font-size: 82px;
   font-style: normal;
