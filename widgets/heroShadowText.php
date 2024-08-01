@@ -160,6 +160,8 @@ line-height: 107.473%; /* 88.128px */
 
             .heroShadowTextContainer h1.bg{
                 position: absolute;
+                top: 0;
+                z-index: -1;
             font-family: Montserrat, sans-serif;
             font-size: 82px;
             font-weight: 900;
