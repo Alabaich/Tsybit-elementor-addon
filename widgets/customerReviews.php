@@ -193,43 +193,43 @@ class customerReviews extends \Elementor\Widget_Base
                     <h3 class="bottomTitle">
                         <?php echo $settings['subtitle']; ?>
                     </h3>
-                <?php endif; ?>
-                <div class="reviewBlock">
-                    <?php
-                    foreach ($settings['repeater_field'] as $item) :
-                    ?>
-                        <div class="review">
-                            <div class="rowContainer">
-                                <?php if (!empty($item['image']['url'])) : ?>
-                                        <img src="<?php echo $item['image']['url']; ?>" alt="">
-                                <?php endif; ?>
-                                <div class="columnContainer">
-                                    <?php if (!empty($item['name'])) : ?>
-                                        <div class="name">
-                                            <p><?php echo $item['name']; ?> </p>
-                                        </div>
-                                    <?php endif; ?>
-                                    <?php if (!empty($item['placeOfWork'])) : ?>
-                                        <div class="placeOfWork">
-                                            <p><?php echo $item['placeOfWork']; ?></p>
-                                        </div>
-                                    <?php endif; ?>
+            </div>
+        <?php endif; ?>
+        <div class="reviewBlock">
+            <?php
+            foreach ($settings['repeater_field'] as $item) :
+            ?>
+                <div class="review">
+                    <div class="rowContainer">
+                        <?php if (!empty($item['image']['url'])) : ?>
+                            <img src="<?php echo $item['image']['url']; ?>" alt="">
+                        <?php endif; ?>
+                        <div class="columnContainer">
+                            <?php if (!empty($item['name'])) : ?>
+                                <div class="name">
+                                    <p><?php echo $item['name']; ?> </p>
                                 </div>
-                            </div>
-                            <?php if (!empty($item['reviewText'])) : ?>
-                                <div class="reviewText">
-                                    <p><?php echo $item['reviewText']; ?></p>
+                            <?php endif; ?>
+                            <?php if (!empty($item['placeOfWork'])) : ?>
+                                <div class="placeOfWork">
+                                    <p><?php echo $item['placeOfWork']; ?></p>
                                 </div>
                             <?php endif; ?>
                         </div>
-                    <?php
-                    endforeach;
-                    ?>
+                    </div>
+                    <?php if (!empty($item['reviewText'])) : ?>
+                        <div class="reviewText">
+                            <p><?php echo $item['reviewText']; ?></p>
+                        </div>
+                    <?php endif; ?>
                 </div>
-                <a class="link">
-                    <?php echo $settings['link']; ?> ↗
-                </a>
-            </div>
+            <?php
+            endforeach;
+            ?>
+        </div>
+        <a class="link">
+            <?php echo $settings['link']; ?> ↗
+        </a>
         </div>
 
 <?php
