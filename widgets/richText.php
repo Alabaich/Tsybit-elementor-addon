@@ -77,7 +77,7 @@ class richText extends \Elementor\Widget_Base
             'link',
             [
                 'label' => esc_html__('Link', 'elementor-addon'),
-                'type' => \Elementor\Controls_Manager::link,
+                'type' => \Elementor\Controls_Manager::URL,
             ]
         );
 
