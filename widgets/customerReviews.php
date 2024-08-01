@@ -85,12 +85,12 @@ class customerReviews extends \Elementor\Widget_Base
                         'type' => \Elementor\Controls_Manager::TEXTAREA,
                     ],
                     [
-                        'name' => 'title',
+                        'name' => 'name',
                         'label' => esc_html__('Name', 'elementor-addon'),
                         'type' => \Elementor\Controls_Manager::TEXTAREA,
                     ],
                     [
-                        'name' => 'Review Text',
+                        'name' => 'reviewText',
                         'label' => esc_html__('Description', 'elementor-addon'),
                         'type' => \Elementor\Controls_Manager::TEXTAREA,
                     ],
@@ -149,24 +149,48 @@ class customerReviews extends \Elementor\Widget_Base
 
         <div class="greyBg richText pageWidth">
             <div class="richTextCentered">
-                <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
-                <h2><?php echo $settings['title']; ?></h2>
-                <h3 class="bottomTitle">
-                    <?php echo $settings['subtitle']; ?>
-                    <div class="reviewBlock">
+                <?php if (!empty($settings['upperTitle'])) : ?>
+                    <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
+                <?php endif; ?>
+                <?php if (!empty($settings['title'])) : ?>
+                    <h2><?php echo $settings['title']; ?></h2>
+                <?php endif; ?>
+                <?php if (!empty($settings['subtitle'])) : ?>
+                    <h3 class="bottomTitle">
+                        <?php echo $settings['subtitle']; ?>
+                    </h3>
+                <?php endif; ?>
+                <div class="reviewBlock">
+                    <?php
+                    foreach ($settings['repeater_field'] as $item) :
+                    ?>
                         <div class="review">
-                            <div class="name">
-                                <p>Sarah L.</p>
-                            </div>
-                            <div class="placeOfWork">
-                                <p>Owner of Sarah's Boutique</p>
-                            </div>
-                            <div class="reviewText">
-                                <p>As a small business owner, finding a reliable and talented web design team was crucial. The all-stack web design team exceeded my expectations! They were professional, responsive, and created a stunning, user-friendly website for my business. From initial consultation to final launch, every step was seamless. Highly recommended!</p>
-                            </div>
+                            <?php if (!empty($item['image']['url'])) : ?>
+                                <div class="image">
+                                    <img src="<?php echo $item['image']['url']; ?>" alt="">
+                                </div>
+                            <?php endif; ?>
+
+                            <?php if (!empty($item['name'])) : ?>
+                                <div class="name">
+                                    <p><?php echo $item['name']; ?> </p>
+                                </div>
+                            <?php endif; ?>
+                            <?php if (!empty($item['placeOfWork'])) : ?>
+                                <div class="placeOfWork">
+                                    <p><?php echo $item['placeOfWork']; ?></p>
+                                </div>
+                            <?php endif; ?>
+                            <?php if (!empty($item['reviewText'])) : ?>
+                                <div class="reviewText">
+                                    <p><?php echo $item['reviewText']; ?></p>
+                                </div>
+                            <?php endif; ?>
                         </div>
-                    </div>
-                </h3>
+                    <?php
+                    endforeach;
+                    ?>
+                </div>
                 <a class="link">
                     <?php echo $settings['link']; ?> ↗
                 </a>
