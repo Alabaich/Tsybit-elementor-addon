@@ -164,27 +164,32 @@ class richText extends \Elementor\Widget_Base
 
         <div class="greyBg richText pageWidth">
             <div class="richTextCentered">
-                <?php if (!empty($item['upperTitle'])) : ?>
+                <?php if (!empty($settings['upperTitle'])) : ?>
                     <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
                 <?php endif; ?>
-                <?php if (!empty($item['title'])) : ?>
+
+                <?php if (!empty($settings['title'])) : ?>
                     <h2><?php echo $settings['title']; ?></h2>
                 <?php endif; ?>
-                <?php if (!empty($item['subtitle'])) : ?>
+
+                <?php if (!empty($settings['subtitle'])) : ?>
                     <h3 class="bottomTitle">
                         <?php echo $settings['subtitle']; ?>
                     </h3>
                 <?php endif; ?>
-                <?php if (!empty($item['regularText'])) : ?>
+
+                <?php if (!empty($settings['regularText'])) : ?>
                     <p class="regularText">
                         <?php echo $settings['regularText']; ?>
                     </p>
                 <?php endif; ?>
+
                 <?php if (!empty($settings['link'])) : ?>
                     <a class="link">
                         <?php echo $settings['link']; ?> ↗
                     </a>
                 <?php endif; ?>
+
             </div>
         </div>
 
