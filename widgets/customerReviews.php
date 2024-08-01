@@ -167,7 +167,7 @@ class customerReviews extends \Elementor\Widget_Base
                 gap: 10px;
             }
 
-            .reviewBlock .review .rowContainer image {
+            .reviewBlock .review .rowContainer img
                 border-radius: 23px;
                 height: 45px;
                 width: 45px;
