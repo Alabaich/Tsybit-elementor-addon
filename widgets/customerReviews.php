@@ -145,6 +145,9 @@ class customerReviews extends \Elementor\Widget_Base
 ?>
 
         <style>
+            .reviewBlock .review {
+                background-color: #fff;
+            }
         </style>
 
         <div class="greyBg richText pageWidth">
@@ -165,22 +168,23 @@ class customerReviews extends \Elementor\Widget_Base
                     foreach ($settings['repeater_field'] as $item) :
                     ?>
                         <div class="review">
-                            <?php if (!empty($item['image']['url'])) : ?>
-                                <div class="image">
-                                    <img src="<?php echo $item['image']['url']; ?>" alt="">
-                                </div>
-                            <?php endif; ?>
-
-                            <?php if (!empty($item['name'])) : ?>
-                                <div class="name">
-                                    <p><?php echo $item['name']; ?> </p>
-                                </div>
-                            <?php endif; ?>
-                            <?php if (!empty($item['placeOfWork'])) : ?>
-                                <div class="placeOfWork">
-                                    <p><?php echo $item['placeOfWork']; ?></p>
-                                </div>
-                            <?php endif; ?>
+                            <div class="rowContainer">
+                                <?php if (!empty($item['image']['url'])) : ?>
+                                    <div class="image">
+                                        <img src="<?php echo $item['image']['url']; ?>" alt="">
+                                    </div>
+                                <?php endif; ?>
+                                <?php if (!empty($item['name'])) : ?>
+                                    <div class="name">
+                                        <p><?php echo $item['name']; ?> </p>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if (!empty($item['placeOfWork'])) : ?>
+                                    <div class="placeOfWork">
+                                        <p><?php echo $item['placeOfWork']; ?></p>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
                             <?php if (!empty($item['reviewText'])) : ?>
                                 <div class="reviewText">
                                     <p><?php echo $item['reviewText']; ?></p>
