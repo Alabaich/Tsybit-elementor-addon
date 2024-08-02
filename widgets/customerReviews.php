@@ -189,6 +189,19 @@ class customerReviews extends \Elementor\Widget_Base
                 flex-direction: column;
                 justify-content: center;
             }
+
+            @media screen and (max-width: 600px) {
+                .pageWidth .mainReviewContainer .richTextCentered h2 {
+                    font-size: 13px;
+                    font-weight: lighter
+                }
+
+                .mainReviewContainer .reviewBlock {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                }
+            }
         </style>
 
         <div class="pageWidth">
@@ -239,10 +252,10 @@ class customerReviews extends \Elementor\Widget_Base
                 ?>
             </div>
             <?php if (!empty($settings['link']['url'])) : ?>
-                    <a class="link" href="<?php echo esc_url($settings['link']['url']); ?>" <?php echo !empty($settings['link']['is_external']) ? 'target="_blank"' : ''; ?>>
-                        <?php echo esc_html($settings['link']['url']); ?> 
-                    </a>
-                <?php endif; ?>
+                <a class="link" href="<?php echo esc_url($settings['link']['url']); ?>" <?php echo !empty($settings['link']['is_external']) ? 'target="_blank"' : ''; ?>>
+                    <?php echo esc_html($settings['link']['url']); ?>
+                </a>
+            <?php endif; ?>
             </div>
         </div>
 
