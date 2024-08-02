@@ -196,45 +196,14 @@ class heroShadowText extends \Elementor\Widget_Base
         </style>
         <div class="heroShadowTextContainer pageWidth">
             <div class="h1cont">
-            <h1>
-            Your One-Stop Digitalization Solution.
-        </h1>        <h1 class="bg">
-            Your One-Stop Digitalization Solution.
-        </h1>
+                <h1>
+                    Your One-Stop Digitalization Solution.
+                </h1>        
+                <h1 class="bg">
+                    Your One-Stop Digitalization Solution.
+                </h1>
             </div>
 
-        </div>
-
-
-        <div class="greyBg richText pageWidth">
-            <div class="richTextCentered">
-                <?php if (!empty($settings['upperTitle'])) : ?>
-                    <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
-                <?php endif; ?>
-
-                <?php if (!empty($settings['title'])) : ?>
-                    <h2><?php echo $settings['title']; ?></h2>
-                <?php endif; ?>
-
-                <?php if (!empty($settings['subtitle'])) : ?>
-                    <h3 class="bottomTitle">
-                        <?php echo $settings['subtitle']; ?>
-                    </h3>
-                <?php endif; ?>
-
-                <?php if (!empty($settings['regularText'])) : ?>
-                    <p class="regularText">
-                        <?php echo $settings['regularText']; ?>
-                    </p>
-                <?php endif; ?>
-
-                <?php if (!empty($settings['link']['url'])) : ?>
-                    <a class="link" href="<?php echo esc_url($settings['link']['url']); ?>" <?php echo !empty($settings['link']['is_external']) ? 'target="_blank"' : ''; ?>>
-                        <?php echo esc_html($settings['link']['url']); ?> ↗
-                    </a>
-                <?php endif; ?>
-
-            </div>
         </div>
 
         <script>
@@ -250,6 +219,8 @@ class heroShadowText extends \Elementor\Widget_Base
                 ${shadowX}px ${shadowY}px 6px rgba(0, 0, 0, 0.25),
                 ${-shadowX}px ${-shadowY}px 6px rgba(255, 255, 255, 0.25)
             `;
+
+            console.log(textShadow)
             
             document.getElementById('dynamic-shadow').style.textShadow = textShadow;
         });
