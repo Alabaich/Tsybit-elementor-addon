@@ -219,8 +219,6 @@ class heroShadowText extends \Elementor\Widget_Base
                 ${shadowX}px ${shadowY}px 6px rgba(0, 0, 0, 0.25),
                 ${-shadowX}px ${-shadowY}px 6px rgba(255, 255, 255, 0.25)
             `;
-
-            console.log(textShadow)
             
             document.getElementById('dynamic-shadow').style.textShadow = textShadow;
         });
