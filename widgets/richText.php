@@ -69,7 +69,7 @@ class richText extends \Elementor\Widget_Base
             'regularText',
             [
                 'label' => esc_html__('Regular Text', 'elementor-addon'),
-                'type' => \Elementor\Controls_Manager::WYSIWYG,
+                'type' => \Elementor\Controls_Manager::TEXTAREA,
             ]
         );
 
@@ -186,7 +186,7 @@ class richText extends \Elementor\Widget_Base
 
                 <?php if (!empty($settings['link']['url'])) : ?>
                     <a class="link" href="<?php echo esc_url($settings['link']['url']); ?>" <?php echo !empty($settings['link']['is_external']) ? 'target="_blank"' : ''; ?>>
-                        <?php echo esc_html($settings['link']['url']); ?> ↗
+                        <?php echo esc_html($settings['link']['url']); ?>
                     </a>
                 <?php endif; ?>
 
