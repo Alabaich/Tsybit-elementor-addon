@@ -196,7 +196,7 @@ class heroShadowText extends \Elementor\Widget_Base
         </style>
         <div class="heroShadowTextContainer pageWidth">
             <div class="h1cont">
-                <h1>
+                <h1 id="dynamic-shadow">
                     Your One-Stop Digitalization Solution.
                 </h1>        
                 <h1 class="bg">
