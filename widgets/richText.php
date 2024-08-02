@@ -132,6 +132,10 @@ class richText extends \Elementor\Widget_Base
                 gap: 10px;
             }
 
+            .richText .richTextCentered .link {
+                color: #2c2d2c;
+            }
+
             .richTextCentered * {
                 max-width: 800px;
             }
