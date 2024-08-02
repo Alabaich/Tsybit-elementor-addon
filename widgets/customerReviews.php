@@ -191,7 +191,7 @@ class customerReviews extends \Elementor\Widget_Base
             }
 
             @media screen and (max-width: 600px) {
-                .pageWidth .mainReviewContainer .richTextCentered h2 {
+                .pageWidth .mainReviewContainer .richTextCentered h3 {
                     font-size: 13px;
                     font-weight: lighter
                 }
@@ -200,6 +200,8 @@ class customerReviews extends \Elementor\Widget_Base
                     display: flex;
                     flex-direction: column;
                     gap: 15px;
+                    text-align: left;
+                    width: 100%;
                 }
             }
         </style>
