@@ -207,20 +207,34 @@ class heroShadowText extends \Elementor\Widget_Base
         </div>
 
         <script>
-        document.addEventListener('mousemove', function(event) {
-            const x = event.clientX; // Mouse X position
-            const y = event.clientY; // Mouse Y position
-            const windowWidth = window.innerWidth; // Window width
-            const windowHeight = window.innerHeight; // Window height
-            const shadowX = ((x / windowWidth) - 0.5) * -20; // Inverted shadow X offset
-            const shadowY = ((y / windowHeight) - 0.5) * -20; // Inverted shadow Y offset
+document.addEventListener('DOMContentLoaded', function() {
+            const textElement = document.getElementById('dynamic-shadow');
+            if (textElement) {
+                let lastExecution = 0;
+                const throttle = 50; // Throttle rate in milliseconds
 
-            const textShadow = `
-                ${shadowX}px ${shadowY}px 6px rgba(0, 0, 0, 0.25),
-                ${-shadowX}px ${-shadowY}px 6px rgba(255, 255, 255, 0.25)
-            `;
-            
-            document.getElementById('dynamic-shadow').style.textShadow = textShadow;
+                document.addEventListener('mousemove', function(event) {
+                    const now = Date.now();
+                    if (now - lastExecution >= throttle) {
+                        lastExecution = now;
+                        const x = event.clientX; // Mouse X position
+                        const y = event.clientY; // Mouse Y position
+                        const windowWidth = window.innerWidth; // Window width
+                        const windowHeight = window.innerHeight; // Window height
+                        const shadowX = ((x / windowWidth) - 0.5) * -20; // Inverted shadow X offset
+                        const shadowY = ((y / windowHeight) - 0.5) * -20; // Inverted shadow Y offset
+
+                        const textShadow = `
+                            ${shadowX}px ${shadowY}px 10px rgba(0, 0, 0, 0.25),
+                            ${-shadowX}px ${-shadowY}px 10px rgba(255, 255, 255, 0.25)
+                        `;
+                        
+                        textElement.style.textShadow = textShadow;
+                    }
+                });
+            } else {
+                console.error('Element with ID "dynamic-shadow" not found.');
+            }
         });
     </script>
 
