@@ -201,6 +201,9 @@ class customerReviews extends \Elementor\Widget_Base
                     flex-direction: column;
                     gap: 15px;
                     text-align: left;
+                }
+
+                .mainReviewContainer .reviewBlock .review {
                     width: 100%;
                 }
             }
