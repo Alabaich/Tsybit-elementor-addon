@@ -136,49 +136,60 @@ class heroShadowText extends \Elementor\Widget_Base
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
+                height: 80vh;
             }
 
-            .h1cont{
-                position: relative;
-            }
-
-
-            .heroShadowTextContainer h1{
-                color: #F9F9F9;
-text-align: center;
-leading-trim: both;
-text-edge: cap;
-text-shadow: 6px 6px 16px rgba(0, 0, 0, 0.20), -2.5px -2.5px 6px #FFF, 3px 3px 6px rgba(174, 174, 192, 0.40);
-font-family: Montserrat;
-font-size: 82px;
-font-style: normal;
-font-weight: 900;
-line-height: 107.473%; /* 88.128px */
+            .h1cont {
+            position: relative;
         }
 
-            .heroShadowTextContainer h1.bg{
-                position: absolute;
-                top: 0;
-                z-index: -1;
-            font-family: Montserrat, sans-serif;
+        .heroShadowTextContainer h1 {
+            color: #F9F9F9;
+            font-family: Montserrat;
+            text-align: center;
+            font-size: 82px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 107.473%;
+            text-shadow: 6px 6px 16px rgba(0, 0, 0, 0.20), -2.5px -2.5px 6px #FFF, 3px 3px 6px rgba(174, 174, 192, 0.40);
+            transition: text-shadow 0.1s ease-out; /* Smooth transition for shadow movement */
+        }
+
+        .heroShadowTextContainer h1.bg {
+            position: absolute;
+            font-family: Montserrat;
+            top: 0;
+            left: 0;
+            z-index: -1;
             font-size: 82px;
             font-weight: 900;
-            color: #F9F9F9; /* Text color */
-            text-align: center;
-            display: inline-block;
-            background: linear-gradient(97deg, rgba(116, 86, 234, 0.25) 27.69%, rgba(86, 145, 234, 0.25) 32.98%, #FFF 39.18%, #F2F6FA 59.01%, rgba(116, 86, 234, 0.25) 64.79%, rgba(86, 145, 234, 0.25) 68.55%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    /* Make sure the background gradient is clipped to the text */
-    text-shadow:
-        0 0 1px rgba(116, 86, 234, 0.25),
-        0 0 2px rgba(116, 86, 234, 0.25),
-        0 0 3px rgba(116, 86, 234, 0.25),
-        0 0 4px rgba(86, 145, 234, 0.25),
-        0 0 5px rgba(86, 145, 234, 0.25),
-        0 0 6px rgba(86, 145, 234, 0.25),
-        0 0 7px rgba(116, 86, 234, 0.25);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientBorder 2s infinite;
+        }
+
+        @keyframes gradientBorder {
+            0% {
+                text-shadow:
+                    0 0 1px rgb(170, 153, 238),
+                    0 0 2px rgb(135, 116, 212),
+                    0 0 3px rgb(132, 119, 185);
+            }
+
+            50% {
+                text-shadow:
+                    0 0 1px rgba(255, 255, 255, 1),
+                    0 0 2px rgba(255, 255, 255, 1),
+                    0 0 3px rgb(255, 255, 255);
+            }
+
+            100% {
+                text-shadow:
+                    0 0 1px rgb(170, 153, 238),
+                    0 0 2px rgb(135, 116, 212),
+                    0 0 3px rgb(132, 119, 185);
+            }
         }
 
 
