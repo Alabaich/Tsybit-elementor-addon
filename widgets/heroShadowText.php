@@ -76,7 +76,7 @@ class heroShadowText extends \Elementor\Widget_Base
         $this->add_control(
             'linkOne',
             [
-                'label' => esc_html__('Link', 'elementor-addon'),
+                'label' => esc_html__('LinkOne', 'elementor-addon'),
                 'type' => \Elementor\Controls_Manager::URL,
             ]
         );
@@ -240,7 +240,7 @@ class heroShadowText extends \Elementor\Widget_Base
             <?php endif; ?>
             <div class="buttons">
                 <a href="<?php echo esc_html($settings['linkOne']['url']); ?> ↗" class="buttonOne"><?php echo $settings['linkOneText']; ?></a>
-                <a href="<?php echo esc_html($settings['linkTwo']['url']); ?> ↗" class="buttonOne"><?php echo $settings['linkTwoText']; ?></a>
+                <a href="<?php echo esc_html($settings['linkTwo']['url']); ?> ↗" class="buttonTwo"><?php echo $settings['linkTwoText']; ?></a>
             </div>
 
         </div>
