@@ -74,9 +74,33 @@ class heroShadowText extends \Elementor\Widget_Base
         );
 
         $this->add_control(
-            'link',
+            'linkOne',
             [
                 'label' => esc_html__('Link', 'elementor-addon'),
+                'type' => \Elementor\Controls_Manager::URL,
+            ]
+        );
+
+        $this->add_control(
+            'linkOneText',
+            [
+                'label' => esc_html__('Link Text', 'elementor-addon'),
+                'type' => \Elementor\Controls_Manager::TEXTAREA,
+            ]
+        );
+
+        $this->add_control(
+            'linkTwo',
+            [
+                'label' => esc_html__('Link Two', 'elementor-addon'),
+                'type' => \Elementor\Controls_Manager::URL,
+            ]
+        );
+
+        $this->add_control(
+            'linkTwoText',
+            [
+                'label' => esc_html__('Link Two Text', 'elementor-addon'),
                 'type' => \Elementor\Controls_Manager::URL,
             ]
         );
@@ -166,7 +190,7 @@ class heroShadowText extends \Elementor\Widget_Base
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: gradientBorder 2s infinite;
+            animation: gradientBorder 6s infinite;
         }
 
         @keyframes gradientBorder {
@@ -195,13 +219,28 @@ class heroShadowText extends \Elementor\Widget_Base
 
         </style>
         <div class="heroShadowTextContainer pageWidth">
+
+            <?php if (!empty($settings['upperTitle'])) : ?>
+                    <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
+                <?php endif; ?>
+
             <div class="h1cont">
                 <h1 id="dynamic-shadow">
-                    Your One-Stop Digitalization Solution.
+                    <?php echo $settings['title']; ?>
                 </h1>        
                 <h1 class="bg">
-                    Your One-Stop Digitalization Solution.
+                    <?php echo $settings['title']; ?>
                 </h1>
+            </div>
+            
+            <?php if (!empty($settings['regularText'])) : ?>
+                    <p class="regularText">
+                        <?php echo $settings['regularText']; ?>
+                    </p>
+            <?php endif; ?>
+            <div class="buttons">
+                <a href="<?php echo esc_html($settings['linkOne']['url']); ?> ↗" class="buttonOne"><?php echo $settings['linkOneText']; ?></a>
+                <a href="<?php echo esc_html($settings['linkTwo']['url']); ?> ↗" class="buttonOne"><?php echo $settings['linkTwoText']; ?></a>
             </div>
 
         </div>
