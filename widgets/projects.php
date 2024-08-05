@@ -179,6 +179,13 @@ class Projects extends \Elementor\Widget_Base
                 padding: 50px 150px;
             }
 
+            .ourBrands .textContainerCentered {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
             .brandsSlider {
                 width: 100vw;
                 overflow: visible;
@@ -232,8 +239,8 @@ class Projects extends \Elementor\Widget_Base
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/js/splide.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/css/themes/splide-skyblue.min.css">
 
-        <div class="pageWidthFG">
-            <div class="greyBg ourBrands">
+        <div class="pageWidth">
+            <div class="ourBrands">
                 <div class="textContainerCentered">
                 <?php if (!empty($settings['upperTitle'])): ?>
                 <p class="upperTitle">
