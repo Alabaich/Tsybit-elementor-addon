@@ -151,15 +151,16 @@ class allServices extends \Elementor\Widget_Base
             }
 
             .allServices .textSide a {
+                display: inline-flex;
+                align-items: center;
+                text-align: center;
                 background: #2C2D2C;
                 color: #F0F0F3;
-                text-align: center;
                 padding: 15px 25px;
                 border-radius: 25px;
-                font-family: Montserrat;
                 font-weight: 500;
+                gap: 10px;
                 transition: all 300ms linear;
-                display: inline-flex;
             }
 
             .allServices .richTextCentered a:hover {
@@ -181,7 +182,7 @@ class allServices extends \Elementor\Widget_Base
                 padding: 25px;
             }
 
-            .allServices .allServicesBlocks .oneServiceBlock h3{
+            .allServices .allServicesBlocks .oneServiceBlock h3 {
                 font-size: 18px;
             }
         </style>
@@ -211,8 +212,8 @@ class allServices extends \Elementor\Widget_Base
                 <?php if (!empty($settings['buttonText'])) : ?>
                     <a class="link" href="<?php echo $settings['buttonUrl']['url']; ?>">
                         <?php echo $settings['buttonText']; ?> <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M9.74253 1.18198H3.37857M9.74253 1.18198V7.54594M9.74253 1.18198L4.17406 6.75045M1.25725 9.66726L2.58307 8.34144" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                            <path d="M9.74253 1.18198H3.37857M9.74253 1.18198V7.54594M9.74253 1.18198L4.17406 6.75045M1.25725 9.66726L2.58307 8.34144" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
 
                     </a>
                 <?php endif; ?>
