@@ -144,7 +144,7 @@ class latestProjects extends \Elementor\Widget_Base
 
             .pageWidth .latestProjectsContainer .swiper-container {
                 width: 100%;
-                height: 300px;
+                height: auto;
                 overflow: hidden;
             }
 
