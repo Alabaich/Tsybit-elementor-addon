@@ -195,9 +195,14 @@ class servicesWidget extends \Elementor\Widget_Base
 
             .servicesMainSection .servicesBlock .oneServiceBlock a {
                 display: inline-flex;
-                border: 2px solid #2c2d2c;
+                border: 1px solid #2c2d2c;
                 border-radius: 25px;
                 padding: 10px 10px;
+                transition: ease-in 300ms;
+            }
+
+            .servicesMainSection .servicesBlock .oneServiceBlock a:hover {
+                color: #fff;
             }
         </style>
 
