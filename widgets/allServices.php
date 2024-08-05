@@ -136,12 +136,12 @@ class allServices extends \Elementor\Widget_Base
             }
 
             .allServices .richTextCentered .link {
-                display: flex;
-                padding: 15px 25px;
-                justify-content: center;
-                align-items: center;
-                gap: 10px;
-                border-radius: 25px;
+                background: #2C2D2C;
+                color: #F0F0F3;
+                text-align: center;
+                font-family: Montserrat;
+                font-weight: 500;
+                transition: all 300ms linear;
             }
         </style>
 
