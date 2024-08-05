@@ -252,13 +252,14 @@ class Projects extends \Elementor\Widget_Base
                 flex-direction: column;
                 justify-content: center;
                 text-align: left;
-                gap: 15px;
+                gap: 10px;
             }
 
             .ourBrands .sliderOurBrands {
                 display: flex;
                 align-items: center;
                 text-align: center;
+                gap: 25px;
             }
 
             .ourBrands .bigImg {
