@@ -10,12 +10,12 @@ class Projects extends \Elementor\Widget_Base
 
     public function get_title()
     {
-        return esc_html__('Projects', 'elementor-addon');
+        return esc_html__('Brands Slider', 'elementor-addon');
     }
 
     public function get_icon()
     {
-        return 'eicon-image';
+        return 'eicon-carousel';
     }
 
     public function get_categories()
@@ -65,6 +65,14 @@ class Projects extends \Elementor\Widget_Base
             ]
         );
 
+        $this->add_control(
+            'description',
+            [
+                'label' => esc_html__('Description', 'elementor-addon'),
+                'type' => \Elementor\Controls_Manager::TEXTAREA,
+            ]
+        );
+
         $this->end_controls_section();
 
         $this->start_controls_section(
@@ -78,9 +86,14 @@ class Projects extends \Elementor\Widget_Base
         $this->add_control(
             'repeater_field',
             [
-                'label' => esc_html__('Photos', 'elementor-addon'),
+                'label' => esc_html__('Blocks', 'elementor-addon'),
                 'type' => \Elementor\Controls_Manager::REPEATER,
                 'fields' => [
+                    [
+                        'name' => 'urlBrandPage',
+                        'label' => esc_html__('Url to Brand Page', 'elementor-addon'),
+                        'type' => \Elementor\Controls_Manager::URL,
+                    ],
                     [
                         'name' => 'image',
                         'label' => esc_html__('Choose Image', 'textdomain'),
@@ -88,7 +101,25 @@ class Projects extends \Elementor\Widget_Base
                         'default' => [
                             'url' => \Elementor\Utils::get_placeholder_image_src(),
                         ],
-                    ]
+                    ],
+                    [
+                        'name' => 'logo',
+                        'label' => esc_html__('Choose logo', 'textdomain'),
+                        'type' => \Elementor\Controls_Manager::MEDIA,
+                        'default' => [
+                            'url' => \Elementor\Utils::get_placeholder_image_src(),
+                        ],
+                    ],
+                    [
+                        'name' => 'title',
+                        'label' => esc_html__('Title', 'elementor-addon'),
+                        'type' => \Elementor\Controls_Manager::TEXTAREA,
+                    ],
+                    [
+                        'name' => 'subtitle',
+                        'label' => esc_html__('Subtitle', 'elementor-addon'),
+                        'type' => \Elementor\Controls_Manager::TEXTAREA,
+                    ],
                 ],
             ]
         );
@@ -132,130 +163,150 @@ class Projects extends \Elementor\Widget_Base
 ?>
 
 
-<style>
-        .masonry {
-            /* Masonry container */
-            -webkit-column-count: 4;
-            -moz-column-count: 4;
-            column-count: 4;
-            -webkit-column-gap: 1em;
-            -moz-column-gap: 1em;
-            column-gap: 1em;
-            margin: 1.5em;
-            padding: 0;
-            -moz-column-gap: 1.5em;
-            -webkit-column-gap: 1.5em;
-            column-gap: 1.5em;
-            font-size: .85em;
-        }
-
-        .item {
-            display: inline-block;
-            margin: 0 0 1.5em;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .item img {
-            max-width: 100%;
-            width: 100%;
-        }
-
-        @media only screen and (max-width: 600px) {
-            .masonry {
-                -moz-column-count: 1;
-                -webkit-column-count: 1;
-                column-count: 1;
+        <style>
+            .regularText {
+                color: #2c2d2c;
+                font-size: 16px;
+                font-weight: 400;
             }
-        }
 
-        @media only screen and (min-width: 600px) and (max-width: 768px) {
-            .masonry {
-                -moz-column-count: 2;
-                -webkit-column-count: 2;
-                column-count: 2;
+            .ourBrands {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 15px;
+                padding: 50px 150px;
             }
-        }
 
-        @media only screen and (min-width: 769px) {
-            .masonry {
-                -moz-column-count: 3;
-                -webkit-column-count: 3;
-                column-count: 3;
+            .brandsSlider {
+                width: 100vw;
+                overflow: visible;
+                padding: 15px;
             }
-        }
 
-        .projectsContainer .richTextCentered{
-            padding: 25px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 15px;
-        }
+            .slideOurBrands {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 10px;
+            }
 
-        .projectsContainer .richTextCentered *{
-            width: 100%;
-            max-width: 800px;
-            text-align: center;
-        }
+            .slideOurBrands p {
+                text-align: center;
+            }
 
-        .projectsContainer .line{
-            height: 1px;
-            max-width: 600px;
-            background-color: #2C2D2C;
-        }
+            .ourBrands .bigImg {
+                width: 100%;
+                height: 400px;
+                display: flex;
+                justify-content: center;
+                align-items: end;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
 
-        .projectsContainer .buttonContainer{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding-bottom: 25px;
-        }
+            .ourBrands .bigImg img {
+                padding-bottom: 25px;
+            }
 
-        .projectsContainer .button{
-            background: #006;
-            padding: 15px;
-            color: #fff;
-        }
+            .ourBrands .subtitle{
+                text-align: center;
+            }
 
-        .projectsContainer .button:hover{
-            background: rgb(4, 4, 72);
-        }
-    </style>
+            @media screen and (max-width: 600px) {
+                .ourBrands {
+                    padding: 15px;
+                }
 
+                .ourBrands * {
+                    text-align: center;
+                }
 
-<div class="pageWidthFG projectsContainer grid">
-        <div class="greyBg">
-            <div class="richTextCentered">
-            <p class="upperTitle">
-                        <?php echo esc_html($settings['upperTitle']); ?>
-                    </p>
-                    <h2>
-                        <?php echo esc_html($settings['title']); ?>
-                    </h2>
-                    <h4 class="regularText">
-                        <?php echo esc_html($settings['subtitle']); ?>
-                    </h4>
-                <div class="line"></div>
-            </div>
+                .ourBrands .bigImg {
+                    height: 180px;
+                }
+            }
+        </style>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/js/splide.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/css/themes/splide-skyblue.min.css">
 
-            <div class="masonry">
-            <?php
+        <div class="pageWidthFG">
+            <div class="greyBg ourBrands">
+                <div class="textContainerCentered">
+                <?php if (!empty($settings['upperTitle'])): ?>
+                <p class="upperTitle">
+                    <?php echo $settings['upperTitle']; ?>
+                </p>
+            <?php endif; ?>
+
+            <?php if (!empty($settings['title'])): ?>
+                <h2>
+                    <?php echo $settings['title']; ?>
+                </h2>
+            <?php endif; ?>
+
+            <?php if (!empty($settings['subtitle'])): ?>
+                <h4 class="subtitle">
+                    <?php echo $settings['subtitle']; ?>
+                </h4>
+            <?php endif; ?>
+
+            <?php if (!empty($settings['description'])): ?>
+                <p class="regularText">
+                    <?php echo $settings['description']; ?>
+                </p>
+            <?php endif; ?>
+                </div>
+
+                <div class="brandsSlider">
+                    <section class="splide" aria-label="Our Brands" id="uniqIdForThisSection">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <?php
                                 foreach ($settings['repeater_field'] as $item) :
                                 ?>
-                                    <div class="item"><img src="<?php echo esc_url($item['image']['url']); ?>" alt=""></div>
+                                    <li class="splide__slide">
+                                    <?php if (!empty($item['urlBrandPage']['url'])) : ?>
+                                        <a href="<?php echo esc_url($item['urlBrandPage']['url']); ?>" class="slideOurBrands">
+                                    <?php else : ?>
+                                        <a class="slideOurBrands">
+                                    <?php endif; ?>
+                                            <div class="bigImg" style="background-image: url(<?php echo esc_url($item['image']['url']); ?>);">
+                                                <img src="<?php echo esc_html($item['logo']['url']); ?>" alt="" class="logoForBrand">
+                                            </div>
+                                            <h5><?php echo esc_html($item['title']); ?></h5>
+                                            <p class="regularText"><?php echo esc_html($item['subtitle']); ?></p>
+                                        </a>
+                                    </li>
                                 <?php
                                 endforeach;
                                 ?>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
             </div>
-            <div class="buttonContainer">
-                <a href="" class="button">More</a>
-            </div>
-            
         </div>
-    </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                new Splide('#uniqIdForThisSection', {
+                    gap: 25,
+                    type: 'loop',
+                    padding: '20%',
+                    pagination: false,
+                    arrows: false,
+                    breakpoints: {
+                        640: {
+                            padding: '5%',
+                            gap: 10,
+                        },
+                    }
+                }).mount();
+            });
+        </script>
 
 <?php
     }
