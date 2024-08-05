@@ -234,6 +234,7 @@ class portfolio1 extends \Elementor\Widget_Base
                 box-shadow: 0px 4px 5px #2c2d2c;
                 top: 0px;
                 right: 40px;
+                max-width: 115px;
             }
 
             .portfolioContainer .descriptionContainer{
@@ -250,6 +251,7 @@ backdrop-filter: blur(2.5594329833984375px);
 
             .portfolioContainer .badge2{
                 display: flex;
+                max-width: 115px;
 padding: 25px 12px;
 flex-direction: column;
 justify-content: center;
