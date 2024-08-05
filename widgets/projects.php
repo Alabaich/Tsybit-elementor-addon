@@ -196,9 +196,12 @@ class Projects extends \Elementor\Widget_Base
                 display: flex;
                 flex-direction: row;
             }
+
             .brandsSlider .splide__track .splide__list .splide__slide .textSide {
                 display: flex;
                 flex-direction: column;
+                align-items: start;
+                text-align: left;
             }
 
             .slideOurBrands {
@@ -207,10 +210,6 @@ class Projects extends \Elementor\Widget_Base
                 align-items: center;
                 flex-direction: column;
                 gap: 10px;
-            }
-
-            .slideOurBrands p {
-                text-align: center;
             }
 
             .ourBrands .bigImg {
@@ -289,12 +288,12 @@ class Projects extends \Elementor\Widget_Base
                                             <?php else : ?>
                                                 <a class="slideOurBrands">
                                                 <?php endif; ?>
-                                                <div class="bigImg" style="background-image: url(<?php echo esc_url($item['image']['url']); ?>);">
-                                                    <img src="<?php echo esc_html($item['logo']['url']); ?>" alt="" class="logoForBrand">
-                                                </div>
                                                 <div class="textSide">
                                                     <h5><?php echo esc_html($item['title']); ?></h5>
                                                     <p class="regularText"><?php echo esc_html($item['subtitle']); ?></p>
+                                                </div>
+                                                <div class="bigImg" style="background-image: url(<?php echo esc_url($item['image']['url']); ?>);">
+                                                    <img src="<?php echo esc_html($item['logo']['url']); ?>" alt="" class="logoForBrand">
                                                 </div>
                                                 </a>
                                     </li>
