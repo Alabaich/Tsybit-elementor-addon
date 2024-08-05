@@ -289,7 +289,7 @@ class customerReviews extends \Elementor\Widget_Base
                     endforeach;
                     ?>
                 </div>
-                <?php if (!empty($settings['link']['url'])) : ?>
+                <?php if (!empty($settings['link']['url']) && !empty($settings['linkText'])) : ?>
                     <a class="link" href="<?php echo esc_url($settings['link']['url']); ?>" <?php echo !empty($settings['link']['is_external']) ? 'target="_blank"' : ''; ?>>
                         <?php echo esc_html($settings['linkText']); ?>
                     </a>
