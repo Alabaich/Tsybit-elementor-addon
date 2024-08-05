@@ -157,6 +157,7 @@ class allServices extends \Elementor\Widget_Base
                 text-align: center;
                 background: #2C2D2C;
                 color: #F0F0F3;
+                border: 1px #2C2D2C solid;
                 padding: 15px 25px;
                 border-radius: 25px;
                 font-weight: 500;
