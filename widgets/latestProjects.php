@@ -148,13 +148,36 @@ class latestProjects extends \Elementor\Widget_Base
                 overflow: hidden;
             }
 
-            .pageWidth .latestProjectsContainer .swiper-container .swiper-wrapper {
-                margin: 40px 0px 40px 0px;
+            .swiper-wrapper {
+                display: flex;
+            }
+
+            .swiper-slide {
+                width: 100%;
             }
 
             .pageWidth .latestProjectsContainer .swiper-container .swiper-wrapper .swiper-slide {
                 text-align: center;
                 background-color: #fff;
+            }
+
+            .swiper-pagination {
+                bottom: 10px;
+                position: relative;
+            }
+
+            .swiper-pagination-bullet {
+                background: #2c2d2c;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                opacity: 1;
+            }
+
+            .swiper-pagination-bullet-active {
+                background: #007bff;
+                width: 16px;
+                height: 16px;
             }
         </style>
 
@@ -182,16 +205,13 @@ class latestProjects extends \Elementor\Widget_Base
 
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <!-- Slides -->
                         <div class="swiper-slide">Slide 1</div>
                         <div class="swiper-slide">Slide 2</div>
                         <div class="swiper-slide">Slide 3</div>
                     </div>
 
-                    <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>
 
-                    <!-- Add Navigation -->
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </div>
