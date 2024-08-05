@@ -152,20 +152,42 @@ class Form extends \Elementor\Widget_Base
             }
 
             .formAndContactsContainer .formContainer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 15px;
                 background: #fff;
                 border-radius: 25px;
+                padding: 25px;
             }
 
-            .contactsContainer{
+            .formAndContactsContainer .formContainer .wpforms-container{
+                width: 100%;
+                margin: 0;
+            }
+
+            .formAndContactsContainer .formContainer .wpforms-field-row,
+            .formAndContactsContainer .formContainer .wpforms-field-medium{
+                width: 100%;
+                max-width: 100%;
+            }
+
+            
+
+            .formAndContactsContainer .contactsContainer{
                 justify-content: start;
                 align-items: start;
                 gap: 25px;
                 flex-direction: column;
             }
+
+            .formAndContactsContainer
         </style>
 
         <div class="pageWidth formAndContactsContainer">
             <div class="formContainer">
+                <h2>Contact Form</h2>
                 <?php echo do_shortcode('[wpforms id="150"]'); ?>
             </div>
             <div class="contactsContainer">
