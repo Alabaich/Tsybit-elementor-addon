@@ -164,11 +164,13 @@ class portfolio1 extends \Elementor\Widget_Base
             }
 
             .portfolioContainer .badge1 {
+                display: flex;
+                justify-content: center;
                 background-color: #2c2d2c;
                 border-radius: 0px 0px 10px 10px;
                 color: #fff;
                 padding: 30px 10px;
-                box-shadow: 0px 4px 5px #2c2d2c 25%;
+                box-shadow: 0px 4px 5px #2c2d2c;
             }
         </style>
 
