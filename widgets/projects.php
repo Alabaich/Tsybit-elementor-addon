@@ -335,33 +335,33 @@ class Projects extends \Elementor\Widget_Base
                     <section class="splide" aria-label="Our Brands" id="uniqIdForThisSection">
                         <div class="splide__track">
                             <ul class="splide__list">
-                                <?php foreach ($settings['repeater_field'] as $item) : ?>
+                                <?php
+                                foreach ($settings['repeater_field'] as $item) :
+                                ?>
                                     <li class="splide__slide">
                                         <?php if (!empty($item['urlBrandPage']['url'])) : ?>
-                                            <a href="<?php echo esc_url($item['urlBrandPage']['url']); ?>" class="slideOurBrands">
+                                            <a href="" class="slideOurBrands">
                                             <?php else : ?>
                                                 <div class="slideOurBrands">
                                                 <?php endif; ?>
                                                 <div class="textSide">
                                                     <h5><?php echo esc_html($item['title']); ?></h5>
-                                                    <img src="<?php echo esc_url($item['logo']['url']); ?>" alt="" class="logoForBrand">
+                                                    <img src="<?php echo esc_html($item['logo']['url']); ?>" alt="" class="logoForBrand">
                                                     <p class="regularText"><?php echo esc_html($item['subtitle']); ?></p>
                                                     <p><?php echo esc_html($item['description']); ?></p>
                                                     <a href="<?php echo esc_url($item['linkUrl']['url']); ?>" class="button"><?php echo esc_html($item['linkTitle']); ?></a>
                                                 </div>
                                                 <div class="bigImg" style="background-image: url(<?php echo esc_url($item['image']['url']); ?>);"></div>
-                                                <?php if (!empty($item['urlBrandPage']['url'])) : ?>
-                                            </a>
-                                        <?php else : ?>
+                                                </div>
+                                    </li>
+                                <?php
+                                endforeach;
+                                ?>
+                            </ul>
                         </div>
-                    <?php endif; ?>
-                    </li>
-                <?php endforeach; ?>
-                </ul>
+                    </section>
                 </div>
-                </section>
             </div>
-        </div>
         </div>
 
         <script>
