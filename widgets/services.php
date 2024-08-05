@@ -132,9 +132,15 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/j
 
             .servicesContainer .oneService{
                 display: flex;
+                color: #2C2D2C;
+                text-align: left;
+font-size: 16px;
+font-style: normal;
+font-weight: 200;
+line-height: 138.696%; /* 22.191px */
 width: auto;
 padding: 10px 15px;
-max-width: 400px;
+max-width: 600px;
 justify-content: center;
 align-items: center;
 gap: 10px;
