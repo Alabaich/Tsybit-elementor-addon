@@ -110,7 +110,7 @@ class customerReviews extends \Elementor\Widget_Base
             'linkText',
             [
                 'label' => esc_html__('Link text', 'elementor-addon'),
-                'type' => \Elementor\Controls_Manager::URL,
+                'type' => \Elementor\Controls_Manager::TEXTAREA,
             ]
         );
 
