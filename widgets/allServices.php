@@ -128,7 +128,17 @@ class allServices extends \Elementor\Widget_Base
 ?>
 
         <style>
+            .allServices {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
 
+            .allServices .richTextCentered .link{
+                background-color: #2c2d2c;
+                color: #F0F0F3;
+                padding: 15px 25px;
+            }
         </style>
 
         <div class="allServices pageWidth">
