@@ -107,6 +107,14 @@ class customerReviews extends \Elementor\Widget_Base
         );
 
         $this->add_control(
+            'linkText',
+            [
+                'label' => esc_html__('Link text', 'elementor-addon'),
+                'type' => \Elementor\Controls_Manager::URL,
+            ]
+        );
+
+        $this->add_control(
             'link',
             [
                 'label' => esc_html__('Link', 'elementor-addon'),
@@ -171,6 +179,10 @@ class customerReviews extends \Elementor\Widget_Base
                 width: 100%;
             }
 
+            .mainReviewContainer .link {
+                color: #2c2d2c;
+            }
+
             .mainReviewContainer .reviewBlock .review {
                 background-color: #fff;
                 justify-content: space-between;
@@ -206,8 +218,8 @@ class customerReviews extends \Elementor\Widget_Base
                 }
 
                 .mainReviewContainer {
-                margin: 50px 0px 50px 0px;
-            }
+                    margin: 50px 0px 50px 0px;
+                }
 
                 .mainReviewContainer .reviewBlock {
                     display: flex;
@@ -232,7 +244,7 @@ class customerReviews extends \Elementor\Widget_Base
                     <?php if (!empty($settings['title'])) : ?>
                         <h2><?php echo $settings['title']; ?></h2>
                     <?php endif; ?>
-                    
+
                     <?php if (!empty($settings['subtitle'])) : ?>
                         <h3 class="bottomTitle">
                             <?php echo $settings['subtitle']; ?>
@@ -279,7 +291,7 @@ class customerReviews extends \Elementor\Widget_Base
                 </div>
                 <?php if (!empty($settings['link']['url'])) : ?>
                     <a class="link" href="<?php echo esc_url($settings['link']['url']); ?>" <?php echo !empty($settings['link']['is_external']) ? 'target="_blank"' : ''; ?>>
-                        <?php echo esc_html($settings['link']['url']); ?>
+                        <?php echo esc_html($settings['linkText']); ?>
                     </a>
                 <?php endif; ?>
             </div>
