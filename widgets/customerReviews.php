@@ -205,6 +205,10 @@ class customerReviews extends \Elementor\Widget_Base
                     font-weight: lighter
                 }
 
+                .mainReviewContainer {
+                    margin: 50px 0px 50px 0px;
+                }
+                
                 .mainReviewContainer .reviewBlock {
                     display: flex;
                     flex-direction: column;
