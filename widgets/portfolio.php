@@ -15,7 +15,7 @@ class portfolio extends \Elementor\Widget_Base
 
     public function get_icon()
     {
-        return 'eicon-t-letter-bold0xe94e';
+        return 'eicon-site-logo';
     }
 
     public function get_categories()
