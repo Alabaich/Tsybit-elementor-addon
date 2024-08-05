@@ -340,7 +340,7 @@ class Projects extends \Elementor\Widget_Base
                                 ?>
                                     <li class="splide__slide">
                                         <?php if (!empty($item['urlBrandPage']['url'])) : ?>
-                                            <a href="<?php echo esc_url($item['urlBrandPage']['url']); ?>" class="slideOurBrands">
+                                            <div class="slideOurBrands">
                                             <?php else : ?>
                                                 <div class="slideOurBrands">
                                                 <?php endif; ?>
@@ -353,6 +353,7 @@ class Projects extends \Elementor\Widget_Base
                                                 </div>
                                                 <div class="bigImg" style="background-image: url(<?php echo esc_url($item['image']['url']); ?>);"></div>
                                                 </div>
+                                            </div>
                                     </li>
                                 <?php
                                 endforeach;
