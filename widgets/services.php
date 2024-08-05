@@ -63,10 +63,14 @@ class Services extends \Elementor\Widget_Base
         );
 
         $this->add_control(
-            'link',
+            'direction',
             [
-                'label' => esc_html__('Link', 'elementor-addon'),
-                'type' => \Elementor\Controls_Manager::URL,
+                'label' => esc_html__('Direction', 'elementor-addon'),
+                'type' => \Elementor\Controls_Manager::SWITCHER,
+                'label_on' => esc_html__('RTL', 'elementor-addon'),
+                'label_off' => esc_html__('LTR', 'elementor-addon'),
+                'return_value' => 'rtl',
+                'default' => 'ltr',
             ]
         );
 
@@ -106,6 +110,8 @@ class Services extends \Elementor\Widget_Base
     protected function render()
     {
         $settings = $this->get_settings_for_display();
+        $unique_id = uniqid('splide_');
+        $direction = $settings['direction'] === 'rtl' ? 'rtl' : 'ltr';
 ?>
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/js/splide.min.js"></script>
@@ -139,7 +145,7 @@ box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
 
 
         <div class="servicesContainer">
-  <div id="partnersSplide" class="splide firstBlockPartners">
+  <div id="<?php echo esc_attr($unique_id); ?>" class="splide firstBlockPartners">
     <div class="splide__track featuredProductsInner">
       <ul class="splide__list featuredProductsInnerList">
       <?php
@@ -163,7 +169,7 @@ box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
 
         <script>
   document.addEventListener('DOMContentLoaded', function () {
-    new Splide('#partnersSplide', {
+    new Splide('#<?php echo esc_attr($unique_id); ?>', {
       type: 'loop',
       drag: 'free',
       focus: 'center',
@@ -171,7 +177,7 @@ box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
       pagination: false,
       perPage: 7,
       gap: 25,
-      direction: "rtl",
+      direction: '<?php echo esc_js($direction); ?>',
       autoScroll: {
         speed: 1,
       },
