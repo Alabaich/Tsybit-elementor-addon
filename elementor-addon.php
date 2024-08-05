@@ -17,7 +17,6 @@ function register_hello_world_widget( $widgets_manager ) {
 	require_once( __DIR__ . '/widgets/heroShadowText.php' );
 	require_once( __DIR__ . '/widgets/services.php' );
 	require_once( __DIR__ . '/widgets/servicesWidget.php' );
-	require_once( __DIR__ . '/widgets/latestProjects.php' );
 	require_once( __DIR__ . '/widgets/form.php' );
 	require_once( __DIR__ . '/widgets/projects.php' );
 
@@ -28,7 +27,6 @@ function register_hello_world_widget( $widgets_manager ) {
 	$widgets_manager->register( new \heroShadowText() );
 	$widgets_manager->register( new \Services() );
 	$widgets_manager->register( new \servicesWidget() );
-	$widgets_manager->register( new \latestProjects() );
 	$widgets_manager->register( new \Form() );
 	$widgets_manager->register( new \Projects() );
 
