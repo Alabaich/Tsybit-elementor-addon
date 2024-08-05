@@ -232,37 +232,35 @@ border-radius: 25px;
     justify-content: center;
     align-items: center;
     gap: 30px;
+
+    transition: all linear 200ms;
 }
 
 .heroShadowTextContainer .buttons .buttonOne{
     background: #2C2D2C;
-    color: #FFF;
     color: #F0F0F3;
-
 text-align: center;
-
-
-
 font-family: Montserrat;
 font-size: 18px;
-
 font-weight: 500;
+}
 
+.heroShadowTextContainer .buttons .buttonOne:hover{
+    background: #000;
 }
 
 .heroShadowTextContainer .buttons .buttonTwo{
     background: #F9F9F9;
     color: #808080;
-
 text-align: center;
-
-
 font-family: Montserrat;
 font-size: 18px;
 font-weight: 300;
 box-shadow: -2px -2px 4px 0px #FFF, 2px 2px 4px 0px rgba(174, 174, 192, 0.40);
+}
 
-
+.heroShadowTextContainer .buttons .buttonTwo:hover{
+box-shadow: -3px -3px 8px 0px #FFF, 3px 3px 8px 0px rgba(174, 174, 192, 0.50);
 }
 
 .heroShadowTextContainer .regularText{
@@ -272,7 +270,8 @@ text-align: center;
 font-family: Montserrat;
 font-size: 20px;
 font-weight: 300;
-min-width: 800px;
+max-width: 800px;
+width: 100%;
 }
 
 @media screen and (max-width: 600px) {
