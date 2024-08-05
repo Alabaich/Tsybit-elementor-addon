@@ -120,6 +120,21 @@ class Projects extends \Elementor\Widget_Base
                         'label' => esc_html__('Subtitle', 'elementor-addon'),
                         'type' => \Elementor\Controls_Manager::TEXTAREA,
                     ],
+                    [
+                        'name' => 'description',
+                        'label' => esc_html__('Description', 'elementor-addon'),
+                        'type' => \Elementor\Controls_Manager::TEXTAREA,
+                    ],
+                    [
+                        'name' => 'linkTitle',
+                        'label' => esc_html__('Title Link', 'elementor-addon'),
+                        'type' => \Elementor\Controls_Manager::TEXTAREA,
+                    ],
+                    [
+                        'name' => 'linkUrl',
+                        'label' => esc_html__('Link Url', 'elementor-addon'),
+                        'type' => \Elementor\Controls_Manager::URL,
+                    ],
                 ],
             ]
         );
@@ -291,6 +306,8 @@ class Projects extends \Elementor\Widget_Base
                                                 <div class="textSide">
                                                     <h5><?php echo esc_html($item['title']); ?></h5>
                                                     <p class="regularText"><?php echo esc_html($item['subtitle']); ?></p>
+                                                    <p><?php echo esc_html($item['description']); ?></p>
+                                                    <a href="<?php echo esc_url($item['linkUrl']['url']); ?>" class="button"><?php echo esc_html($item['linkTitle']); ?></a>
                                                 </div>
                                                 <div class="bigImg" style="background-image: url(<?php echo esc_url($item['image']['url']); ?>);">
                                                     <img src="<?php echo esc_html($item['logo']['url']); ?>" alt="" class="logoForBrand">
