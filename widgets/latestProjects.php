@@ -256,34 +256,39 @@ class latestProjects extends \Elementor\Widget_Base
 
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="imageWithText">
-                                <div class="informationBlock">
-                                    <?php if (!empty($slide['slideUpperTitle'])) : ?>
-                                        <p class="upperTitle"><?php echo esc_html($slide['slideUpperTitle']); ?></p>
+                        <?php foreach ($settings['slides'] as $slide) : ?>
+                            <div class="swiper-slide">
+                                <div class="imageWithText">
+                                    <?php if (!empty($slide['slideLogo']['url'])) : ?>
+                                        <img src="<?php echo esc_url($slide['slideLogo']['url']); ?>" alt="">
                                     <?php endif; ?>
 
-                                    <?php if (!empty($slide['slideTitle'])) : ?>
-                                        <h3 class="title"><?php echo esc_html($slide['slideTitle']); ?></h3>
-                                    <?php endif; ?>
+                                    <div class="informationBlock">
+                                        <?php if (!empty($slide['slideUpperTitle'])) : ?>
+                                            <p class="upperTitle"><?php echo esc_html($slide['slideUpperTitle']); ?></p>
+                                        <?php endif; ?>
 
-                                    <?php if (!empty($slide['slideRegularText'])) : ?>
-                                        <p class="regularText"><?php echo esc_html($slide['slideRegularText']); ?></p>
-                                    <?php endif; ?>
+                                        <?php if (!empty($slide['slideTitle'])) : ?>
+                                            <h3 class="title"><?php echo esc_html($slide['slideTitle']); ?></h3>
+                                        <?php endif; ?>
 
-                                    <?php if (!empty($slide['slideDescription'])) : ?>
-                                        <p class="description"><?php echo esc_html($slide['slideDescription']); ?></p>
-                                    <?php endif; ?>
+                                        <?php if (!empty($slide['slideRegularText'])) : ?>
+                                            <p class="regularText"><?php echo esc_html($slide['slideRegularText']); ?></p>
+                                        <?php endif; ?>
 
-                                    <?php if (!empty($slide['slideLinkText']) && !empty($slide['slideLinkUrl'])) : ?>
-                                        <a class="blueButton" href="<?php echo esc_url($slide['slideLinkUrl']['url']); ?>">
-                                            <?php echo esc_html($slide['slideLinkText']); ?>
-                                        </a>
-                                    <?php endif; ?>
+                                        <?php if (!empty($slide['slideDescription'])) : ?>
+                                            <p class="description"><?php echo esc_html($slide['slideDescription']); ?></p>
+                                        <?php endif; ?>
+
+                                        <?php if (!empty($slide['slideLinkText']) && !empty($slide['slideLinkUrl']['url'])) : ?>
+                                            <a class="blueButton" href="<?php echo esc_url($slide['slideLinkUrl']['url']); ?>">
+                                                <?php echo esc_html($slide['slideLinkText']); ?>
+                                            </a>
+                                        <?php endif; ?>
+                                    </div>
                                 </div>
-                                <img src="<?php echo esc_url($settings['image']['url']); ?>" alt="">
                             </div>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
 
                     <div class="swiper-pagination"></div>
