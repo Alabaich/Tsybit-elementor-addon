@@ -42,30 +42,6 @@ class Services extends \Elementor\Widget_Base
         );
 
         $this->add_control(
-            'upperTitle',
-            [
-                'label' => esc_html__('Upper Title', 'elementor-addon'),
-                'type' => \Elementor\Controls_Manager::TEXTAREA,
-            ]
-        );
-
-        $this->add_control(
-            'title',
-            [
-                'label' => esc_html__('Title', 'elementor-addon'),
-                'type' => \Elementor\Controls_Manager::TEXTAREA,
-            ]
-        );
-
-        $this->add_control(
-            'subtitle',
-            [
-                'label' => esc_html__('Subtitle', 'elementor-addon'),
-                'type' => \Elementor\Controls_Manager::TEXTAREA,
-            ]
-        );
-
-        $this->add_control(
             'repeater_field',
             [
                 'label' => esc_html__('Review', 'elementor-addon'),
@@ -141,70 +117,6 @@ class Services extends \Elementor\Widget_Base
 https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js
 "></script>
 
-        <style>
-            .mainReviewContainer {
-                display: flex;
-                justify-content: center;
-                text-align: center;
-                align-items: center;
-                flex-direction: column;
-                gap: 25px;
-            }
-
-            .mainReviewContainer .reviewBlock {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 25px;
-                width: 100%;
-            }
-
-            .mainReviewContainer .reviewBlock .review {
-                background-color: #fff;
-                justify-content: space-between;
-                padding: 20px;
-                border-radius: 25px;
-                width: 400px;
-            }
-
-            .mainReviewContainer .reviewBlock .review .rowContainer {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                gap: 10px;
-            }
-
-            .mainReviewContainer .reviewBlock .review .rowContainer img {
-                border-radius: 23px;
-                height: 45px;
-                width: 45px;
-                object-fit: cover;
-            }
-
-            .reviewBlock .review .rowContainer .columnContainer {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-            }
-
-            @media screen and (max-width: 600px) {
-                .pageWidth .mainReviewContainer .richTextCentered h3 {
-                    font-size: 13px;
-                    font-weight: lighter
-                }
-
-                .mainReviewContainer .reviewBlock {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 15px;
-                    text-align: left;
-                }
-
-                .mainReviewContainer .reviewBlock .review {
-                    width: 100%;
-                }
-            }
-        </style>
 
         <style>
             .servicesContainer{
@@ -259,6 +171,7 @@ box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
       pagination: false,
       perPage: 7,
       gap: 25,
+      direction: "rtl",
       autoScroll: {
         speed: 1,
       },
