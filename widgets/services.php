@@ -139,6 +139,7 @@ font-style: normal;
 font-weight: 200;
 line-height: 138.696%; /* 22.191px */
 width: auto;
+min-width: 350px;
 padding: 10px 15px;
 max-width: 600px;
 justify-content: center;
@@ -182,7 +183,6 @@ box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
       focus: 'center',
       arrows: false,
       pagination: false,
-      perPage: 7,
       gap: 25,
       direction: '<?php echo esc_js($direction); ?>',
       autoScroll: {
