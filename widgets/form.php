@@ -136,7 +136,16 @@ class Form extends \Elementor\Widget_Base
 ?>
 
         <style>
+            .formAndContactsContainer .formContainer,
+            .formAndContactsContainer .contactsContainer{
+                display: flex;
+                width: 50%;
+            }
 
+            .formAndContactsContainer .formContainer{
+                background: #fff;
+                border-radius: 25px;
+            }
         </style>
 
         <div class="pageWidth formAndContactsContainer">
