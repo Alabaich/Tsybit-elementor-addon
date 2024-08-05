@@ -172,12 +172,17 @@ class allServices extends \Elementor\Widget_Base
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 25px;
+                margin-top: 20px;
             }
 
             .allServices .allServicesBlocks .oneServiceBlock {
                 background-color: #fff;
                 border-radius: 25px;
                 padding: 25px;
+            }
+
+            .allServices .allServicesBlocks .oneServiceBlock h3{
+                font-size: 18px;
             }
         </style>
 
