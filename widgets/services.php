@@ -72,28 +72,16 @@ class Services extends \Elementor\Widget_Base
                 'type' => \Elementor\Controls_Manager::REPEATER,
                 'fields' => [
                     [
-                        'name' => 'image',
-                        'label' => esc_html__('Choose Image', 'textdomain'),
-                        'type' => \Elementor\Controls_Manager::MEDIA,
-                        'default' => [
-                            'url' => \Elementor\Utils::get_placeholder_image_src(),
-                        ],
-                    ],
-                    [
-                        'name' => 'placeOfWork',
-                        'label' => esc_html__('Place of work', 'elementor-addon'),
-                        'type' => \Elementor\Controls_Manager::TEXTAREA,
-                    ],
-                    [
-                        'name' => 'name',
-                        'label' => esc_html__('Name', 'elementor-addon'),
-                        'type' => \Elementor\Controls_Manager::TEXTAREA,
-                    ],
-                    [
                         'name' => 'reviewText',
                         'label' => esc_html__('Description', 'elementor-addon'),
                         'type' => \Elementor\Controls_Manager::TEXTAREA,
                     ],
+                    [
+                        'name' => 'link',
+                        'label' => esc_html__('Link Two', 'elementor-addon'),
+                        'type' => \Elementor\Controls_Manager::URL,
+                    ],
+
                 ],
             ]
         );
@@ -218,63 +206,27 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/j
             }
         </style>
 
-        <div class="pageWidth">
-            <div class="mainReviewContainer">
-                <div class="richTextCentered">
-                    <?php if (!empty($settings['upperTitle'])) : ?>
-                        <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
-                    <?php endif; ?>
-                    <?php if (!empty($settings['title'])) : ?>
-                        <h2><?php echo $settings['title']; ?></h2>
-                    <?php endif; ?>
-                    <?php if (!empty($settings['subtitle'])) : ?>
-                        <h3 class="bottomTitle">
-                            <?php echo $settings['subtitle']; ?>
-                        </h3>
-                </div>
-            <?php endif; ?>
-            <div class="reviewBlock">
-                <?php
-                foreach ($settings['repeater_field'] as $item) :
-                ?>
-                    <div class="review">
-                        <div class="rowContainer">
-                            <?php if (!empty($item['image']['url'])) : ?>
-                                <img src="<?php echo $item['image']['url']; ?>" alt="">
-                            <?php endif; ?>
-                            <div class="columnContainer">
-                                <?php if (!empty($item['name'])) : ?>
-                                    <div class="name">
-                                        <p><?php echo $item['name']; ?> </p>
-                                    </div>
-                                <?php endif; ?>
-                                <?php if (!empty($item['placeOfWork'])) : ?>
-                                    <div class="placeOfWork">
-                                        <p><?php echo $item['placeOfWork']; ?></p>
-                                    </div>
-                                <?php endif; ?>
-                            </div>
-                        </div>
-                        <?php if (!empty($item['reviewText'])) : ?>
-                            <div class="reviewText">
-                                <p><?php echo $item['reviewText']; ?></p>
-                            </div>
-                        <?php endif; ?>
-                    </div>
-                <?php
-                endforeach;
-                ?>
-            </div>
-            <?php if (!empty($settings['link']['url'])) : ?>
-                <a class="link" href="<?php echo esc_url($settings['link']['url']); ?>" <?php echo !empty($settings['link']['is_external']) ? 'target="_blank"' : ''; ?>>
-                    <?php echo esc_html($settings['link']['url']); ?>
-                </a>
-            <?php endif; ?>
-            </div>
-        </div>
+        <style>
+            .servicesContainer{
+                width: 100vw;
+                padding: 25px 0;
+            }
+
+            .servicesContainer .oneService{
+                display: flex;
+width: 390px;
+padding: 20px 25px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 15px;
+background: #FFF;
+box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+            }
+        </style>
 
 
-        <div class="partnersOutter">
+        <div class="servicesContainer">
   <div id="partnersSplide" class="splide firstBlockPartners">
     <div class="splide__track featuredProductsInner">
       <ul class="splide__list featuredProductsInnerList">
@@ -283,10 +235,10 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/j
                 ?>
           <li class="splide__slide partnersSplide">
           <?php if (!empty($item['reviewText'])) : ?>
-                            <div class="reviewText">
-                                <p><?php echo $item['reviewText']; ?></p>
-                            </div>
-                        <?php endif; ?>  ↗
+            <a href="<?php echo esc_html($item['link']['url']); ?>" class="oneService">
+            <?php echo $item['reviewText']; ?> ↗
+            </a>
+                        <?php endif; ?>  
           </li>
           <?php
                 endforeach;
@@ -303,6 +255,8 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/j
       type: 'loop',
       drag: 'free',
       focus: 'center',
+      arrows: false,
+      pagination: false,
       perPage: 7,
       autoScroll: {
         speed: 1,
