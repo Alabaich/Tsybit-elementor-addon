@@ -148,6 +148,7 @@ class allServices extends \Elementor\Widget_Base
                 justify-content: center;
                 align-items: center;
                 text-align: center;
+                padding: 100px 0px;
             }
 
             .allServices .textSide a {
