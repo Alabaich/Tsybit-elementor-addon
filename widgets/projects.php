@@ -72,6 +72,37 @@ class Projects extends \Elementor\Widget_Base
                 'type' => \Elementor\Controls_Manager::TEXTAREA,
             ]
         );
+        $this->add_control(
+            'linkOne',
+            [
+                'label' => esc_html__('LinkOne', 'elementor-addon'),
+                'type' => \Elementor\Controls_Manager::URL,
+            ]
+        );
+
+        $this->add_control(
+            'linkOneText',
+            [
+                'label' => esc_html__('Link Text', 'elementor-addon'),
+                'type' => \Elementor\Controls_Manager::TEXTAREA,
+            ]
+        );
+
+        $this->add_control(
+            'linkTwo',
+            [
+                'label' => esc_html__('Link Two', 'elementor-addon'),
+                'type' => \Elementor\Controls_Manager::URL,
+            ]
+        );
+
+        $this->add_control(
+            'linkTwoText',
+            [
+                'label' => esc_html__('Link Two Text', 'elementor-addon'),
+                'type' => \Elementor\Controls_Manager::TEXTAREA,
+            ]
+        );
 
         $this->end_controls_section();
 
