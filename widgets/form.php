@@ -164,6 +164,7 @@ class Form extends \Elementor\Widget_Base
 
             .formAndContactsContainer .formContainer .wpforms-container{
                 width: 100%;
+                margin: 0;
             }
 
             .formAndContactsContainer .formContainer .wpforms-field-row,
