@@ -74,6 +74,14 @@ class richText extends \Elementor\Widget_Base
         );
 
         $this->add_control(
+            'linkText',
+            [
+                'label' => esc_html__('Link text', 'elementor-addon'),
+                'type' => \Elementor\Controls_Manager::TEXTAREA,
+            ]
+        );
+
+        $this->add_control(
             'link',
             [
                 'label' => esc_html__('Link', 'elementor-addon'),
@@ -193,9 +201,9 @@ class richText extends \Elementor\Widget_Base
                     </p>
                 <?php endif; ?>
 
-                <?php if (!empty($settings['link']['url'])) : ?>
-                    <a class="link" href="<?php echo esc_url($settings['link']['url']); ?>" <?php echo !empty($settings['link']['is_external']) ? 'target="_blank"' : ''; ?>>
-                        <?php echo esc_html($settings['link']['url']); ?>
+                <?php if (!empty($settings['link']['url']) && !empty($settings['linkText'])) : ?>
+                    <a class="link" href="<?php echo esc_url($settings['link']['url']); ?>">
+                        <?php echo esc_html($settings['linkText']); ?>
                     </a>
                 <?php endif; ?>
 
