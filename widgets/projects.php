@@ -246,6 +246,11 @@ class Projects extends \Elementor\Widget_Base
                 border-radius: 25px;
             }
 
+            .brandsSlider .splide__track .splide__list .splide__slide .textSide {
+                display: flex;
+                align-items: center;
+            }
+
             .brandsSlider .splide__track .splide__list .splide__slide .textSide .slideOurBrands {
                 display: flex;
                 flex-direction: column;
