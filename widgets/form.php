@@ -170,7 +170,7 @@ class Form extends \Elementor\Widget_Base
             .formAndContactsContainer .formContainer .wpforms-field-row,
             .formAndContactsContainer .formContainer .wpforms-field-medium{
                 width: 100%;
-                max-width: 100%;
+                max-width: 100% !important;
             }
 
             
