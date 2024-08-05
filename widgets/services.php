@@ -127,13 +127,14 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/j
         <style>
             .servicesContainer{
                 width: 100vw;
-                padding: 25px 0;
+                padding: 10px 0;
             }
 
             .servicesContainer .oneService{
                 display: flex;
 width: auto;
-padding: 20px 25px;
+padding: 10px 15px;
+max-width: 400px;
 justify-content: center;
 align-items: center;
 gap: 10px;
