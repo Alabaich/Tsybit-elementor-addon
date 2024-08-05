@@ -139,10 +139,13 @@ class allServices extends \Elementor\Widget_Base
                 background: #2C2D2C;
                 color: #F0F0F3;
                 text-align: center;
+                padding: 15px 25px;
+                border-radius: 25px;
                 font-family: Montserrat;
                 font-weight: 500;
                 transition: all 300ms linear;
             }
+            
         </style>
 
         <div class="allServices pageWidth">
