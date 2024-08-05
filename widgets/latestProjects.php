@@ -89,6 +89,55 @@ class latestProjects extends \Elementor\Widget_Base
             ]
         );
 
+        $this->add_control(
+            'slides',
+            [
+                'label' => esc_html__('Slides', 'elementor-addon'),
+                'type' => \Elementor\Controls_Manager::REPEATER,
+                'fields' => [
+                    [
+                        'name' => 'slideUpperTitle',
+                        'label' => esc_html__('Slide Upper Title', 'elementor-addon'),
+                        'type' => \Elementor\Controls_Manager::TEXTAREA,
+                    ],
+                    [
+                        'name' => 'slideLogo',
+                        'label' => esc_html__('Slide Logo', 'elementor-addon'),
+                        'type' => \Elementor\Controls_Manager::MEDIA,
+                        'default' => [
+                            'url' => \Elementor\Utils::get_placeholder_image_src(),
+                        ],
+                    ],
+                    [
+                        'name' => 'slideTitle',
+                        'label' => esc_html__('Slide Title', 'elementor-addon'),
+                        'type' => \Elementor\Controls_Manager::TEXTAREA,
+                    ],
+                    [
+                        'name' => 'slideRegularText',
+                        'label' => esc_html__('Slide Regular Text', 'elementor-addon'),
+                        'type' => \Elementor\Controls_Manager::TEXTAREA,
+                    ],
+                    [
+                        'name' => 'slideDescription',
+                        'label' => esc_html__('Slide Description', 'elementor-addon'),
+                        'type' => \Elementor\Controls_Manager::TEXTAREA,
+                    ],
+                    [
+                        'name' => 'slideLinkText',
+                        'label' => esc_html__('Slide Link Text', 'elementor-addon'),
+                        'type' => \Elementor\Controls_Manager::TEXTAREA,
+                    ],
+                    [
+                        'name' => 'slideLinkUrl',
+                        'label' => esc_html__('Slide Link Url', 'elementor-addon'),
+                        'type' => \Elementor\Controls_Manager::URL,
+                    ],
+                ],
+                'title_field' => '{{{ slide_title }}}',
+            ]
+        );
+
         $this->end_controls_section();
 
         // Content Tab End
@@ -207,9 +256,29 @@ class latestProjects extends \Elementor\Widget_Base
 
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">
+                            <div class="imageWithText <?php if ('yes' === $settings['switch_position']) {
+                                                            echo 'right';
+                                                        } else {
+                                                            echo 'left';
+                                                        } ?> wow fadeInUp pageWidthFG">
+                                <img src="<?php echo esc_url($settings['image']['url']); ?>" alt="" class="left">
+                                <div class="informationBlock">
+                                    <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
+                                    <h3 class="title"><?php echo $settings['title']; ?></h3>
+                                    <p class="regularText"><?php echo $settings['description']; ?></p>
+                                    <?php if ($settings['url'] != "") {
+                                    ?>
+                                        <a class="blueButton" href="<?php echo esc_url($settings['url']); ?>">
+                                            <?php echo esc_html($settings['textForButton']); ?>
+                                        </a>
+                                    <?php
+                                    }
+                                    ?>
+                                </div>
+                                <img src="<?php echo esc_url($settings['image']['url']); ?>" alt="" class="right">
+                            </div>
+                        </div>
                     </div>
 
                     <div class="swiper-pagination"></div>
