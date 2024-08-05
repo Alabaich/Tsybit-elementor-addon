@@ -15,7 +15,7 @@ class allServices extends \Elementor\Widget_Base
 
     public function get_icon()
     {
-        return 'eicon-t-letter-bold0xe94e';
+        return 'eicon-accordion';
     }
 
     public function get_categories()
@@ -74,17 +74,17 @@ class allServices extends \Elementor\Widget_Base
         );
 
         $this->add_control(
-            'linkText',
+            'buttonText',
             [
-                'label' => esc_html__('Link text', 'elementor-addon'),
+                'label' => esc_html__('Button text', 'elementor-addon'),
                 'type' => \Elementor\Controls_Manager::TEXTAREA,
             ]
         );
 
         $this->add_control(
-            'link',
+            'buttonUrl',
             [
-                'label' => esc_html__('Link', 'elementor-addon'),
+                'label' => esc_html__('Url for button', 'elementor-addon'),
                 'type' => \Elementor\Controls_Manager::URL,
             ]
         );
@@ -132,7 +132,34 @@ class allServices extends \Elementor\Widget_Base
         </style>
 
         <div class="allServices pageWidth">
+            <div class="richTextCentered">
+                <?php if (!empty($settings['upperTitle'])) : ?>
+                    <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
+                <?php endif; ?>
 
+                <?php if (!empty($settings['title'])) : ?>
+                    <h2><?php echo $settings['title']; ?></h2>
+                <?php endif; ?>
+
+                <?php if (!empty($settings['subtitle'])) : ?>
+                    <h3 class="bottomTitle">
+                        <?php echo $settings['subtitle']; ?>
+                    </h3>
+                <?php endif; ?>
+
+                <?php if (!empty($settings['regularText'])) : ?>
+                    <p class="regularText">
+                        <?php echo $settings['regularText']; ?>
+                    </p>
+                <?php endif; ?>
+
+                <?php if (!empty($settings['buttonText'])) : ?>
+                    <a class="link" href="<?php echo $settings['buttonUrl']['url']; ?>">
+                        <?php echo $settings['buttonText']; ?>
+                    </a>
+                <?php endif; ?>
+
+            </div>
         </div>
 
 <?php
