@@ -103,6 +103,14 @@ class portfolio1 extends \Elementor\Widget_Base
                             'url' => \Elementor\Utils::get_placeholder_image_src(),
                         ],
                     ],
+                    [
+                        'name' => 'number',
+                        'label' => esc_html__('Choose number 1-4', 'textdomain'),
+                        'type' => \Elementor\Controls_Manager::MEDIA,
+                        'default' => [
+                            'url' => \Elementor\Utils::get_placeholder_image_src(),
+                        ],
+                    ],
                 ],
             ]
         );
@@ -179,15 +187,11 @@ class portfolio1 extends \Elementor\Widget_Base
         </div>
 
         <div class="portfolioContainer pageWidth">
-            <?php
-            foreach ($settings['portfolio'] as $item) :
-            ?>
-                <div style="grid-column: span 4;" class="oneProject">
-                    <img src="<?php echo esc_html($item['image']['url']); ?>" alt="">
+            <?php foreach ($settings['portfolio'] as $item) : ?>
+                <div style="grid-column: span <?php echo esc_attr($item['number']); ?>;" class="oneProject">
+                    <img src="<?php echo esc_url($item['image']['url']); ?>" alt="">
                 </div>
-            <?php
-            endforeach;
-            ?>
+            <?php endforeach; ?>
         </div>
 
 <?php
