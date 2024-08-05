@@ -346,13 +346,12 @@ class Projects extends \Elementor\Widget_Base
                                                 <?php endif; ?>
                                                 <div class="textSide">
                                                     <h5><?php echo esc_html($item['title']); ?></h5>
+                                                    <img src="<?php echo esc_html($item['logo']['url']); ?>" alt="" class="logoForBrand">
                                                     <p class="regularText"><?php echo esc_html($item['subtitle']); ?></p>
                                                     <p><?php echo esc_html($item['description']); ?></p>
                                                     <a href="<?php echo esc_url($item['linkUrl']['url']); ?>" class="button"><?php echo esc_html($item['linkTitle']); ?></a>
                                                 </div>
-                                                <div class="bigImg" style="background-image: url(<?php echo esc_url($item['image']['url']); ?>);">
-                                                    <img src="<?php echo esc_html($item['logo']['url']); ?>" alt="" class="logoForBrand">
-                                                </div>
+                                                <div class="bigImg" style="background-image: url(<?php echo esc_url($item['image']['url']); ?>);"></div>
                                                 </a>
                                     </li>
                                 <?php
