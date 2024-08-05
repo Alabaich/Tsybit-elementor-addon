@@ -237,6 +237,7 @@ class Projects extends \Elementor\Widget_Base
                 justify-content: center;
                 text-align: left;
                 gap: 10px;
+                min-width: 50%;
             }
 
             .ourBrands .sliderOurBrands {
@@ -262,6 +263,10 @@ class Projects extends \Elementor\Widget_Base
 
             .ourBrands .subtitle {
                 text-align: center;
+            }
+
+            .ourBrands .projectImage{
+                max-width: 50%;
             }
 
             @media screen and (max-width: 600px) {
@@ -338,7 +343,7 @@ class Projects extends \Elementor\Widget_Base
                                                 <a href="<?php echo esc_url($item['linkUrl']['url']); ?>"
                                                     class="button"><?php echo esc_html($item['linkTitle']); ?></a>
                                             </div>
-                                            <img src="<?php echo esc_html($item['image']['url']); ?>" alt="">
+                                            <img src="<?php echo esc_html($item['image']['url']); ?>" alt="" class="projectImage">
                                         </div>
                                     </li>
                                     <?php

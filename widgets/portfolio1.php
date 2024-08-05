@@ -221,6 +221,7 @@ class portfolio1 extends \Elementor\Widget_Base
                 align-items: center;
                 min-height: 600px;
                 position: relative;
+                border-radius: 35px;
             }
 
             .portfolioContainer .badge1 {
@@ -258,11 +259,21 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 position: absolute;
-right: 135px;
+right: 155px;
 top: 0;
 border-radius: 0px 0px 6.399px 6.399px;
 box-shadow: 0px 5.119px 5.119px 0px rgba(0, 0, 0, 0.25);
 text-align: center;
+            }
+
+            @media screen and (max-width: 600px) {
+                .portfolioContainer .oneProject{
+                    grid-column: span 1;
+                }
+
+                .portfolioContainer{
+                    grid-template-columns: repeat(1, 1fr);
+                }
             }
         </style>
 
