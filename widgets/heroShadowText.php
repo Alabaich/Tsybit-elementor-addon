@@ -217,6 +217,47 @@ class heroShadowText extends \Elementor\Widget_Base
         }
 
 
+.buttons a{
+    display: flex;
+padding: 15px 25px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 25px;
+
+}
+
+.buttons .buttonOne{
+    background: #2C2D2C;
+    color: #FFF;
+    color: #F0F0F3;
+
+text-align: center;
+
+
+
+font-family: Montserrat;
+font-size: 18px;
+
+font-weight: 500;
+
+}
+
+.buttons .buttonTwo{
+    background: #F9F9F9;
+    color: #808080;
+
+text-align: center;
+
+
+font-family: Montserrat;
+font-size: 18px;
+font-weight: 300;
+box-shadow: -2px -2px 4px 0px #FFF, 2px 2px 4px 0px rgba(174, 174, 192, 0.40);
+
+
+}
+
         </style>
         <div class="heroShadowTextContainer pageWidth">
 
