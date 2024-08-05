@@ -144,6 +144,9 @@ class richText extends \Elementor\Widget_Base
             @media screen and (max-width: 600px) {
                 .richText .richTextCentered {
                     padding: 0px;
+                }
+
+                .richText .richTextCentered {
                     margin: 50px 0px 50px 0px;
                 }
 
