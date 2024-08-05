@@ -179,10 +179,6 @@ class customerReviews extends \Elementor\Widget_Base
                 width: 100%;
             }
 
-            .mainReviewContainer .link {
-                color: #2c2d2c;
-            }
-
             .mainReviewContainer .reviewBlock .review {
                 background-color: #fff;
                 justify-content: space-between;
