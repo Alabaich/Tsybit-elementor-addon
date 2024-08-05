@@ -182,7 +182,76 @@ class Form extends \Elementor\Widget_Base
                 flex-direction: column;
             }
 
-            .formAndContactsContainer
+            .formAndContactsContainer .contactsContainer .bigText{
+                color: #2C2D2C;
+font-family: Montserrat;
+font-size: 32px;
+font-weight: 700;
+            }
+
+            .formAndContactsContainer .contactsContainer .contactInfo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .formAndContactsContainer .contactsContainer ul{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+            }
+
+
+
+.formAndContactsContainer .buttons a{
+    display: flex;
+padding: 15px 25px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 25px;
+
+}
+
+.formAndContactsContainer .buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    transition: all 300ms linear ;
+}
+
+.formAndContactsContainer .buttons .buttonOne{
+    background: #2C2D2C;
+    color: #F0F0F3;
+text-align: center;
+font-family: Montserrat;
+font-size: 18px;
+font-weight: 500;
+transition: all 300ms linear ;
+}
+
+.formAndContactsContainer .buttons .buttonOne:hover{
+    background: #000;
+}
+
+.formAndContactsContainer .buttons .buttonTwo{
+    background: #F9F9F9;
+    color: #808080;
+text-align: center;
+font-family: Montserrat;
+font-size: 18px;
+font-weight: 300;
+box-shadow: -2px -2px 4px 0px #FFF, 2px 2px 4px 0px rgba(174, 174, 192, 0.40);
+transition: all 300ms linear ;
+}
+
+.formAndContactsContainer .buttons .buttonTwo:hover{
+box-shadow: -3px -3px 8px 0px #FFF, 3px 3px 8px 0px rgba(174, 174, 192, 0.50);
+}
         </style>
 
         <div class="pageWidth formAndContactsContainer">
