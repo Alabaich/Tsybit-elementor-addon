@@ -136,10 +136,19 @@ class Form extends \Elementor\Widget_Base
 ?>
 
         <style>
+            .formAndContactsContainer{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 25px;
+
+            }
+
             .formAndContactsContainer .formContainer,
             .formAndContactsContainer .contactsContainer{
                 display: flex;
-                width: 50%;
+                max-width: 50%;
+                width: 48%;
             }
 
             .formAndContactsContainer .formContainer{
