@@ -1,11 +1,11 @@
 <?php
 
-class portfolio extends \Elementor\Widget_Base
+class portfolio1 extends \Elementor\Widget_Base
 {
 
     public function get_name()
     {
-        return 'portfolio';
+        return 'portfolio1';
     }
 
     public function get_title()
