@@ -281,6 +281,12 @@ class Projects extends \Elementor\Widget_Base
                     flex-direction: column;
                 }
             }
+
+            .ourBrands .buttonTwo{
+                text-align: center;
+    display: block;
+    margin: 25px;
+            }
         </style>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/js/splide.min.js"></script>
         <link rel="stylesheet"
