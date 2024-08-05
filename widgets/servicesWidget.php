@@ -223,6 +223,12 @@ class servicesWidget extends \Elementor\Widget_Base
                         </div>
                     <?php endforeach; ?>
                 </div>
+
+                <?php if (!empty($settings['link']['url']) && !empty($settings['linkText'])) : ?>
+                    <a class="link" href="<?php echo esc_url($settings['link']['url']); ?>">
+                        <?php echo esc_html($settings['linkText']); ?>
+                    </a>
+                <?php endif; ?>
             </div>
         </div>
 
