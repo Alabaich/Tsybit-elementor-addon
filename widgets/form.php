@@ -10,12 +10,12 @@ class Form extends \Elementor\Widget_Base
 
     public function get_title()
     {
-        return esc_html__('Our Latest Projects', 'elementor-addon');
+        return esc_html__('Form And Contacts', 'elementor-addon');
     }
 
     public function get_icon()
     {
-        return 'eicon-carousel-loop';
+        return 'eicon-form-horizontal';
     }
 
     public function get_categories()
