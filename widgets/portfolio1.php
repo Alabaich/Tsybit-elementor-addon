@@ -234,7 +234,7 @@ class portfolio1 extends \Elementor\Widget_Base
                 box-shadow: 0px 4px 5px #2c2d2c;
                 top: 0px;
                 right: 40px;
-                max-width: 115px;
+                max-width: 100px;
                 text-align: center;
             }
 
@@ -252,7 +252,7 @@ backdrop-filter: blur(2.5594329833984375px);
 
             .portfolioContainer .badge2{
                 display: flex;
-                max-width: 115px;
+                max-width: 140px;
 padding: 25px 12px;
 flex-direction: column;
 justify-content: center;
@@ -272,9 +272,11 @@ text-align: center;
                 <?php if ( 'yes' === $item['badge1'] ) : ?>
                     <div class="badge1">Award Winner 2024</div>
                 <?php endif; ?>
+                <?php if (!empty($item['badge2'])) : ?>
                     <div class="badge2">
-                    <?php echo $item['badge2']; ?> 
+                        <?php echo esc_html($item['badge2']); ?> 
                     </div>
+                <?php endif; ?>
                     <div class="descriptionContainer">
                         <img src="<?php echo esc_url($item['logo']['url']); ?>" alt="" class="logo">
                         <div class="regularText">
