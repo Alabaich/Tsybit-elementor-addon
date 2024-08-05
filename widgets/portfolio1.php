@@ -160,6 +160,8 @@ class portfolio1 extends \Elementor\Widget_Base
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
                 width: 100%;
+                grid-column-gap: 25px;
+                grid-row-gap: 25px;
             }
         </style>
 
