@@ -202,6 +202,7 @@ class servicesWidget extends \Elementor\Widget_Base
             }
 
             .servicesMainSection .servicesBlock .oneServiceBlock a:hover {
+                background-color: #2c2d2c;
                 color: #fff;
             }
         </style>
