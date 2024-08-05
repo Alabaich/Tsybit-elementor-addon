@@ -246,14 +246,14 @@ class Projects extends \Elementor\Widget_Base
                 border-radius: 25px;
             }
 
-            .brandsSlider .splide__track .splide__list .splide__slide .textSide {
+            .brandsSlider .textSide {
                 display: flex;
                 align-items: start;
                 flex-direction: column;
                 justify-content: center;
             }
 
-            .ourBrands .splide__track .splide__list .splide__slide .textSide .sliderOurBrands {
+            .ourBrands .sliderOurBrands {
                 display: flex;
                 align-items: start;
                 text-align: left;
