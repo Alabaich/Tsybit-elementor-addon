@@ -150,7 +150,7 @@ class allServices extends \Elementor\Widget_Base
                 text-align: center;
             }
 
-            .allServices .richTextCentered .link {
+            .allServices .textSide .link {
                 background: #2C2D2C;
                 color: #F0F0F3;
                 text-align: center;
@@ -182,7 +182,7 @@ class allServices extends \Elementor\Widget_Base
         </style>
 
         <div class="allServices pageWidth">
-            <div class="richTextCentered">
+            <div class="textSide">
                 <?php if (!empty($settings['upperTitle'])) : ?>
                     <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
                 <?php endif; ?>
