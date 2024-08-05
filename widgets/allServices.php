@@ -144,8 +144,9 @@ class allServices extends \Elementor\Widget_Base
                 font-family: Montserrat;
                 font-weight: 500;
                 transition: all 300ms linear;
+                display: inline-flex;
             }
-            
+
         </style>
 
         <div class="allServices pageWidth">
