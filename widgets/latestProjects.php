@@ -127,6 +127,10 @@ class latestProjects extends \Elementor\Widget_Base
         $settings = $this->get_settings_for_display();
 ?>
 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.js"></script>
+
         <style>
             .pageWidth .latestProjectsContainer {
                 display: flex;
@@ -137,29 +141,51 @@ class latestProjects extends \Elementor\Widget_Base
                 gap: 15px;
                 margin: 100px 0px 100px 0px;
             }
+
+            .swiper-container {
+                width: 100%;
+                height: 300px;
+            }
         </style>
 
         <div class="pageWidth">
             <div class="latestProjectsContainer">
-                    <?php if (!empty($settings['upperTitle'])) : ?>
-                        <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
-                    <?php endif; ?>
+                <?php if (!empty($settings['upperTitle'])) : ?>
+                    <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
+                <?php endif; ?>
 
-                    <?php if (!empty($settings['title'])) : ?>
-                        <h2><?php echo $settings['title']; ?></h2>
-                    <?php endif; ?>
+                <?php if (!empty($settings['title'])) : ?>
+                    <h2><?php echo $settings['title']; ?></h2>
+                <?php endif; ?>
 
-                    <?php if (!empty($settings['subtitle'])) : ?>
-                        <h3 class="bottomTitle">
-                            <?php echo $settings['subtitle']; ?>
-                        </h3>
-                    <?php endif; ?>
+                <?php if (!empty($settings['subtitle'])) : ?>
+                    <h3 class="bottomTitle">
+                        <?php echo $settings['subtitle']; ?>
+                    </h3>
+                <?php endif; ?>
 
-                    <?php if (!empty($settings['regularText'])) : ?>
-                        <p class="regularText">
-                            <?php echo $settings['regularText']; ?>
-                        </p>
-                    <?php endif; ?>
+                <?php if (!empty($settings['regularText'])) : ?>
+                    <p class="regularText">
+                        <?php echo $settings['regularText']; ?>
+                    </p>
+                <?php endif; ?>
+
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                    </div>
+
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- Add Navigation -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+
 
                 <?php if (!empty($settings['link']['url']) && !empty($settings['linkText'])) : ?>
                     <a class="link" href="<?php echo esc_url($settings['link']['url']); ?>">
@@ -169,6 +195,22 @@ class latestProjects extends \Elementor\Widget_Base
 
             </div>
         </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var swiper = new Swiper('.swiper-container', {
+                    loop: true,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                });
+            });
+        </script>
 
 <?php
     }
