@@ -66,18 +66,34 @@ class Form extends \Elementor\Widget_Base
         );
 
         $this->add_control(
-            'linkText',
+            'linkOne',
             [
-                'label' => esc_html__('Link text', 'elementor-addon'),
+                'label' => esc_html__('LinkOne', 'elementor-addon'),
+                'type' => \Elementor\Controls_Manager::URL,
+            ]
+        );
+
+        $this->add_control(
+            'linkOneText',
+            [
+                'label' => esc_html__('Link Text', 'elementor-addon'),
                 'type' => \Elementor\Controls_Manager::TEXTAREA,
             ]
         );
 
         $this->add_control(
-            'link',
+            'linkTwo',
             [
-                'label' => esc_html__('Link', 'elementor-addon'),
+                'label' => esc_html__('Link Two', 'elementor-addon'),
                 'type' => \Elementor\Controls_Manager::URL,
+            ]
+        );
+
+        $this->add_control(
+            'linkTwoText',
+            [
+                'label' => esc_html__('Link Two Text', 'elementor-addon'),
+                'type' => \Elementor\Controls_Manager::TEXTAREA,
             ]
         );
 
