@@ -92,7 +92,7 @@ class allServices extends \Elementor\Widget_Base
         $this->add_control(
             'services',
             [
-                'label' => esc_html__('Review', 'elementor-addon'),
+                'label' => esc_html__('Services', 'elementor-addon'),
                 'type' => \Elementor\Controls_Manager::REPEATER,
                 'fields' => [
                     [
@@ -210,9 +210,9 @@ class allServices extends \Elementor\Widget_Base
                 <?php endif; ?>
 
                 <div class="allServicesBlocks">
-                <?php foreach ($settings['services'] as $service) : ?>
+                    <?php foreach ($settings['services'] as $service) : ?>
                         <div class="oneServiceBlock">
-                            <h3><?php echo $service['serviceTitle']; ?></h3>
+                            <h3><?php echo esc_html($service['serviceTitle']); ?></h3>
                         </div>
                     <?php endforeach; ?>
                 </div>
