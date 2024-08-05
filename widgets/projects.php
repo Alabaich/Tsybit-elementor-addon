@@ -351,7 +351,7 @@ class Projects extends \Elementor\Widget_Base
                                                     <p><?php echo esc_html($item['description']); ?></p>
                                                     <a href="<?php echo esc_url($item['linkUrl']['url']); ?>" class="button"><?php echo esc_html($item['linkTitle']); ?></a>
                                                 </div>
-                                                <div class="bigImg" style="background-image: url(<?php echo esc_url($item['image']['url']); ?>);"></div>
+                                                    <img src="<?php echo esc_html($item['image']['url']); ?>" alt="">
                                                 </div>
                                     </li>
                                 <?php
