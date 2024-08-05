@@ -147,6 +147,14 @@ class latestProjects extends \Elementor\Widget_Base
                 height: 300px;
                 overflow: hidden;
             }
+
+            .pageWidth .latestProjectsContainer .swiper-container .swiper-wrapper {
+                margin: 40px 0px 40px 0px;
+            }
+
+            .pageWidth .latestProjectsContainer .swiper-container .swiper-wrapper .swiper-slide {
+                text-align: center;
+            }
         </style>
 
         <div class="pageWidth">
