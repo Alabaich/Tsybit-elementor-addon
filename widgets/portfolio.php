@@ -152,34 +152,29 @@ class portfolio extends \Elementor\Widget_Base
             }
         </style>
 
-        <div class="greyBg richText pageWidth">
+        <div class="richText pageWidth">
             <div class="richTextCentered">
                 <?php if (!empty($settings['upperTitle'])) : ?>
                     <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
                 <?php endif; ?>
-
                 <?php if (!empty($settings['title'])) : ?>
                     <h2><?php echo $settings['title']; ?></h2>
                 <?php endif; ?>
-
                 <?php if (!empty($settings['subtitle'])) : ?>
                     <h3 class="bottomTitle">
                         <?php echo $settings['subtitle']; ?>
                     </h3>
                 <?php endif; ?>
-
                 <?php if (!empty($settings['regularText'])) : ?>
                     <p class="regularText">
                         <?php echo $settings['regularText']; ?>
                     </p>
                 <?php endif; ?>
-
                 <?php if (!empty($settings['link']['url']) && !empty($settings['linkText'])) : ?>
                     <a class="link" href="<?php echo esc_url($settings['link']['url']); ?>">
                         <?php echo esc_html($settings['linkText']); ?>
                     </a>
                 <?php endif; ?>
-
             </div>
         </div>
 
