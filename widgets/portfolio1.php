@@ -220,6 +220,7 @@ class portfolio1 extends \Elementor\Widget_Base
                 justify-content: center;
                 align-items: center;
                 min-height: 600px;
+                position: relative;
             }
 
             .portfolioContainer .badge1 {
@@ -233,6 +234,8 @@ class portfolio1 extends \Elementor\Widget_Base
                 box-shadow: 0px 4px 5px #2c2d2c;
                 top: 0px;
                 right: 40px;
+                max-width: 115px;
+                text-align: center;
             }
 
             .portfolioContainer .descriptionContainer{
@@ -249,14 +252,17 @@ backdrop-filter: blur(2.5594329833984375px);
 
             .portfolioContainer .badge2{
                 display: flex;
-padding: 25px 12;
+                max-width: 115px;
+padding: 25px 12px;
 flex-direction: column;
 justify-content: center;
 align-items: center;
 position: absolute;
 right: 135px;
+top: 0;
 border-radius: 0px 0px 6.399px 6.399px;
 box-shadow: 0px 5.119px 5.119px 0px rgba(0, 0, 0, 0.25);
+text-align: center;
             }
         </style>
 
