@@ -150,7 +150,7 @@ class allServices extends \Elementor\Widget_Base
                 text-align: center;
             }
 
-            .allServices .textSide .link {
+            .allServices .textSide a {
                 background: #2C2D2C;
                 color: #F0F0F3;
                 text-align: center;
@@ -162,7 +162,7 @@ class allServices extends \Elementor\Widget_Base
                 display: inline-flex;
             }
 
-            .allServices .richTextCentered .link:hover {
+            .allServices .richTextCentered a:hover {
                 background-color: #F0F0F3;
                 color: #2C2D2C;
             }
@@ -210,7 +210,10 @@ class allServices extends \Elementor\Widget_Base
 
                 <?php if (!empty($settings['buttonText'])) : ?>
                     <a class="link" href="<?php echo $settings['buttonUrl']['url']; ?>">
-                        <?php echo $settings['buttonText']; ?>
+                        <?php echo $settings['buttonText']; ?> <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.74253 1.18198H3.37857M9.74253 1.18198V7.54594M9.74253 1.18198L4.17406 6.75045M1.25725 9.66726L2.58307 8.34144" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
                     </a>
                 <?php endif; ?>
 
