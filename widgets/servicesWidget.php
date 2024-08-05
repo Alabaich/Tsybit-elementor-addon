@@ -73,6 +73,58 @@ class servicesWidget extends \Elementor\Widget_Base
             ]
         );
 
+        $this->add_control(
+            'repeater_field',
+            [
+                'label' => esc_html__('Review', 'elementor-addon'),
+                'type' => \Elementor\Controls_Manager::REPEATER,
+                'fields' => [
+                    [
+                        'name' => 'serviceTitle',
+                        'label' => esc_html__('Service Title', 'elementor-addon'),
+                        'type' => \Elementor\Controls_Manager::TEXTAREA,
+                    ],
+                    [
+                        'name' => 'description',
+                        'label' => esc_html__('Description', 'elementor-addon'),
+                        'type' => \Elementor\Controls_Manager::TEXTAREA,
+                    ],
+                    [
+                        'name' => 'estimatedPrice',
+                        'label' => esc_html__('Estimated Price', 'elementor-addon'),
+                        'type' => \Elementor\Controls_Manager::TEXTAREA,
+                    ],
+                    [
+                        'name' => 'linkText',
+                        'label' => esc_html__('Link text', 'elementor-addon'),
+                        'type' => \Elementor\Controls_Manager::TEXTAREA,
+                    ],
+                    [
+                        'name' => 'link',
+                        'label' => esc_html__('Link', 'elementor-addon'),
+                        'type' => \Elementor\Controls_Manager::URL,
+                    ],
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'linkText',
+            [
+                'label' => esc_html__('Link text', 'elementor-addon'),
+                'type' => \Elementor\Controls_Manager::TEXTAREA,
+            ]
+        );
+
+        $this->add_control(
+            'link',
+            [
+                'label' => esc_html__('Link', 'elementor-addon'),
+                'type' => \Elementor\Controls_Manager::URL,
+            ]
+        );
+
+
         $this->end_controls_section();
 
         // Content Tab End
@@ -112,11 +164,53 @@ class servicesWidget extends \Elementor\Widget_Base
 ?>
 
         <style>
+            .servicesMainSection {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 25px;
+                margin: 100px 0px 100px 0px;
+            }
 
+            .servicesMainSection .oneServiceBlock {
+                flex-wrap: wrap;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 25px;
+            }
         </style>
 
         <div class="pageWidth">
+            <div class="servicesMainSection">
+                <div class="richTextCentered">
+                    <?php if (!empty($settings['upperTitle'])) : ?>
+                        <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
+                    <?php endif; ?>
 
+                    <?php if (!empty($settings['title'])) : ?>
+                        <h2><?php echo $settings['title']; ?></h2>
+                    <?php endif; ?>
+
+                    <?php if (!empty($settings['subtitle'])) : ?>
+                        <h3 class="bottomTitle">
+                            <?php echo $settings['subtitle']; ?>
+                        </h3>
+                    <?php endif; ?>
+
+                    <?php if (!empty($settings['regularText'])) : ?>
+                        <p class="regularText">
+                            <?php echo $settings['regularText']; ?>
+                        </p>
+                    <?php endif; ?>
+                </div>
+
+                <div class="oneServiceBlock">
+                        
+                </div>
+            </div>
         </div>
 
 <?php
