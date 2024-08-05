@@ -140,6 +140,57 @@ class latestProjects extends \Elementor\Widget_Base
 
         $this->end_controls_section();
 
+        $this->start_controls_section(
+            'sliderSection',
+            [
+                'label' => esc_html__('Slider', 'elementor-addon'),
+                'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+            ]
+        );
+
+        $this->add_control(
+            'repeater_field',
+            [
+                'label' => esc_html__('Blocks', 'elementor-addon'),
+                'type' => \Elementor\Controls_Manager::REPEATER,
+                'fields' => [
+                    [
+                        'name' => 'urlBrandPage',
+                        'label' => esc_html__('Url to Brand Page', 'elementor-addon'),
+                        'type' => \Elementor\Controls_Manager::URL,
+                    ],
+                    [
+                        'name' => 'image',
+                        'label' => esc_html__('Choose Image', 'textdomain'),
+                        'type' => \Elementor\Controls_Manager::MEDIA,
+                        'default' => [
+                            'url' => \Elementor\Utils::get_placeholder_image_src(),
+                        ],
+                    ],
+                    [
+                        'name' => 'logo',
+                        'label' => esc_html__('Choose logo', 'textdomain'),
+                        'type' => \Elementor\Controls_Manager::MEDIA,
+                        'default' => [
+                            'url' => \Elementor\Utils::get_placeholder_image_src(),
+                        ],
+                    ],
+                    [
+                        'name' => 'title',
+                        'label' => esc_html__('Title', 'elementor-addon'),
+                        'type' => \Elementor\Controls_Manager::TEXTAREA,
+                    ],
+                    [
+                        'name' => 'subtitle',
+                        'label' => esc_html__('Subtitle', 'elementor-addon'),
+                        'type' => \Elementor\Controls_Manager::TEXTAREA,
+                    ],
+                ],
+            ]
+        );
+
+        $this->end_controls_section();
+
         // Content Tab End
 
         // Style Tab Start
