@@ -255,17 +255,8 @@ class Projects extends \Elementor\Widget_Base
 
             .brandsSlider .splide__track .splide__list .splide__slide .textSide .slideOurBrands {
                 display: flex;
-                flex-direction: column;
                 align-items: start;
                 text-align: left;
-            }
-
-            .slideOurBrands {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                gap: 10px;
             }
 
             .ourBrands .bigImg {
@@ -340,7 +331,7 @@ class Projects extends \Elementor\Widget_Base
                                 foreach ($settings['repeater_field'] as $item):
                                     ?>
                                     <li class="splide__slide">
-                                        <div class="slideOurBrands">
+                                        <div class="sliderOurBrands">
                                             <div class="textSide">
                                                 <h5><?php echo esc_html($item['title']); ?></h5>
                                                 <img src="<?php echo esc_html($item['logo']['url']); ?>" alt=""
