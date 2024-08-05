@@ -233,7 +233,7 @@ border-radius: 25px;
     align-items: center;
     gap: 30px;
 
-    transition: all linear 200ms;
+    transition: all 300ms linear ;
 }
 
 .heroShadowTextContainer .buttons .buttonOne{
