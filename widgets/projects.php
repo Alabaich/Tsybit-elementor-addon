@@ -252,6 +252,7 @@ class Projects extends \Elementor\Widget_Base
                 flex-direction: column;
                 justify-content: center;
                 text-align: left;
+                gap: 15px;
             }
 
             .ourBrands .sliderOurBrands {
