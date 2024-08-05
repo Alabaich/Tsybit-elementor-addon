@@ -89,6 +89,21 @@ class allServices extends \Elementor\Widget_Base
             ]
         );
 
+        $this->add_control(
+            'services',
+            [
+                'label' => esc_html__('Review', 'elementor-addon'),
+                'type' => \Elementor\Controls_Manager::REPEATER,
+                'fields' => [
+                    [
+                        'name' => 'serviceTitle',
+                        'label' => esc_html__('Service Title', 'elementor-addon'),
+                        'type' => \Elementor\Controls_Manager::TEXTAREA,
+                    ],
+                ],
+            ]
+        );
+
         $this->end_controls_section();
 
         // Content Tab End
@@ -147,6 +162,23 @@ class allServices extends \Elementor\Widget_Base
                 display: inline-flex;
             }
 
+            .allServices .richTextCentered .link:hover {
+                background-color: #F0F0F3;
+                color: #2C2D2C;
+            }
+
+            .allServices .allServicesBlocks {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 25px;
+            }
+
+            .allServices .allServicesBlocks .oneServiceBlock {
+                background-color: #fff;
+                border-radius: 25px;
+                padding: 25px;
+            }
         </style>
 
         <div class="allServices pageWidth">
@@ -176,6 +208,14 @@ class allServices extends \Elementor\Widget_Base
                         <?php echo $settings['buttonText']; ?>
                     </a>
                 <?php endif; ?>
+
+                <div class="allServicesBlocks">
+                <?php foreach ($settings['services'] as $service) : ?>
+                        <div class="oneServiceBlock">
+                            <h3><?php echo $service['serviceTitle']; ?></h3>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
 
             </div>
         </div>

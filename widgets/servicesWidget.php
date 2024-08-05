@@ -179,7 +179,6 @@ class servicesWidget extends \Elementor\Widget_Base
             }
 
             .servicesMainSection .servicesBlock {
-                flex-wrap: wrap;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
@@ -187,7 +186,7 @@ class servicesWidget extends \Elementor\Widget_Base
             }
 
             .servicesMainSection .servicesBlock .oneServiceBlock {
-                background-color: #fff;
+                background-color: #F0F0F3;
                 padding: 20px;
                 border-radius: 25px;
                 width: 400px;
@@ -203,7 +202,7 @@ class servicesWidget extends \Elementor\Widget_Base
 
             .servicesMainSection .servicesBlock .oneServiceBlock a:hover {
                 background-color: #2c2d2c;
-                color: #fff;
+                color: #F0F0F3;
             }
         </style>
 
