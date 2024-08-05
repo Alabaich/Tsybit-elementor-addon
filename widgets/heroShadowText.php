@@ -243,6 +243,7 @@ text-align: center;
 font-family: Montserrat;
 font-size: 18px;
 font-weight: 500;
+transition: all 300ms linear ;
 }
 
 .heroShadowTextContainer .buttons .buttonOne:hover{
@@ -257,6 +258,7 @@ font-family: Montserrat;
 font-size: 18px;
 font-weight: 300;
 box-shadow: -2px -2px 4px 0px #FFF, 2px 2px 4px 0px rgba(174, 174, 192, 0.40);
+transition: all 300ms linear ;
 }
 
 .heroShadowTextContainer .buttons .buttonTwo:hover{
