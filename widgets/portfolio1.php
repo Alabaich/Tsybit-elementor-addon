@@ -159,6 +159,7 @@ class portfolio1 extends \Elementor\Widget_Base
             .portfolioContainer {
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
+                width: 100%;
             }
         </style>
 
