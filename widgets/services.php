@@ -258,6 +258,7 @@ box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
       arrows: false,
       pagination: false,
       perPage: 7,
+      gap: 25,
       autoScroll: {
         speed: 1,
       },
