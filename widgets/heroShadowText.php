@@ -69,7 +69,7 @@ class heroShadowText extends \Elementor\Widget_Base
             'regularText',
             [
                 'label' => esc_html__('Regular Text', 'elementor-addon'),
-                'type' => \Elementor\Controls_Manager::WYSIWYG,
+                'type' => \Elementor\Controls_Manager::TEXTAREA,
             ]
         );
 
