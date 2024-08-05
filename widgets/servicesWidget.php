@@ -74,7 +74,7 @@ class servicesWidget extends \Elementor\Widget_Base
         );
 
         $this->add_control(
-            'repeater_field',
+            'services',
             [
                 'label' => esc_html__('Review', 'elementor-addon'),
                 'type' => \Elementor\Controls_Manager::REPEATER,
@@ -207,8 +207,15 @@ class servicesWidget extends \Elementor\Widget_Base
                     <?php endif; ?>
                 </div>
 
-                <div class="oneServiceBlock">
-                        
+                <div class="servicesBlock">
+                    <?php foreach ($settings['services'] as $service) : ?>
+                        <div class="oneServiceBlock">
+                            <h3><?php echo $service['service_title']; ?></h3>
+                            <p><?php echo $service['description']; ?></p>
+                            <p><?php echo $service['estimated_price']; ?></p>
+                            <a href="<?php echo $service['link']['url']; ?>"><?php echo $service['link_text']; ?></a>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
