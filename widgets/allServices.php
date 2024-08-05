@@ -170,6 +170,10 @@ class allServices extends \Elementor\Widget_Base
                 border: 1px solid #2c2d2c;
             }
 
+            .allServices .textSide .link:hover svg {
+                border: #2c2d2c;
+            }
+
             .allServices .allServicesBlocks {
                 display: flex;
                 flex-wrap: wrap;
@@ -186,14 +190,6 @@ class allServices extends \Elementor\Widget_Base
 
             .allServices .allServicesBlocks .oneServiceBlock h3 {
                 font-size: 18px;
-            }
-
-            .allServices .textSide a:hover .icon path {
-                stroke: #2C2D2C;
-            }
-
-            .allServices .textSide a .icon path {
-                stroke: #F0F0F3;
             }
         </style>
 
