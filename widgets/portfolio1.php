@@ -1,21 +1,21 @@
 <?php
 
-class portfolio1 extends \Elementor\Widget_Base
+class portfolio extends \Elementor\Widget_Base
 {
 
     public function get_name()
     {
-        return 'portfolio1';
+        return 'portfolio';
     }
 
     public function get_title()
     {
-        return esc_html__('portfolio1', 'elementor-addon');
+        return esc_html__('Portfolio', 'elementor-addon');
     }
 
     public function get_icon()
     {
-        return 'eicon-t-letter-bold0xe94e';
+        return 'eicon-site-logo';
     }
 
     public function get_categories()
@@ -89,6 +89,24 @@ class portfolio1 extends \Elementor\Widget_Base
             ]
         );
 
+        $this->add_control(
+            'portfolio',
+            [
+                'label' => esc_html__('Blocks', 'elementor-addon'),
+                'type' => \Elementor\Controls_Manager::REPEATER,
+                'fields' => [
+                    [
+                        'name' => 'image',
+                        'label' => esc_html__('Choose Image', 'textdomain'),
+                        'type' => \Elementor\Controls_Manager::MEDIA,
+                        'default' => [
+                            'url' => \Elementor\Utils::get_placeholder_image_src(),
+                        ],
+                    ],
+                ],
+            ]
+        );
+
         $this->end_controls_section();
 
         // Content Tab End
@@ -128,54 +146,9 @@ class portfolio1 extends \Elementor\Widget_Base
 ?>
 
         <style>
-            .richText .bottomTitle {
-                font-weight: 500;
-            }
-
-            .richText .richTextCentered {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 10px;
-                margin: 100px 0px 100px 0px;
-            }
-
-            .richText .richTextCentered .link {
-                color: #2c2d2c;
-            }
-
-            .richTextCentered * {
-                max-width: 800px;
-            }
-
-            @media screen and (max-width: 600px) {
-                .richText .richTextCentered {
-                    padding: 0px;
-                }
-
-                .richText .richTextCentered {
-                    margin: 50px 0px 50px 0px;
-                }
-
-                .richText .upperTitle {
-                    justify-content: center;
-                    font-size: 10px;
-                }
-
-                .richText h2 {
-                    text-align: center;
-                }
-
-                .richText .bottomTitle {
-                    font-size: 1em;
-                    justify-content: center;
-                    text-align: center;
-                }
-
-                .richText .regularText {
-                    text-align: center;
-                }
+            .portfolioContainer {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
             }
         </style>
 
@@ -184,30 +157,37 @@ class portfolio1 extends \Elementor\Widget_Base
                 <?php if (!empty($settings['upperTitle'])) : ?>
                     <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
                 <?php endif; ?>
-
                 <?php if (!empty($settings['title'])) : ?>
                     <h2><?php echo $settings['title']; ?></h2>
                 <?php endif; ?>
-
                 <?php if (!empty($settings['subtitle'])) : ?>
                     <h3 class="bottomTitle">
                         <?php echo $settings['subtitle']; ?>
                     </h3>
                 <?php endif; ?>
-
                 <?php if (!empty($settings['regularText'])) : ?>
                     <p class="regularText">
                         <?php echo $settings['regularText']; ?>
                     </p>
                 <?php endif; ?>
-
                 <?php if (!empty($settings['link']['url']) && !empty($settings['linkText'])) : ?>
                     <a class="link" href="<?php echo esc_url($settings['link']['url']); ?>">
                         <?php echo esc_html($settings['linkText']); ?>
                     </a>
                 <?php endif; ?>
-
             </div>
+        </div>
+
+        <div class="portfolioContainer pageWidth">
+            <?php
+            foreach ($settings['portfolio'] as $item) :
+            ?>
+                <div style="grid-area: 1 / 1 / 2 / 5;" class="oneProject">
+                    <img src="<?php echo esc_html($item['image']['url']); ?>" alt="">
+                </div>
+            <?php
+            endforeach;
+            ?>
         </div>
 
 <?php
