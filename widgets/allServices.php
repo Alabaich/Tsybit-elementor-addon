@@ -164,7 +164,7 @@ class allServices extends \Elementor\Widget_Base
                 transition: background-color 300ms linear, color 300ms linear;
             }
 
-            .allServices .richTextCentered a:hover {
+            .allServices .textSide a:hover {
                 background-color: #F0F0F3;
                 color: #2C2D2C;
             }
