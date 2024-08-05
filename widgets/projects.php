@@ -255,8 +255,8 @@ class Projects extends \Elementor\Widget_Base
 
             .ourBrands .sliderOurBrands {
                 display: flex;
-                align-items: start;
-                text-align: left;
+                align-items: center;
+                text-align: center;
             }
 
             .ourBrands .bigImg {
