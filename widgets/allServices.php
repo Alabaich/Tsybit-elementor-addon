@@ -172,7 +172,7 @@ class allServices extends \Elementor\Widget_Base
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 25px;
-                margin: 20px 76px 0px;
+                margin: 20px 100px 0px;
             }
 
             .allServices .allServicesBlocks .oneServiceBlock {
