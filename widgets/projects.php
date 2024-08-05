@@ -253,7 +253,7 @@ class Projects extends \Elementor\Widget_Base
                 justify-content: center;
             }
 
-            .brandsSlider .splide__track .splide__list .splide__slide .textSide .slideOurBrands {
+            .brandsSlider .splide__track .splide__list .splide__slide .textSide .sliderOurBrands {
                 display: flex;
                 align-items: start;
                 text-align: left;
