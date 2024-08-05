@@ -272,6 +272,13 @@ text-align: center;
                     grid-template-columns: repeat(1, 1fr);
                 }
             }
+
+            .portfolioContainer .timeAndDate{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+            }
         </style>
 
         <div class="portfolioContainer pageWidth">
