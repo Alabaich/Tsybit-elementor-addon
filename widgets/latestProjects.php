@@ -282,7 +282,7 @@ class latestProjects extends \Elementor\Widget_Base
                                         </a>
                                     <?php endif; ?>
                                 </div>
-                                <img src="<?php echo esc_url($settings['image']['url']); ?>" alt="" class="right">
+                                <img src="<?php echo esc_url($settings['image']['url']); ?>" alt="">
                             </div>
                         </div>
                     </div>
