@@ -182,7 +182,7 @@ class portfolio1 extends \Elementor\Widget_Base
             <?php
             foreach ($settings['portfolio'] as $item) :
             ?>
-                <div style="grid-area: 1 / 1 / 2 / 5;" class="oneProject">
+                <div style="grid-column: span 4;" class="oneProject">
                     <img src="<?php echo esc_html($item['image']['url']); ?>" alt="">
                 </div>
             <?php
