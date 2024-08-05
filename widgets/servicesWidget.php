@@ -174,12 +174,18 @@ class servicesWidget extends \Elementor\Widget_Base
                 margin: 100px 0px 100px 0px;
             }
 
-            .servicesMainSection .oneServiceBlock {
+            .servicesMainSection .servicesBlock {
                 flex-wrap: wrap;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 25px;
+            }
+            .servicesMainSection .servicesBlock .oneServiceBlock {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 25px;
+                width: 400px;
             }
         </style>
 
