@@ -15,7 +15,7 @@ class latestProjects extends \Elementor\Widget_Base
 
     public function get_icon()
     {
-        return 'eicon-t-letter-bold0xe94e';
+        return 'eicon-carousel-loop';
     }
 
     public function get_categories()
@@ -131,7 +131,29 @@ class latestProjects extends \Elementor\Widget_Base
 
         </style>
 
-        <div class="greyBg richText pageWidth">
+        <div class="pageWidth">
+            <div class="latestProjectsContainer">
+                <div class="richTextCentered">
+                    <?php if (!empty($settings['upperTitle'])) : ?>
+                        <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
+                    <?php endif; ?>
+
+                    <?php if (!empty($settings['title'])) : ?>
+                        <h2><?php echo $settings['title']; ?></h2>
+                    <?php endif; ?>
+
+                    <?php if (!empty($settings['subtitle'])) : ?>
+                        <h3 class="bottomTitle">
+                            <?php echo $settings['subtitle']; ?>
+                        </h3>
+                    <?php endif; ?>
+
+                    <?php if (!empty($settings['regularText'])) : ?>
+                        <p class="regularText">
+                            <?php echo $settings['regularText']; ?>
+                        </p>
+                    <?php endif; ?>
+                </div>
 
                 <?php if (!empty($settings['link']['url']) && !empty($settings['linkText'])) : ?>
                     <a class="link" href="<?php echo esc_url($settings['link']['url']); ?>">
@@ -139,6 +161,7 @@ class latestProjects extends \Elementor\Widget_Base
                     </a>
                 <?php endif; ?>
 
+            </div>
         </div>
 
 <?php
