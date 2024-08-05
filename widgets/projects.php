@@ -207,7 +207,7 @@ class Projects extends \Elementor\Widget_Base
                 padding: 15px;
             }
 
-            .brandsSlider .splide__track .splide__list .splide__slide a {
+            .brandsSlider .splide__track .splide__list .splide__slide {
                 display: flex;
                 flex-direction: row;
             }
