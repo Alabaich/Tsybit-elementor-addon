@@ -154,6 +154,7 @@ class latestProjects extends \Elementor\Widget_Base
 
             .pageWidth .latestProjectsContainer .swiper-container .swiper-wrapper .swiper-slide {
                 text-align: center;
+                background-color: #fff;
             }
         </style>
 
