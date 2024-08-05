@@ -112,7 +112,6 @@ class portfolio1 extends \Elementor\Widget_Base
                         'max' => 4,
                         'step' => 1,
                     ],
-
                 ],
             ]
         );
@@ -163,6 +162,12 @@ class portfolio1 extends \Elementor\Widget_Base
                 grid-column-gap: 25px;
                 grid-row-gap: 25px;
             }
+
+            .portfolioContainer .badge1 {
+                background-color: #2c2d2c;
+                border-radius: 0px 0px 10px 10px;
+                box-shadow: 0px 4px 5px #2c2d2c 25%;
+            }
         </style>
 
         <div class="richText pageWidth">
@@ -195,6 +200,7 @@ class portfolio1 extends \Elementor\Widget_Base
             <?php foreach ($settings['portfolio'] as $item) : ?>
                 <div style="grid-column: span <?php echo esc_attr($item['number']); ?>;" class="oneProject">
                     <img src="<?php echo esc_url($item['image']['url']); ?>" alt="">
+                    <div class="badge1">Award Winner 2024</div>
                 </div>
             <?php endforeach; ?>
         </div>
