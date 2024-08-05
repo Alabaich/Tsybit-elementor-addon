@@ -196,6 +196,7 @@ class servicesWidget extends \Elementor\Widget_Base
             .servicesMainSection .servicesBlock .oneServiceBlock a{
                 border: 2px solid #2c2d2c;
                 border-radius: 25px;
+                padding: 10px 10px;
             }
         </style>
 
