@@ -187,6 +187,12 @@ class portfolio1 extends \Elementor\Widget_Base
                 grid-row-gap: 25px;
             }
 
+            .portfolioContainer .logo{
+                width: 100%;
+                max-height: 30px;
+                object-fit: contain;
+            }
+
             .portfolioContainer .oneProject{
                 display: flex;
                 justify-content: center;
