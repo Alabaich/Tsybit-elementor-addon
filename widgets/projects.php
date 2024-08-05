@@ -192,9 +192,13 @@ class Projects extends \Elementor\Widget_Base
                 padding: 15px;
             }
 
-            .brandsSlider .splide__track .splide__list .splide__slide a{
+            .brandsSlider .splide__track .splide__list .splide__slide a {
                 display: flex;
                 flex-direction: row;
+            }
+            .brandsSlider .splide__track .splide__list .splide__slide .textSide {
+                display: flex;
+                flex-direction: column;
             }
 
             .slideOurBrands {
@@ -223,7 +227,7 @@ class Projects extends \Elementor\Widget_Base
                 padding-bottom: 25px;
             }
 
-            .ourBrands .subtitle{
+            .ourBrands .subtitle {
                 text-align: center;
             }
 
@@ -247,29 +251,29 @@ class Projects extends \Elementor\Widget_Base
         <div class="pageWidth">
             <div class="ourBrands">
                 <div class="textContainerCentered">
-                <?php if (!empty($settings['upperTitle'])): ?>
-                <p class="upperTitle">
-                    <?php echo $settings['upperTitle']; ?>
-                </p>
-            <?php endif; ?>
+                    <?php if (!empty($settings['upperTitle'])) : ?>
+                        <p class="upperTitle">
+                            <?php echo $settings['upperTitle']; ?>
+                        </p>
+                    <?php endif; ?>
 
-            <?php if (!empty($settings['title'])): ?>
-                <h2>
-                    <?php echo $settings['title']; ?>
-                </h2>
-            <?php endif; ?>
+                    <?php if (!empty($settings['title'])) : ?>
+                        <h2>
+                            <?php echo $settings['title']; ?>
+                        </h2>
+                    <?php endif; ?>
 
-            <?php if (!empty($settings['subtitle'])): ?>
-                <h4 class="subtitle">
-                    <?php echo $settings['subtitle']; ?>
-                </h4>
-            <?php endif; ?>
+                    <?php if (!empty($settings['subtitle'])) : ?>
+                        <h4 class="subtitle">
+                            <?php echo $settings['subtitle']; ?>
+                        </h4>
+                    <?php endif; ?>
 
-            <?php if (!empty($settings['description'])): ?>
-                <p class="regularText">
-                    <?php echo $settings['description']; ?>
-                </p>
-            <?php endif; ?>
+                    <?php if (!empty($settings['description'])) : ?>
+                        <p class="regularText">
+                            <?php echo $settings['description']; ?>
+                        </p>
+                    <?php endif; ?>
                 </div>
 
                 <div class="brandsSlider">
@@ -280,17 +284,19 @@ class Projects extends \Elementor\Widget_Base
                                 foreach ($settings['repeater_field'] as $item) :
                                 ?>
                                     <li class="splide__slide">
-                                    <?php if (!empty($item['urlBrandPage']['url'])) : ?>
-                                        <a href="<?php echo esc_url($item['urlBrandPage']['url']); ?>" class="slideOurBrands">
-                                    <?php else : ?>
-                                        <a class="slideOurBrands">
-                                    <?php endif; ?>
-                                            <div class="bigImg" style="background-image: url(<?php echo esc_url($item['image']['url']); ?>);">
-                                                <img src="<?php echo esc_html($item['logo']['url']); ?>" alt="" class="logoForBrand">
-                                            </div>
-                                            <h5><?php echo esc_html($item['title']); ?></h5>
-                                            <p class="regularText"><?php echo esc_html($item['subtitle']); ?></p>
-                                        </a>
+                                        <?php if (!empty($item['urlBrandPage']['url'])) : ?>
+                                            <a href="<?php echo esc_url($item['urlBrandPage']['url']); ?>" class="slideOurBrands">
+                                            <?php else : ?>
+                                                <a class="slideOurBrands">
+                                                <?php endif; ?>
+                                                <div class="bigImg" style="background-image: url(<?php echo esc_url($item['image']['url']); ?>);">
+                                                    <img src="<?php echo esc_html($item['logo']['url']); ?>" alt="" class="logoForBrand">
+                                                </div>
+                                                <div class="textSide">
+                                                    <h5><?php echo esc_html($item['title']); ?></h5>
+                                                    <p class="regularText"><?php echo esc_html($item['subtitle']); ?></p>
+                                                </div>
+                                                </a>
                                     </li>
                                 <?php
                                 endforeach;
