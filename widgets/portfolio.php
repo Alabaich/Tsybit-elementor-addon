@@ -185,7 +185,7 @@ class portfolio extends \Elementor\Widget_Base
 
         <div class="portfolioContainer pageWidth">
             <?php
-            foreach ($settings['repeater_field'] as $item) :
+            foreach ($settings['portfolio'] as $item) :
             ?>
                 <div style="grid-area: 1 / 1 / 2 / 5;" class="oneProject">
                     <img src="<?php echo esc_html($item['image']['url']); ?>" alt="">
