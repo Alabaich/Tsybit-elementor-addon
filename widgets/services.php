@@ -127,7 +127,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/j
         <style>
             .servicesContainer{
                 width: 100vw;
-                padding: 10px 0;
+                padding: 5px 0;
             }
 
             .servicesContainer .oneService{
