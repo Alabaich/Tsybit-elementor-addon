@@ -187,6 +187,13 @@ class portfolio1 extends \Elementor\Widget_Base
                 grid-row-gap: 25px;
             }
 
+            .portfolioContainer .oneProject{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 600px;
+            }
+
             .portfolioContainer .badge1 {
                 position: absolute;
                 display: flex;
