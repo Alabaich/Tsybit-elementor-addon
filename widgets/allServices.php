@@ -160,7 +160,7 @@ class allServices extends \Elementor\Widget_Base
                 border-radius: 25px;
                 font-weight: 500;
                 gap: 10px;
-                transition: all 300ms linear;
+                transition: background-color 300ms linear, color 300ms linear;
             }
 
             .allServices .richTextCentered a:hover {
