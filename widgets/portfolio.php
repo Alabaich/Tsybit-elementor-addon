@@ -96,40 +96,12 @@ class portfolio extends \Elementor\Widget_Base
                 'type' => \Elementor\Controls_Manager::REPEATER,
                 'fields' => [
                     [
-                        'name' => 'urlBrandPage',
-                        'label' => esc_html__('Url to Brand Page', 'elementor-addon'),
-                        'type' => \Elementor\Controls_Manager::URL,
-                    ],
-                    [
                         'name' => 'image',
                         'label' => esc_html__('Choose Image', 'textdomain'),
                         'type' => \Elementor\Controls_Manager::MEDIA,
                         'default' => [
                             'url' => \Elementor\Utils::get_placeholder_image_src(),
                         ],
-                    ],
-                    [
-                        'name' => 'logo',
-                        'label' => esc_html__('Choose logo', 'textdomain'),
-                        'type' => \Elementor\Controls_Manager::MEDIA,
-                        'default' => [
-                            'url' => \Elementor\Utils::get_placeholder_image_src(),
-                        ],
-                    ],
-                    [
-                        'name' => 'title',
-                        'label' => esc_html__('Title', 'elementor-addon'),
-                        'type' => \Elementor\Controls_Manager::TEXTAREA,
-                    ],
-                    [
-                        'name' => 'subtitle',
-                        'label' => esc_html__('Subtitle', 'elementor-addon'),
-                        'type' => \Elementor\Controls_Manager::TEXTAREA,
-                    ],
-                    [
-                        'name' => 'description',
-                        'label' => esc_html__('Description', 'elementor-addon'),
-                        'type' => \Elementor\Controls_Manager::TEXTAREA,
                     ],
                 ],
             ]
@@ -215,7 +187,9 @@ class portfolio extends \Elementor\Widget_Base
             <?php
             foreach ($settings['repeater_field'] as $item) :
             ?>
-                        <img src="<?php echo esc_html($item['image']['url']); ?>" alt="">
+                <div style="grid-area: 1 / 1 / 2 / 5;" class="oneProject">
+                    <img src="<?php echo esc_html($item['image']['url']); ?>" alt="">
+                </div>
             <?php
             endforeach;
             ?>
