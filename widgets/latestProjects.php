@@ -258,7 +258,6 @@ class latestProjects extends \Elementor\Widget_Base
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="imageWithText">
-                                <img src="<?php echo esc_url($slide['slideLogo']['url']); ?>" alt="">
                                 <div class="informationBlock">
                                     <?php if (!empty($slide['slideUpperTitle'])) : ?>
                                         <p class="upperTitle"><?php echo esc_html($slide['slideUpperTitle']); ?></p>
