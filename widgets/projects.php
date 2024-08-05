@@ -241,6 +241,8 @@ class Projects extends \Elementor\Widget_Base
             .brandsSlider .splide__track .splide__list .splide__slide {
                 display: flex;
                 flex-direction: row;
+                padding: 20px;
+                background-color: #fff;
             }
 
             .brandsSlider .splide__track .splide__list .splide__slide .textSide .slideOurBrands {
