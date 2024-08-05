@@ -216,10 +216,10 @@ class servicesWidget extends \Elementor\Widget_Base
                 <div class="servicesBlock">
                     <?php foreach ($settings['services'] as $service) : ?>
                         <div class="oneServiceBlock">
-                            <h3><?php echo $service['service_title']; ?></h3>
+                            <h3><?php echo $service['serviceTitle']; ?></h3>
                             <p><?php echo $service['description']; ?></p>
-                            <p><?php echo $service['estimated_price']; ?></p>
-                            <a href="<?php echo $service['link']['url']; ?>"><?php echo $service['link_text']; ?></a>
+                            <p><?php echo $service['estimatedPrice']; ?></p>
+                            <a href="<?php echo $service['link']['url']; ?>"><?php echo $service['linkText']; ?></a>
                         </div>
                     <?php endforeach; ?>
                 </div>
