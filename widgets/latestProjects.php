@@ -172,13 +172,14 @@ class latestProjects extends \Elementor\Widget_Base
                 width: 8px;
                 height: 8px;
                 border-radius: 50%;
-                opacity: 1;
+                opacity: 0.5;
             }
 
             .swiper-pagination-bullet-active {
-                background: #007bff;
+                background: #2c2d2c;
                 width: 10px;
                 height: 10px;
+                opacity: 1;
             }
         </style>
 
