@@ -128,12 +128,19 @@ class latestProjects extends \Elementor\Widget_Base
 ?>
 
         <style>
-
+            .pageWidth .latestProjectsContainer {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 25px;
+                margin: 100px 0px 100px 0px;
+            }
         </style>
 
         <div class="pageWidth">
             <div class="latestProjectsContainer">
-                <div class="richTextCentered">
                     <?php if (!empty($settings['upperTitle'])) : ?>
                         <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
                     <?php endif; ?>
@@ -153,7 +160,6 @@ class latestProjects extends \Elementor\Widget_Base
                             <?php echo $settings['regularText']; ?>
                         </p>
                     <?php endif; ?>
-                </div>
 
                 <?php if (!empty($settings['link']['url']) && !empty($settings['linkText'])) : ?>
                     <a class="link" href="<?php echo esc_url($settings['link']['url']); ?>">

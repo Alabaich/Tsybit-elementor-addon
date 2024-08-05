@@ -209,7 +209,6 @@ class servicesWidget extends \Elementor\Widget_Base
 
         <div class="pageWidth">
             <div class="servicesMainSection">
-                <div class="richTextCentered">
                     <?php if (!empty($settings['upperTitle'])) : ?>
                         <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
                     <?php endif; ?>
@@ -229,7 +228,6 @@ class servicesWidget extends \Elementor\Widget_Base
                             <?php echo $settings['regularText']; ?>
                         </p>
                     <?php endif; ?>
-                </div>
 
                 <div class="servicesBlock">
                     <?php foreach ($settings['services'] as $service) : ?>
