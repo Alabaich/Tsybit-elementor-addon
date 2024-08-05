@@ -66,6 +66,14 @@ class customerReviews extends \Elementor\Widget_Base
         );
 
         $this->add_control(
+            'regularText',
+            [
+                'label' => esc_html__('Regular Text', 'elementor-addon'),
+                'type' => \Elementor\Controls_Manager::TEXTAREA,
+            ]
+        );
+
+        $this->add_control(
             'repeater_field',
             [
                 'label' => esc_html__('Review', 'elementor-addon'),
@@ -152,6 +160,7 @@ class customerReviews extends \Elementor\Widget_Base
                 align-items: center;
                 flex-direction: column;
                 gap: 25px;
+                margin: 100px 0px 100px 0px;
             }
 
             .mainReviewContainer .reviewBlock {
@@ -215,52 +224,60 @@ class customerReviews extends \Elementor\Widget_Base
                     <?php if (!empty($settings['upperTitle'])) : ?>
                         <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
                     <?php endif; ?>
+
                     <?php if (!empty($settings['title'])) : ?>
                         <h2><?php echo $settings['title']; ?></h2>
                     <?php endif; ?>
+                    
                     <?php if (!empty($settings['subtitle'])) : ?>
                         <h3 class="bottomTitle">
                             <?php echo $settings['subtitle']; ?>
                         </h3>
+                    <?php endif; ?>
+
+                    <?php if (!empty($settings['regularText'])) : ?>
+                        <p class="regularText">
+                            <?php echo $settings['regularText']; ?>
+                        </p>
+                    <?php endif; ?>
                 </div>
-            <?php endif; ?>
-            <div class="reviewBlock">
-                <?php
-                foreach ($settings['repeater_field'] as $item) :
-                ?>
-                    <div class="review">
-                        <div class="rowContainer">
-                            <?php if (!empty($item['image']['url'])) : ?>
-                                <img src="<?php echo $item['image']['url']; ?>" alt="">
+                <div class="reviewBlock">
+                    <?php
+                    foreach ($settings['repeater_field'] as $item) :
+                    ?>
+                        <div class="review">
+                            <div class="rowContainer">
+                                <?php if (!empty($item['image']['url'])) : ?>
+                                    <img src="<?php echo $item['image']['url']; ?>" alt="">
+                                <?php endif; ?>
+                                <div class="columnContainer">
+                                    <?php if (!empty($item['name'])) : ?>
+                                        <div class="name">
+                                            <p><?php echo $item['name']; ?> </p>
+                                        </div>
+                                    <?php endif; ?>
+                                    <?php if (!empty($item['placeOfWork'])) : ?>
+                                        <div class="placeOfWork">
+                                            <p><?php echo $item['placeOfWork']; ?></p>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                            <?php if (!empty($item['reviewText'])) : ?>
+                                <div class="reviewText">
+                                    <p><?php echo $item['reviewText']; ?></p>
+                                </div>
                             <?php endif; ?>
-                            <div class="columnContainer">
-                                <?php if (!empty($item['name'])) : ?>
-                                    <div class="name">
-                                        <p><?php echo $item['name']; ?> </p>
-                                    </div>
-                                <?php endif; ?>
-                                <?php if (!empty($item['placeOfWork'])) : ?>
-                                    <div class="placeOfWork">
-                                        <p><?php echo $item['placeOfWork']; ?></p>
-                                    </div>
-                                <?php endif; ?>
-                            </div>
                         </div>
-                        <?php if (!empty($item['reviewText'])) : ?>
-                            <div class="reviewText">
-                                <p><?php echo $item['reviewText']; ?></p>
-                            </div>
-                        <?php endif; ?>
-                    </div>
-                <?php
-                endforeach;
-                ?>
-            </div>
-            <?php if (!empty($settings['link']['url'])) : ?>
-                <a class="link" href="<?php echo esc_url($settings['link']['url']); ?>" <?php echo !empty($settings['link']['is_external']) ? 'target="_blank"' : ''; ?>>
-                    <?php echo esc_html($settings['link']['url']); ?>
-                </a>
-            <?php endif; ?>
+                    <?php
+                    endforeach;
+                    ?>
+                </div>
+                <?php if (!empty($settings['link']['url'])) : ?>
+                    <a class="link" href="<?php echo esc_url($settings['link']['url']); ?>" <?php echo !empty($settings['link']['is_external']) ? 'target="_blank"' : ''; ?>>
+                        <?php echo esc_html($settings['link']['url']); ?>
+                    </a>
+                <?php endif; ?>
             </div>
         </div>
 

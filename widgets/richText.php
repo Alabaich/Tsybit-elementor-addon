@@ -130,6 +130,7 @@ class richText extends \Elementor\Widget_Base
                 justify-content: center;
                 align-items: center;
                 gap: 10px;
+                margin: 100px 0px 100px 0px;
             }
 
             .richText .richTextCentered .link {
