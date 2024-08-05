@@ -235,6 +235,7 @@ class portfolio1 extends \Elementor\Widget_Base
                 top: 0px;
                 right: 40px;
                 max-width: 115px;
+                text-align: center;
             }
 
             .portfolioContainer .descriptionContainer{
@@ -261,6 +262,7 @@ right: 135px;
 top: 0;
 border-radius: 0px 0px 6.399px 6.399px;
 box-shadow: 0px 5.119px 5.119px 0px rgba(0, 0, 0, 0.25);
+text-align: center;
             }
         </style>
 
