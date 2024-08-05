@@ -192,6 +192,11 @@ class Projects extends \Elementor\Widget_Base
                 padding: 15px;
             }
 
+            .brandsSlider .splide__track .splide__list .splide__slide a{
+                display: flex;
+                flex-direction: row;
+            }
+
             .slideOurBrands {
                 display: flex;
                 justify-content: center;
