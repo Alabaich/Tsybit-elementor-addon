@@ -252,6 +252,11 @@ transition: all 300ms linear ;
 .formAndContactsContainer .buttons .buttonTwo:hover{
 box-shadow: -3px -3px 8px 0px #FFF, 3px 3px 8px 0px rgba(174, 174, 192, 0.50);
 }
+
+.formAndContactsContainer div.wpforms-container-full .wpforms-field.wpforms-field-checkbox ul{
+    display: flex;
+    flex-wrap: wrap;
+}
         </style>
 
         <div class="pageWidth formAndContactsContainer">
