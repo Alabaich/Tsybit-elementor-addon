@@ -243,7 +243,7 @@ class Projects extends \Elementor\Widget_Base
                 flex-direction: row;
             }
 
-            .brandsSlider .splide__track .splide__list .splide__slide .textSide {
+            .brandsSlider .splide__track .splide__list .splide__slide .textSide a {
                 display: flex;
                 flex-direction: column;
                 align-items: start;
