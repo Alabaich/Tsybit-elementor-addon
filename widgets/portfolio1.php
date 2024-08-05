@@ -156,6 +156,7 @@ class portfolio1 extends \Elementor\Widget_Base
 
         <style>
             .portfolioContainer {
+                position: relative;
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
                 width: 100%;
@@ -164,6 +165,7 @@ class portfolio1 extends \Elementor\Widget_Base
             }
 
             .portfolioContainer .badge1 {
+                position: absolute;
                 display: flex;
                 justify-content: center;
                 background-color: #2c2d2c;
@@ -171,6 +173,8 @@ class portfolio1 extends \Elementor\Widget_Base
                 color: #fff;
                 padding: 30px 10px;
                 box-shadow: 0px 4px 5px #2c2d2c;
+                top: 0px;
+                right: 40px;
             }
         </style>
 
