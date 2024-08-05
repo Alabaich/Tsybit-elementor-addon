@@ -342,7 +342,7 @@ class Projects extends \Elementor\Widget_Base
                         </div>
                     </section>
                     <a href="<?php echo esc_html($settings['link']['url']); ?> ↗" class="buttonTwo">
-                        <?php echo $settings['linkTEXT']; ?> ↗
+                        <?php echo $settings['linkText']; ?> ↗
                     </a>
                 </div>
             </div>
