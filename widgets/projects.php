@@ -73,7 +73,7 @@ class Projects extends \Elementor\Widget_Base
             ]
         );
         $this->add_control(
-            'linkOne',
+            'link',
             [
                 'label' => esc_html__('LinkOne', 'elementor-addon'),
                 'type' => \Elementor\Controls_Manager::URL,
@@ -81,25 +81,9 @@ class Projects extends \Elementor\Widget_Base
         );
 
         $this->add_control(
-            'linkOneText',
+            'linkText',
             [
                 'label' => esc_html__('Link Text', 'elementor-addon'),
-                'type' => \Elementor\Controls_Manager::TEXTAREA,
-            ]
-        );
-
-        $this->add_control(
-            'linkTwo',
-            [
-                'label' => esc_html__('Link Two', 'elementor-addon'),
-                'type' => \Elementor\Controls_Manager::URL,
-            ]
-        );
-
-        $this->add_control(
-            'linkTwoText',
-            [
-                'label' => esc_html__('Link Two Text', 'elementor-addon'),
                 'type' => \Elementor\Controls_Manager::TEXTAREA,
             ]
         );
@@ -293,7 +277,7 @@ class Projects extends \Elementor\Widget_Base
                     height: 180px;
                 }
 
-                .ourBrands .sliderOurBrands{
+                .ourBrands .sliderOurBrands {
                     flex-direction: column;
                 }
             }
@@ -357,6 +341,9 @@ class Projects extends \Elementor\Widget_Base
                             </ul>
                         </div>
                     </section>
+                    <a href="<?php echo esc_html($settings['link']['url']); ?> ↗" class="buttonTwo">
+                        <?php echo $settings['linkTEXT']; ?> ↗
+                    </a>
                 </div>
             </div>
         </div>
