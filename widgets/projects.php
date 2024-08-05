@@ -266,7 +266,7 @@ class Projects extends \Elementor\Widget_Base
             }
 
             .ourBrands .projectImage{
-                max-width: 50%;
+                max-width: 49%;
             }
 
             @media screen and (max-width: 600px) {

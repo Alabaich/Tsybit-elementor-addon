@@ -180,9 +180,6 @@ class portfolio1 extends \Elementor\Widget_Base
             [
                 'label' => esc_html__('Text Color', 'elementor-addon'),
                 'type' => \Elementor\Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .hello-world' => 'color: {{VALUE}};',
-                ],
             ]
         );
 
@@ -284,7 +281,7 @@ text-align: center;
                     <div class="badge1">Award Winner 2024</div>
                 <?php endif; ?>
                 <?php if (!empty($item['badge2'])) : ?>
-                    <div class="badge2">
+                    <div class="badge2" style="background-color: <?php echo esc_attr($item['badge2Color']); ?>;">
                         <?php echo esc_html($item['badge2']); ?> 
                     </div>
                 <?php endif; ?>
