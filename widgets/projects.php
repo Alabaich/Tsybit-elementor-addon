@@ -292,6 +292,10 @@ class Projects extends \Elementor\Widget_Base
                 .ourBrands .bigImg {
                     height: 180px;
                 }
+
+                .ourBrands .sliderOurBrands{
+                    flex-direction: column;
+                }
             }
         </style>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/js/splide.min.js"></script>
