@@ -19,6 +19,7 @@ function register_hello_world_widget( $widgets_manager ) {
 	require_once( __DIR__ . '/widgets/servicesWidget.php' );
 	require_once( __DIR__ . '/widgets/form.php' );
 	require_once( __DIR__ . '/widgets/projects.php' );
+	require_once( __DIR__ . '/widgets/portfolio.php' );
 
 
 	$widgets_manager->register( new \Banner() );
@@ -29,6 +30,7 @@ function register_hello_world_widget( $widgets_manager ) {
 	$widgets_manager->register( new \servicesWidget() );
 	$widgets_manager->register( new \Form() );
 	$widgets_manager->register( new \Projects() );
+	$widgets_manager->register( new \portfolio() );
 
 }
 add_action( 'elementor/widgets/register', 'register_hello_world_widget' );
