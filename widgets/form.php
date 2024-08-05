@@ -261,6 +261,21 @@ box-shadow: -3px -3px 8px 0px #FFF, 3px 3px 8px 0px rgba(174, 174, 192, 0.50);
 .formAndContactsContainer div.wpforms-container-full button[type=submit]:not(:hover):not(:active){
     background-color: #2c2d2c !important;
 }
+
+@media screen and (max-width: 600px) {
+    .formAndContactsContainer {
+                flex-direction: column;
+
+            }
+
+            .formAndContactsContainer .formContainer,
+            .formAndContactsContainer .contactsContainer {
+                display: flex;
+                max-width: 100%;
+                width: 100%;
+            }
+
+}
         </style>
 
         <div class="pageWidth formAndContactsContainer">
