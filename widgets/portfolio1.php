@@ -187,6 +187,19 @@ class portfolio1 extends \Elementor\Widget_Base
                 grid-row-gap: 25px;
             }
 
+            .portfolioContainer .logo{
+                width: 100%;
+                max-height: 30px;
+                object-fit: contain;
+            }
+
+            .portfolioContainer .oneProject{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 600px;
+            }
+
             .portfolioContainer .badge1 {
                 position: absolute;
                 display: flex;
@@ -221,7 +234,7 @@ backdrop-filter: blur(2.5594329833984375px);
 
                     </div>
                     <div class="descriptionContainer">
-                        <img src="<?php echo esc_url($item['image']['url']); ?>" alt="" class="logo">
+                        <img src="<?php echo esc_url($item['logo']['url']); ?>" alt="" class="logo">
                         <div class="regularText">
                             <?php echo $item['description']; ?> 
                         </div>
