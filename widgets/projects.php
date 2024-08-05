@@ -248,7 +248,9 @@ class Projects extends \Elementor\Widget_Base
 
             .brandsSlider .splide__track .splide__list .splide__slide .textSide {
                 display: flex;
-                align-items: center;
+                align-items: start;
+                flex-direction: column;
+                
             }
 
             .brandsSlider .splide__track .splide__list .splide__slide .textSide .slideOurBrands {
