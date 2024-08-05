@@ -176,9 +176,8 @@ class latestProjects extends \Elementor\Widget_Base
         $settings = $this->get_settings_for_display();
 ?>
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.css">
-
-        <script src="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/js/splide.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/css/themes/splide-skyblue.min.css">
 
         <style>
             .pageWidth .latestProjectsContainer {
@@ -230,6 +229,51 @@ class latestProjects extends \Elementor\Widget_Base
                 height: 10px;
                 opacity: 1;
             }
+
+            .ourBrands {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 15px;
+                padding: 50px 150px;
+            }
+
+            .brandsSlider {
+                width: 100vw;
+                overflow: visible;
+                padding: 15px;
+            }
+
+            .slideOurBrands {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .slideOurBrands p {
+                text-align: center;
+            }
+
+            .ourBrands .bigImg {
+                width: 100%;
+                height: 400px;
+                display: flex;
+                justify-content: center;
+                align-items: end;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .ourBrands .bigImg img {
+                padding-bottom: 25px;
+            }
+
+            .ourBrands .subtitle {
+                text-align: center;
+            }
         </style>
 
         <div class="pageWidth">
@@ -254,48 +298,34 @@ class latestProjects extends \Elementor\Widget_Base
                     </p>
                 <?php endif; ?>
 
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <?php foreach ($settings['slides'] as $slide) : ?>
-                            <div class="swiper-slide">
-                                <div class="imageWithText">
-                                    <?php if (!empty($slide['slideLogo']['url'])) : ?>
-                                        <img src="<?php echo esc_url($slide['slideLogo']['url']); ?>" alt="">
-                                    <?php endif; ?>
-
-                                    <div class="informationBlock">
-                                        <?php if (!empty($slide['slideUpperTitle'])) : ?>
-                                            <p class="upperTitle"><?php echo esc_html($slide['slideUpperTitle']); ?></p>
-                                        <?php endif; ?>
-
-                                        <?php if (!empty($slide['slideTitle'])) : ?>
-                                            <h3 class="title"><?php echo esc_html($slide['slideTitle']); ?></h3>
-                                        <?php endif; ?>
-
-                                        <?php if (!empty($slide['slideRegularText'])) : ?>
-                                            <p class="regularText"><?php echo esc_html($slide['slideRegularText']); ?></p>
-                                        <?php endif; ?>
-
-                                        <?php if (!empty($slide['slideDescription'])) : ?>
-                                            <p class="description"><?php echo esc_html($slide['slideDescription']); ?></p>
-                                        <?php endif; ?>
-
-                                        <?php if (!empty($slide['slideLinkText']) && !empty($slide['slideLinkUrl']['url'])) : ?>
-                                            <a class="blueButton" href="<?php echo esc_url($slide['slideLinkUrl']['url']); ?>">
-                                                <?php echo esc_html($slide['slideLinkText']); ?>
-                                            </a>
-                                        <?php endif; ?>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
-
-                    <div class="swiper-pagination"></div>
-
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+                <div class="brandsSlider">
+                    <section class="splide" aria-label="Our Brands" id="uniqIdForThisSection">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <?php
+                                foreach ($settings['repeater_field'] as $item) :
+                                ?>
+                                    <li class="splide__slide">
+                                        <?php if (!empty($item['urlBrandPage']['url'])) : ?>
+                                            <a href="<?php echo esc_url($item['urlBrandPage']['url']); ?>" class="slideOurBrands">
+                                            <?php else : ?>
+                                                <a class="slideOurBrands">
+                                                <?php endif; ?>
+                                                <div class="bigImg" style="background-image: url(<?php echo esc_url($item['image']['url']); ?>);">
+                                                    <img src="<?php echo esc_html($item['logo']['url']); ?>" alt="" class="logoForBrand">
+                                                </div>
+                                                <h5><?php echo esc_html($item['title']); ?></h5>
+                                                <p class="regularText"><?php echo esc_html($item['subtitle']); ?></p>
+                                                </a>
+                                    </li>
+                                <?php
+                                endforeach;
+                                ?>
+                            </ul>
+                        </div>
+                    </section>
                 </div>
+
 
 
                 <?php if (!empty($settings['link']['url']) && !empty($settings['linkText'])) : ?>
@@ -309,17 +339,19 @@ class latestProjects extends \Elementor\Widget_Base
 
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                var swiper = new Swiper('.swiper-container', {
-                    loop: true,
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                    },
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-                });
+                new Splide('#uniqIdForThisSection', {
+                    gap: 25,
+                    type: 'loop',
+                    padding: '20%',
+                    pagination: false,
+                    arrows: false,
+                    breakpoints: {
+                        640: {
+                            padding: '5%',
+                            gap: 10,
+                        },
+                    }
+                }).mount();
             });
         </script>
 
