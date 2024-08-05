@@ -193,7 +193,7 @@ class servicesWidget extends \Elementor\Widget_Base
                 width: 400px;
             }
 
-            .servicesMainSection .servicesBlock .oneServiceBlock a{
+            .servicesMainSection .servicesBlock .oneServiceBlock .button a {
                 border: 2px solid #2c2d2c;
                 border-radius: 25px;
                 padding: 10px 10px;
@@ -230,7 +230,9 @@ class servicesWidget extends \Elementor\Widget_Base
                             <h3><?php echo $service['serviceTitle']; ?></h3>
                             <p><?php echo $service['description']; ?></p>
                             <p><?php echo $service['estimatedPrice']; ?></p>
-                            <a href="<?php echo $service['link']['url']; ?>"><?php echo $service['linkText']; ?></a>
+                            <div class="button">
+                                <a href="<?php echo $service['link']['url']; ?>"><?php echo $service['linkText']; ?></a>
+                            </div>
                         </div>
                     <?php endforeach; ?>
                 </div>
