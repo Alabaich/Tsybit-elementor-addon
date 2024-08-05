@@ -250,7 +250,7 @@ class Projects extends \Elementor\Widget_Base
                 display: flex;
                 align-items: start;
                 flex-direction: column;
-                
+                justify-content: center;
             }
 
             .brandsSlider .splide__track .splide__list .splide__slide .textSide .slideOurBrands {
