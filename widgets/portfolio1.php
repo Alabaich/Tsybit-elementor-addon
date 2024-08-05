@@ -135,6 +135,28 @@ class portfolio1 extends \Elementor\Widget_Base
                         'label' => esc_html__( 'Date', 'textdomain' ),
                         'type' => \Elementor\Controls_Manager::TEXTAREA,
                     ],
+                    [
+                        'name' => 'badge1',
+                        'label' => esc_html__( 'Show Title', 'textdomain' ),
+                        'type' => \Elementor\Controls_Manager::SWITCHER,
+                        'label_on' => esc_html__( 'Show', 'textdomain' ),
+                        'label_off' => esc_html__( 'Hide', 'textdomain' ),
+                        'return_value' => 'yes',
+                        'default' => 'yes',
+                    ],
+                    [
+                        'name' => 'badge2',
+                        'label' => esc_html__( 'Date', 'textdomain' ),
+                        'type' => \Elementor\Controls_Manager::TEXTAREA,
+                    ],
+                    [
+                        'name' => 'badge2Color',
+                        'label' => esc_html__('Badge2 Background Color', 'textdomain'),
+                        'type' => \Elementor\Controls_Manager::COLOR,
+                        'selectors' => [
+                            '{{WRAPPER}} .badge2' => 'background: {{VALUE}};',
+                        ],
+                    ]
                 ],
             ]
         );
@@ -224,14 +246,28 @@ border-radius: 20px;
 background: rgba(255, 255, 255, 0.75);
 backdrop-filter: blur(2.5594329833984375px);
             }
+
+            .portfolioContainer .badge2{
+                display: flex;
+padding: 25px 12;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+position: absolute;
+right: 135px;
+border-radius: 0px 0px 6.399px 6.399px;
+box-shadow: 0px 5.119px 5.119px 0px rgba(0, 0, 0, 0.25);
+            }
         </style>
 
         <div class="portfolioContainer pageWidth">
             <?php foreach ($settings['portfolio'] as $item) : ?>
                 <div style="grid-column: span <?php echo esc_attr($item['number']); ?>; background-image: url('<?php echo esc_url($item['image']['url']); ?>'); background-size: cover;" class="oneProject">
+                <?php if ( 'yes' === $item['badge1'] ) : ?>
                     <div class="badge1">Award Winner 2024</div>
+                <?php endif; ?>
                     <div class="badge2">
-
+                    <?php echo $item['badge2']; ?> 
                     </div>
                     <div class="descriptionContainer">
                         <img src="<?php echo esc_url($item['logo']['url']); ?>" alt="" class="logo">
