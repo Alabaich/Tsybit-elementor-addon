@@ -257,24 +257,30 @@ class latestProjects extends \Elementor\Widget_Base
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="imageWithText <?php if ('yes' === $settings['switch_position']) {
-                                                            echo 'right';
-                                                        } else {
-                                                            echo 'left';
-                                                        } ?> wow fadeInUp pageWidthFG">
-                                <img src="<?php echo esc_url($settings['image']['url']); ?>" alt="" class="left">
+                            <div class="imageWithText">
+                                <img src="<?php echo esc_url($slide['slideLogo']['url']); ?>" alt="">
                                 <div class="informationBlock">
-                                    <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
-                                    <h3 class="title"><?php echo $settings['title']; ?></h3>
-                                    <p class="regularText"><?php echo $settings['description']; ?></p>
-                                    <?php if ($settings['url'] != "") {
-                                    ?>
-                                        <a class="blueButton" href="<?php echo esc_url($settings['url']); ?>">
-                                            <?php echo esc_html($settings['textForButton']); ?>
+                                    <?php if (!empty($slide['slideUpperTitle'])) : ?>
+                                        <p class="upperTitle"><?php echo esc_html($slide['slideUpperTitle']); ?></p>
+                                    <?php endif; ?>
+
+                                    <?php if (!empty($slide['slideTitle'])) : ?>
+                                        <h3 class="title"><?php echo esc_html($slide['slideTitle']); ?></h3>
+                                    <?php endif; ?>
+
+                                    <?php if (!empty($slide['slideRegularText'])) : ?>
+                                        <p class="regularText"><?php echo esc_html($slide['slideRegularText']); ?></p>
+                                    <?php endif; ?>
+
+                                    <?php if (!empty($slide['slideDescription'])) : ?>
+                                        <p class="description"><?php echo esc_html($slide['slideDescription']); ?></p>
+                                    <?php endif; ?>
+
+                                    <?php if (!empty($slide['slideLinkText']) && !empty($slide['slideLinkUrl'])) : ?>
+                                        <a class="blueButton" href="<?php echo esc_url($slide['slideLinkUrl']['url']); ?>">
+                                            <?php echo esc_html($slide['slideLinkText']); ?>
                                         </a>
-                                    <?php
-                                    }
-                                    ?>
+                                    <?php endif; ?>
                                 </div>
                                 <img src="<?php echo esc_url($settings['image']['url']); ?>" alt="" class="right">
                             </div>
