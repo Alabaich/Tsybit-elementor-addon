@@ -214,7 +214,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/j
 
             .servicesContainer .oneService{
                 display: flex;
-width: 390px;
+width: auto;
 padding: 20px 25px;
 justify-content: center;
 align-items: center;
