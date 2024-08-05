@@ -227,6 +227,13 @@ border-radius: 25px;
 
 }
 
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
 .buttons .buttonOne{
     background: #2C2D2C;
     color: #FFF;
