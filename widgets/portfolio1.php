@@ -106,11 +106,13 @@ class portfolio1 extends \Elementor\Widget_Base
                     [
                         'name' => 'number',
                         'label' => esc_html__('Choose number 1-4', 'textdomain'),
-                        'type' => \Elementor\Controls_Manager::MEDIA,
-                        'default' => [
-                            'url' => \Elementor\Utils::get_placeholder_image_src(),
-                        ],
+                        'type' => \Elementor\Controls_Manager::NUMBER,
+                        'default' => 4,
+                        'min' => 1,
+                        'max' => 4,
+                        'step' => 1,
                     ],
+
                 ],
             ]
         );
