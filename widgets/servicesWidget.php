@@ -170,7 +170,7 @@ class servicesWidget extends \Elementor\Widget_Base
                 text-align: center;
                 align-items: center;
                 flex-direction: column;
-                gap: 25px;
+                gap: 15px;
                 margin: 100px 0px 100px 0px;
             }
 
