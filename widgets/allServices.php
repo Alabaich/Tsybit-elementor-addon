@@ -188,7 +188,8 @@ class allServices extends \Elementor\Widget_Base
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 25px;
-                margin: 20px 100px 0px;
+                max-width: 1200px;
+                margin-top: 20px;
             }
 
             .allServices .allServicesBlocks .oneServiceBlock {
