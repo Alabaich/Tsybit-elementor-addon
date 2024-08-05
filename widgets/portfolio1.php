@@ -228,7 +228,7 @@ backdrop-filter: blur(2.5594329833984375px);
 
                     </div>
                     <div class="descriptionContainer">
-                        <img src="<?php echo esc_url($item['image']['url']); ?>" alt="" class="logo">
+                        <img src="<?php echo esc_url($item['logo']['url']); ?>" alt="" class="logo">
                         <div class="regularText">
                             <?php echo $item['description']; ?> 
                         </div>
