@@ -16,6 +16,7 @@ function register_hello_world_widget( $widgets_manager ) {
 	require_once( __DIR__ . '/widgets/customerReviews.php' );
 	require_once( __DIR__ . '/widgets/heroShadowText.php' );
 	require_once( __DIR__ . '/widgets/services.php' );
+	require_once( __DIR__ . '/widgets/servicesWidget.php' );
 
 
 	$widgets_manager->register( new \Banner() );
@@ -23,6 +24,7 @@ function register_hello_world_widget( $widgets_manager ) {
 	$widgets_manager->register( new \customerReviews() );
 	$widgets_manager->register( new \heroShadowText() );
 	$widgets_manager->register( new \Services() );
+	$widgets_manager->register( new \servicesWidget() );
 
 }
 add_action( 'elementor/widgets/register', 'register_hello_world_widget' );

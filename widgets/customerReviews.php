@@ -15,7 +15,7 @@ class customerReviews extends \Elementor\Widget_Base
 
     public function get_icon()
     {
-        return 'eicon-star-o0xe933';
+        return 'eicon-review';
     }
 
     public function get_categories()
