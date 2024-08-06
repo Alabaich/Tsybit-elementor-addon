@@ -285,20 +285,26 @@ box-shadow: -3px -3px 8px 0px #FFF, 3px 3px 8px 0px rgba(174, 174, 192, 0.50);
             </div>
             <div class="contactsContainer">
                 <div class="buttons">
-                    <a href="<?php echo esc_html($settings['linkOne']['url']); ?> ↗"
-                        class="buttonOne"><?php echo $settings['linkOneText']; ?><svg xmlns="http://www.w3.org/2000/svg"
-                            width="11" height="11" viewBox="0 0 11 11" fill="none">
-                            <path
-                                d="M9.81797 1.18198H3.45401M9.81797 1.18198V7.54594M9.81797 1.18198L4.2495 6.75045M1.33269 9.66726L2.65851 8.34144"
-                                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg></a>
-                    <a href="<?php echo esc_html($settings['linkTwo']['url']); ?> ↗"
-                        class="buttonTwo"><?php echo $settings['linkTwoText']; ?><svg xmlns="http://www.w3.org/2000/svg"
-                            width="11" height="11" viewBox="0 0 11 11" fill="none">
-                            <path
-                                d="M9.66733 1.18198H3.30337M9.66733 1.18198V7.54594M9.66733 1.18198L4.09887 6.75045M1.18205 9.66726L2.50788 8.34144"
-                                stroke="#808080" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg></a>
+                <?php if (!empty($settings['linkOneText'])): ?>
+    <a href="<?php echo esc_html($settings['linkOne']['url']); ?> ↗"
+        class="buttonOne"><?php echo esc_html($settings['linkOneText']); ?><svg xmlns="http://www.w3.org/2000/svg"
+            width="11" height="11" viewBox="0 0 11 11" fill="none">
+            <path
+                d="M9.81797 1.18198H3.45401M9.81797 1.18198V7.54594M9.81797 1.18198L4.2495 6.75045M1.33269 9.66726L2.65851 8.34144"
+                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg></a>
+<?php endif; ?>
+
+<?php if (!empty($settings['linkTwoText'])): ?>
+    <a href="<?php echo esc_html($settings['linkTwo']['url']); ?> ↗"
+        class="buttonTwo"><?php echo esc_html($settings['linkTwoText']); ?><svg xmlns="http://www.w3.org/2000/svg"
+            width="11" height="11" viewBox="0 0 11 11" fill="none">
+            <path
+                d="M9.66733 1.18198H3.30337M9.66733 1.18198V7.54594M9.66733 1.18198L4.09887 6.75045M1.18205 9.66726L2.50788 8.34144"
+                stroke="#808080" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" />
+        </svg></a>
+<?php endif; ?>
+
                 </div>
                 <p class="bigText"> <?php echo $settings['title']; ?></p>
                 <p class="description"><?php echo $settings['regularText']; ?></p>
