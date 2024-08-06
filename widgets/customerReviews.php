@@ -201,7 +201,7 @@ class customerReviews extends \Elementor\Widget_Base
                 object-fit: cover;
             }
 
-            .mainReviewContainer .review *{
+            .mainReviewContainer .review * {
                 text-align: left;
                 margin: 0;
             }
@@ -230,7 +230,10 @@ class customerReviews extends \Elementor\Widget_Base
                 }
 
                 .mainReviewContainer .reviewBlock .review {
+                    display: flex;
+                    flex-direction: column;
                     width: 100%;
+                    gap: 15px;
                 }
             }
         </style>
