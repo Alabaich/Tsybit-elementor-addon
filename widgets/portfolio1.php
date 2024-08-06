@@ -283,7 +283,7 @@ text-align: center;
 
         <div class="portfolioContainer pageWidth">
             <?php foreach ($settings['portfolio'] as $item) : ?>
-                <div style="grid-column: span <?php echo esc_attr($item['number']); ?>; background-image: url('<?php echo esc_url($item['image']['url']); ?>'); background-size: cover;" class="oneProject">
+                <div style="grid-column: span <?php echo esc_attr($item['number']); ?>; background-image: url('<?php echo esc_url($item['image']['url']); ?>'); background-size: cover; background-position: center center;" class="oneProject">
                 <?php if ( 'yes' === $item['badge1'] ) : ?>
                     <div class="badge1">Award Winner 2024</div>
                 <?php endif; ?>
