@@ -286,7 +286,7 @@ box-shadow: -3px -3px 8px 0px #FFF, 3px 3px 8px 0px rgba(174, 174, 192, 0.50);
             <div class="contactsContainer">
                 <div class="buttons">
                 <?php if (!empty($settings['linkOneText'])): ?>
-    <a href="<?php echo esc_html($settings['linkOne']['url']); ?> ↗"
+    <a href="<?php echo esc_html($settings['linkOne']['url']); ?> "
         class="buttonOne"><?php echo esc_html($settings['linkOneText']); ?><svg xmlns="http://www.w3.org/2000/svg"
             width="11" height="11" viewBox="0 0 11 11" fill="none">
             <path
@@ -296,7 +296,7 @@ box-shadow: -3px -3px 8px 0px #FFF, 3px 3px 8px 0px rgba(174, 174, 192, 0.50);
 <?php endif; ?>
 
 <?php if (!empty($settings['linkTwoText'])): ?>
-    <a href="<?php echo esc_html($settings['linkTwo']['url']); ?> ↗"
+    <a href="<?php echo esc_html($settings['linkTwo']['url']); ?> "
         class="buttonTwo"><?php echo esc_html($settings['linkTwoText']); ?><svg xmlns="http://www.w3.org/2000/svg"
             width="11" height="11" viewBox="0 0 11 11" fill="none">
             <path
