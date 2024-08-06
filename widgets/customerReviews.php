@@ -201,6 +201,10 @@ class customerReviews extends \Elementor\Widget_Base
                 object-fit: cover;
             }
 
+            .mainReviewContainer .review *{
+                text-align: left;
+            }
+
             .reviewBlock .review .rowContainer .columnContainer {
                 display: flex;
                 flex-direction: column;
