@@ -190,7 +190,7 @@ class Projects extends \Elementor\Widget_Base
     protected function render()
     {
         $settings = $this->get_settings_for_display();
-        ?>
+?>
 
 
         <style>
@@ -265,7 +265,7 @@ class Projects extends \Elementor\Widget_Base
                 text-align: center;
             }
 
-            .ourBrands .projectImage{
+            .ourBrands .projectImage {
                 max-width: 49%;
             }
 
@@ -285,40 +285,46 @@ class Projects extends \Elementor\Widget_Base
                 .ourBrands .sliderOurBrands {
                     flex-direction: column;
                 }
+
+                .ourBrands .brandsSlider .textSide {
+                    align-items: center;
+                }
             }
 
-            .ourBrands .buttonTwo{
+            .ourBrands .buttonTwo {
                 text-align: center;
-    display: block;
-    margin: 25px;
+                display: block;
+                margin: 25px;
             }
+
         </style>
+
+
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/js/splide.min.js"></script>
-        <link rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/css/themes/splide-skyblue.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/css/themes/splide-skyblue.min.css">
 
         <div class="pageWidth">
             <div class="ourBrands">
                 <div class="textContainerCentered">
-                    <?php if (!empty($settings['upperTitle'])): ?>
+                    <?php if (!empty($settings['upperTitle'])) : ?>
                         <p class="upperTitle">
                             <?php echo $settings['upperTitle']; ?>
                         </p>
                     <?php endif; ?>
 
-                    <?php if (!empty($settings['title'])): ?>
+                    <?php if (!empty($settings['title'])) : ?>
                         <h2>
                             <?php echo $settings['title']; ?>
                         </h2>
                     <?php endif; ?>
 
-                    <?php if (!empty($settings['subtitle'])): ?>
+                    <?php if (!empty($settings['subtitle'])) : ?>
                         <h4 class="subtitle">
                             <?php echo $settings['subtitle']; ?>
                         </h4>
                     <?php endif; ?>
 
-                    <?php if (!empty($settings['description'])): ?>
+                    <?php if (!empty($settings['description'])) : ?>
                         <p class="regularText">
                             <?php echo $settings['description']; ?>
                         </p>
@@ -330,23 +336,21 @@ class Projects extends \Elementor\Widget_Base
                         <div class="splide__track">
                             <ul class="splide__list">
                                 <?php
-                                foreach ($settings['repeater_field'] as $item):
-                                    ?>
+                                foreach ($settings['repeater_field'] as $item) :
+                                ?>
                                     <li class="splide__slide">
                                         <div class="sliderOurBrands">
                                             <div class="textSide">
                                                 <h5><?php echo esc_html($item['title']); ?></h5>
-                                                <img src="<?php echo esc_html($item['logo']['url']); ?>" alt=""
-                                                    class="logoForBrand">
+                                                <img src="<?php echo esc_html($item['logo']['url']); ?>" alt="" class="logoForBrand">
                                                 <p class="regularText"><?php echo esc_html($item['subtitle']); ?></p>
                                                 <p><?php echo esc_html($item['description']); ?></p>
-                                                <a href="<?php echo esc_url($item['linkUrl']['url']); ?>"
-                                                    class="button"><?php echo esc_html($item['linkTitle']); ?></a>
+                                                <a href="<?php echo esc_url($item['linkUrl']['url']); ?>" class="button"><?php echo esc_html($item['linkTitle']); ?></a>
                                             </div>
                                             <img src="<?php echo esc_html($item['image']['url']); ?>" alt="" class="projectImage">
                                         </div>
                                     </li>
-                                    <?php
+                                <?php
                                 endforeach;
                                 ?>
                             </ul>
@@ -360,7 +364,7 @@ class Projects extends \Elementor\Widget_Base
         </div>
 
         <script>
-            document.addEventListener('DOMContentLoaded', function () {
+            document.addEventListener('DOMContentLoaded', function() {
                 new Splide('#uniqIdForThisSection', {
                     gap: 25,
                     type: 'loop',
@@ -377,6 +381,6 @@ class Projects extends \Elementor\Widget_Base
             });
         </script>
 
-        <?php
+<?php
     }
 }
