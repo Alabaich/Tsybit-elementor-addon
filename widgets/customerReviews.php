@@ -203,6 +203,7 @@ class customerReviews extends \Elementor\Widget_Base
 
             .mainReviewContainer .review *{
                 text-align: left;
+                margin: 0;
             }
 
             .reviewBlock .review .rowContainer .columnContainer {
