@@ -180,9 +180,6 @@ class portfolio1 extends \Elementor\Widget_Base
             [
                 'label' => esc_html__('Text Color', 'elementor-addon'),
                 'type' => \Elementor\Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .hello-world' => 'color: {{VALUE}};',
-                ],
             ]
         );
 
@@ -211,7 +208,7 @@ class portfolio1 extends \Elementor\Widget_Base
 
             .portfolioContainer .logo{
                 width: 100%;
-                max-height: 30px;
+                max-height: 50px;
                 object-fit: contain;
             }
 
@@ -221,7 +218,7 @@ class portfolio1 extends \Elementor\Widget_Base
                 align-items: center;
                 min-height: 600px;
                 position: relative;
-                border-radius: 35px;
+                border-radius: 35px;box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
             }
 
             .portfolioContainer .badge1 {
@@ -275,16 +272,23 @@ text-align: center;
                     grid-template-columns: repeat(1, 1fr);
                 }
             }
+
+            .portfolioContainer .timeAndDate{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+            }
         </style>
 
         <div class="portfolioContainer pageWidth">
             <?php foreach ($settings['portfolio'] as $item) : ?>
-                <div style="grid-column: span <?php echo esc_attr($item['number']); ?>; background-image: url('<?php echo esc_url($item['image']['url']); ?>'); background-size: cover;" class="oneProject">
+                <div style="grid-column: span <?php echo esc_attr($item['number']); ?>; background-image: url('<?php echo esc_url($item['image']['url']); ?>'); background-size: cover; background-position: center center;" class="oneProject">
                 <?php if ( 'yes' === $item['badge1'] ) : ?>
                     <div class="badge1">Award Winner 2024</div>
                 <?php endif; ?>
                 <?php if (!empty($item['badge2'])) : ?>
-                    <div class="badge2">
+                    <div class="badge2" style="background-color: <?php echo esc_attr($item['badge2Color']); ?>;">
                         <?php echo esc_html($item['badge2']); ?> 
                     </div>
                 <?php endif; ?>
