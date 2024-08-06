@@ -136,6 +136,7 @@ class richText extends \Elementor\Widget_Base
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                text-align: center;
                 align-items: center;
                 gap: 10px;
                 margin: 100px 0px 100px 0px;
