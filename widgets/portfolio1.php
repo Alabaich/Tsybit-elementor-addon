@@ -208,7 +208,7 @@ class portfolio1 extends \Elementor\Widget_Base
 
             .portfolioContainer .logo{
                 width: 100%;
-                max-height: 30px;
+                max-height: 50px;
                 object-fit: contain;
             }
 
