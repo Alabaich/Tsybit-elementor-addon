@@ -183,6 +183,7 @@ class servicesWidget extends \Elementor\Widget_Base
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 25px;
+                width: 100%;
             }
 
             .servicesMainSection .servicesBlock .oneServiceBlock {
