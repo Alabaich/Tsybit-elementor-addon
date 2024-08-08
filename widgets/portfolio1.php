@@ -279,6 +279,11 @@ text-align: center;
                 align-items: center;
                 width: 100%;
             }
+            @media screen and (max-width: 600px) {
+                .portfolioContainer .oneProject{
+                    grid-column: span 4 !important;
+                }
+            }
         </style>
 
         <div class="portfolioContainer pageWidth">
