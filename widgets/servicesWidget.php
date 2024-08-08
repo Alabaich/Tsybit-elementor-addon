@@ -191,6 +191,7 @@ class servicesWidget extends \Elementor\Widget_Base
                 padding: 20px;
                 border-radius: 25px;
                 width: 400px;
+                text-align: center;
                 box-shadow: -2px -2px 4px 0px #FFF, 2px 2px 4px 0px rgba(174, 174, 192, 0.40);
             }
 
@@ -206,29 +207,37 @@ class servicesWidget extends \Elementor\Widget_Base
                 background-color: #2c2d2c;
                 color: #F0F0F3;
             }
+
+            .servicesMainSection .servicesBlock .oneServiceBlock a svg path {
+                stroke: #2c2d2c;
+            }
+
+            .servicesMainSection .servicesBlock .oneServiceBlock a:hover svg path {
+                stroke: #fff;
+            }
         </style>
 
         <div class="pageWidth">
             <div class="servicesMainSection">
-                    <?php if (!empty($settings['upperTitle'])) : ?>
-                        <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
-                    <?php endif; ?>
+                <?php if (!empty($settings['upperTitle'])) : ?>
+                    <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
+                <?php endif; ?>
 
-                    <?php if (!empty($settings['title'])) : ?>
-                        <h2><?php echo $settings['title']; ?></h2>
-                    <?php endif; ?>
+                <?php if (!empty($settings['title'])) : ?>
+                    <h2><?php echo $settings['title']; ?></h2>
+                <?php endif; ?>
 
-                    <?php if (!empty($settings['subtitle'])) : ?>
-                        <h3 class="bottomTitle">
-                            <?php echo $settings['subtitle']; ?>
-                        </h3>
-                    <?php endif; ?>
+                <?php if (!empty($settings['subtitle'])) : ?>
+                    <h3 class="bottomTitle">
+                        <?php echo $settings['subtitle']; ?>
+                    </h3>
+                <?php endif; ?>
 
-                    <?php if (!empty($settings['regularText'])) : ?>
-                        <p class="regularText">
-                            <?php echo $settings['regularText']; ?>
-                        </p>
-                    <?php endif; ?>
+                <?php if (!empty($settings['regularText'])) : ?>
+                    <p class="regularText">
+                        <?php echo $settings['regularText']; ?>
+                    </p>
+                <?php endif; ?>
 
                 <div class="servicesBlock">
                     <?php foreach ($settings['services'] as $service) : ?>
@@ -237,9 +246,9 @@ class servicesWidget extends \Elementor\Widget_Base
                             <p><?php echo $service['description']; ?></p>
                             <p><?php echo $service['estimatedPrice']; ?></p>
                             <a href="<?php echo $service['link']['url']; ?>"><?php echo $service['linkText']; ?> <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M9.74253 0.883641H3.37857M9.74253 0.883641V7.2476M9.74253 0.883641L4.17406 6.45211M1.25725 9.36892L2.58307 8.0431" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-</a>
+                                    <path d="M9.74253 0.883641H3.37857M9.74253 0.883641V7.2476M9.74253 0.883641L4.17406 6.45211M1.25725 9.36892L2.58307 8.0431" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
                         </div>
                     <?php endforeach; ?>
                 </div>
