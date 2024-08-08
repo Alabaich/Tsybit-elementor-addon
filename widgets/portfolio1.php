@@ -282,6 +282,7 @@ text-align: center;
             @media screen and (max-width: 600px) {
                 .portfolioContainer .oneProject{
                     grid-column: span 4 !important;
+                    min-height: 400px;
                 }
             }
         </style>
