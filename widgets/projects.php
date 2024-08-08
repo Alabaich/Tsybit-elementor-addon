@@ -274,6 +274,10 @@ class Projects extends \Elementor\Widget_Base
                     padding: 15px;
                 }
 
+                .ourBrands .projectImage {
+                width: 100%;
+            }
+
                 .ourBrands * {
                     text-align: center;
                 }
