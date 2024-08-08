@@ -239,6 +239,10 @@ class customerReviews extends \Elementor\Widget_Base
                     width: 100%;
                     gap: 15px;
                 }
+                
+                .mainReviewContainer .reviewBlock .review .reviewText {
+                    padding-top: 0px;
+                }
             }
         </style>
 
