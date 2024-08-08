@@ -164,7 +164,8 @@ class heroShadowText extends \Elementor\Widget_Base
                 align-items: center;
                 flex-direction: column;
                 height: auto;
-                padding: 50px;
+                padding-bottom: 50px;
+                padding-top: 50px;
                 min-height: 60vh;
             }
 
