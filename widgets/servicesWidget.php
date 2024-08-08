@@ -187,10 +187,11 @@ class servicesWidget extends \Elementor\Widget_Base
             }
 
             .servicesMainSection .servicesBlock .oneServiceBlock {
-                background-color: #F0F0F3;
+                background-color: #fff;
                 padding: 20px;
                 border-radius: 25px;
                 width: 400px;
+                box-shadow: -2px -2px 4px 0px #FFF, 2px 2px 4px 0px rgba(174, 174, 192, 0.40);
             }
 
             .servicesMainSection .servicesBlock .oneServiceBlock a {
