@@ -191,8 +191,6 @@ class servicesWidget extends \Elementor\Widget_Base
                 padding: 20px;
                 border-radius: 25px;
                 width: 400px;
-                align-items: center;
-                gap: 10px;
                 box-shadow: -2px -2px 4px 0px #FFF, 2px 2px 4px 0px rgba(174, 174, 192, 0.40);
             }
 
@@ -200,6 +198,8 @@ class servicesWidget extends \Elementor\Widget_Base
                 display: inline-flex;
                 border: 1px solid #2c2d2c;
                 border-radius: 25px;
+                align-items: center;
+                gap: 10px;
                 padding: 10px 10px;
                 transition: ease-in 300ms;
             }
