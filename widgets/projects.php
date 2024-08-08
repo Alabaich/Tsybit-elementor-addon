@@ -275,7 +275,7 @@ class Projects extends \Elementor\Widget_Base
                 }
 
                 .ourBrands .projectImage {
-                width: 100%;
+                max-width: 100%;
             }
 
                 .ourBrands * {
