@@ -200,7 +200,7 @@ class servicesWidget extends \Elementor\Widget_Base
                 border-radius: 25px;
                 align-items: center;
                 gap: 10px;
-                padding: 10px 10px;
+                padding: 10px 15px;
                 transition: ease-in 300ms;
             }
 
