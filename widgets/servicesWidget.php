@@ -191,7 +191,8 @@ class servicesWidget extends \Elementor\Widget_Base
                 padding: 20px;
                 border-radius: 25px;
                 width: 400px;
-                text-align: center;
+                align-items: center;
+                gap: 10px;
                 box-shadow: -2px -2px 4px 0px #FFF, 2px 2px 4px 0px rgba(174, 174, 192, 0.40);
             }
 
