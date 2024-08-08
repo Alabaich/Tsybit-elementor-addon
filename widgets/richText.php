@@ -204,8 +204,7 @@ class richText extends \Elementor\Widget_Base
 
                 <?php if (!empty($settings['link']['url']) && !empty($settings['linkText'])) : ?>
                     <a class="link" href="<?php echo esc_url($settings['link']['url']); ?>">
-                        <?php echo esc_html($settings['linkText']); ?>
-                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <?php echo esc_html($settings['linkText']); ?> <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9.74253 0.883641H3.37857M9.74253 0.883641V7.2476M9.74253 0.883641L4.17406 6.45211M1.25725 9.36892L2.58307 8.0431" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </a>
