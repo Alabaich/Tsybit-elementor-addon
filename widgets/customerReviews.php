@@ -187,6 +187,10 @@ class customerReviews extends \Elementor\Widget_Base
                 width: 400px;
             }
 
+            .mainReviewContainer .reviewBlock .review .reviewText {
+                padding-top: 25px;
+            }
+
             .mainReviewContainer .reviewBlock .review .rowContainer {
                 display: flex;
                 flex-direction: row;
