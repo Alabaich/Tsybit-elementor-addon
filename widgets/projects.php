@@ -299,6 +299,7 @@ class Projects extends \Elementor\Widget_Base
                 text-align: center;
                 display: block;
                 margin: 25px;
+                color: #2c2d2c;
             }
 
         </style>

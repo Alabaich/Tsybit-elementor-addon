@@ -216,6 +216,10 @@ class customerReviews extends \Elementor\Widget_Base
                 justify-content: center;
             }
 
+            .mainReviewContainer .link {
+                color: #2c2d2c;
+            }
+
             @media screen and (max-width: 600px) {
                 .pageWidth .mainReviewContainer .richTextCentered h3 {
                     font-size: 13px;
