@@ -318,10 +318,10 @@ class heroShadowText extends \Elementor\Widget_Base
                 </p>
             <?php endif; ?>
             <div class="buttons">
-                <a href="<?php echo esc_html($settings['linkOne']['url']); ?> ↗" class="buttonOne"><?php echo $settings['linkOneText']; ?><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+                <a href="<?php echo esc_html($settings['linkOne']['url']); ?> " class="buttonOne"><?php echo $settings['linkOneText']; ?><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
                         <path d="M9.81797 1.18198H3.45401M9.81797 1.18198V7.54594M9.81797 1.18198L4.2495 6.75045M1.33269 9.66726L2.65851 8.34144" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                     </svg></a>
-                <a href="<?php echo esc_html($settings['linkTwo']['url']); ?> ↗" class="buttonTwo"><?php echo $settings['linkTwoText']; ?><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+                <a href="<?php echo esc_html($settings['linkTwo']['url']); ?> " class="buttonTwo"><?php echo $settings['linkTwoText']; ?><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
                         <path d="M9.66733 1.18198H3.30337M9.66733 1.18198V7.54594M9.66733 1.18198L4.09887 6.75045M1.18205 9.66726L2.50788 8.34144" stroke="#808080" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" />
                     </svg></a>
             </div>
