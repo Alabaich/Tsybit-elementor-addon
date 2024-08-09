@@ -281,6 +281,12 @@ class portfolio1 extends \Elementor\Widget_Base
                 width: 100%;
             }
 
+            .portfolioContainer .timeAndDate .time{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+
             @media screen and (max-width: 600px) {
                 .portfolioContainer .oneProject {
                     grid-column: span 4 !important;
