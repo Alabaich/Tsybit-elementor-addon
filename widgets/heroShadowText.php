@@ -343,8 +343,8 @@ class heroShadowText extends \Elementor\Widget_Base
                             const y = event.clientY; // Mouse Y position
                             const windowWidth = window.innerWidth; // Window width
                             const windowHeight = window.innerHeight; // Window height
-                            const shadowX = ((x / windowWidth) - 0.9) * -20; // Inverted shadow X offset
-                            const shadowY = ((y / windowHeight) - 0.9) * -20; // Inverted shadow Y offset
+                            const shadowX = ((x / windowWidth) - 0.5) * -20; // Inverted shadow X offset
+                            const shadowY = ((y / windowHeight) - 0.5) * -20; // Inverted shadow Y offset
 
                             const textShadow = `
                             ${shadowX}px ${shadowY}px 2px rgba(0, 0, 0, 0.25),
