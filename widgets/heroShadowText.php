@@ -174,14 +174,14 @@ class heroShadowText extends \Elementor\Widget_Base
             }
 
             .heroShadowTextContainer h1 {
-                color: #F9F9F9;
+                color: #2c2d2c;
                 font-family: Montserrat;
                 text-align: center;
-                font-size: 82px;
+                font-size: 64px;
                 font-style: normal;
-                font-weight: 900;
-                line-height: 107.473%;
-                text-shadow: 6px 6px 16px rgba(0, 0, 0, 0.20), -2.5px -2.5px 6px #FFF, 3px 3px 6px rgba(174, 174, 192, 0.40);
+                font-weight: 800;
+                line-height: 105%;
+                /*text-shadow: 6px 6px 16px rgba(0, 0, 0, 0.20), -2.5px -2.5px 6px #FFF, 3px 3px 6px rgba(174, 174, 192, 0.40);*/
                 transition: text-shadow 0.1s ease-out;
                 /* Smooth transition for shadow movement */
             }
@@ -307,9 +307,9 @@ class heroShadowText extends \Elementor\Widget_Base
                 <h1 id="dynamic-shadow">
                     <?php echo $settings['title']; ?>
                 </h1>
-                <h1 class="bg">
+                <!-- <h1 class="bg">
                     <?php echo $settings['title']; ?>
-                </h1>
+                </h1> -->
             </div>
 
             <?php if (!empty($settings['regularText'])) : ?>
@@ -328,7 +328,7 @@ class heroShadowText extends \Elementor\Widget_Base
 
         </div>
 
-        <script>
+        <!-- <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const textElement = document.getElementById('dynamic-shadow');
                 if (textElement) {
@@ -358,7 +358,7 @@ class heroShadowText extends \Elementor\Widget_Base
                     console.error('Element with ID "dynamic-shadow" not found.');
                 }
             });
-        </script>
+        </script> -->
 
 <?php
     }
