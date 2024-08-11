@@ -178,6 +178,7 @@ class heroShadowText extends \Elementor\Widget_Base
                 font-family: Montserrat;
                 text-align: center;
                 font-size: 64px;
+                max-width: 800px;
                 font-style: normal;
                 font-weight: 800;
                 line-height: 105%;

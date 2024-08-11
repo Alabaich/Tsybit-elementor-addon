@@ -193,7 +193,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/j
                     },
                     breakpoints: {
                         640: {
-                            perPage: 2,
+                            perPage: 1,
                         },
                     },
                 }).mount(window.splide.Extensions);
